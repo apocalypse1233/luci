@@ -407,7 +407,7 @@ msgstr "第四个实例"
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:355
 msgid ""
 "Gather DNS related network traffic via tcpdump and provide a DNS Report on "
-"demand. Please note: this needs additional 'tcpdump-mini' package "
+"demand. Please note: this needs additional 'tcpdump' or 'tcpdump-mini' package "
 "installation and a full adblock service restart to take effect."
 msgstr ""
 "通过 tcpdump 收集与 DNS 相关的网络流量，并按需提供 DNS 报告。请注意：这需要额"
@@ -772,7 +772,7 @@ msgstr "等待成功的DNS后端重新启动的超时。"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:16
 msgid ""
-"To keep your adblock lists up-to-date, you should setup an automatic update "
+"To keep your adblock lists up-to-date, you should set up an automatic update "
 "job for these lists."
 msgstr "为了使您的广告过滤列表保持最新，您应该为这些列表设置一个自动更新任务。"
 

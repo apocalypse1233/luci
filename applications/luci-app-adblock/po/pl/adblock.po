@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-11 22:33+0000\n"
+"PO-Revision-Date: 2022-01-07 18:20+0000\n"
 "Last-Translator: Matthaiks <kitynska@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsadblock/pl/>\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:258
 msgid "Action"
@@ -26,7 +26,7 @@ msgstr "Blokowanie reklam"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:40
 msgid "Adblock action"
-msgstr "Akcje Adblock"
+msgstr "Akcje blokowania reklam"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:11
 msgid "Add Blacklist Domain"
@@ -186,7 +186,7 @@ msgstr "Klient"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/dnsreport.js:207
 msgid "Clients"
-msgstr "Klienci"
+msgstr "Klienty"
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:136
 msgid ""
@@ -420,7 +420,7 @@ msgstr "Instancja czwarta"
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:355
 msgid ""
 "Gather DNS related network traffic via tcpdump and provide a DNS Report on "
-"demand. Please note: this needs additional 'tcpdump-mini' package "
+"demand. Please note: this needs additional 'tcpdump' or 'tcpdump-mini' package "
 "installation and a full adblock service restart to take effect."
 msgstr ""
 "Zbierz ruch sieciowy związany z DNS za pośrednictwem tcpdump i na żądanie "
@@ -810,7 +810,7 @@ msgstr "Limit czasu oczekiwania na pomyślne ponowne uruchomienie zaplecza DNS."
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:16
 msgid ""
-"To keep your adblock lists up-to-date, you should setup an automatic update "
+"To keep your adblock lists up-to-date, you should set up an automatic update "
 "job for these lists."
 msgstr ""
 "Aby twoje listy były aktualne, powinieneś ustawić automatyczne zadanie "

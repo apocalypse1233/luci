@@ -1,8 +1,14 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-10-08 17:53+0000\n"
+"Last-Translator: Rayhan Nabi <rayhanjanam@gmail.com>\n"
+"Language-Team: Bengali (Bangladesh) <https://hosted.weblate.org/projects/"
+"openwrt/luciapplicationsmwan3/bn_BD/>\n"
 "Language: bn_BD\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:186
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:202
@@ -90,7 +96,7 @@ msgstr ""
 msgid "-- Interface Selection --"
 msgstr ""
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:84
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:85
 msgid "-- Please choose --"
 msgstr ""
 
@@ -130,7 +136,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:95
 msgid "Collecting data ..."
-msgstr ""
+msgstr "তথ্য সংগ্রহ করা হচ্ছে ..."
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:18
 msgid "Contents have been saved."
@@ -142,13 +148,13 @@ msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:32
 msgid "Debug"
-msgstr ""
+msgstr "ডিবাগ"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:51
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:61
 msgid "Destination address"
 msgstr ""
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:55
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:65
 msgid "Destination port"
 msgstr ""
 
@@ -159,7 +165,7 @@ msgstr ""
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:56
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/status/include/90_mwan3.js:65
 msgid "Disabled"
-msgstr ""
+msgstr "নিষ্ক্রিয়"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:242
 msgid ""
@@ -181,9 +187,9 @@ msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:31
 msgid "Enabled"
-msgstr ""
+msgstr "সক্রিয়"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:93
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:94
 msgid ""
 "Enables firewall rule logging (global mwan3 logging must also be enabled)"
 msgstr ""
@@ -202,7 +208,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:28
 msgid "Error"
-msgstr ""
+msgstr "ভুল"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/diagnostics.js:108
 msgid "Execute"
@@ -256,7 +262,7 @@ msgstr ""
 msgid "Hotplug ifup"
 msgstr ""
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:82
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:83
 msgid "IPset"
 msgstr ""
 
@@ -274,7 +280,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:44
 msgid "IPv6"
-msgstr ""
+msgstr "IPv6"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:39
 msgid "IPv6 only"
@@ -282,7 +288,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:31
 msgid "Info"
-msgstr ""
+msgstr "তথ্য"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:34
 msgid "Initial state"
@@ -295,7 +301,7 @@ msgstr ""
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/status/include/90_mwan3.js:100
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:64
 msgid "Interface"
-msgstr ""
+msgstr "ইন্টারফেস"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:227
 msgid "Interface down"
@@ -343,9 +349,9 @@ msgid ""
 msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:19
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:92
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:93
 msgid "Logging"
-msgstr ""
+msgstr "লগিং"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:22
 msgid "Loglevel"
@@ -355,8 +361,8 @@ msgstr ""
 msgid "Max TTL"
 msgstr ""
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:47
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:56
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:57
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:66
 msgid ""
 "May be entered as a single or multiple port(s) (eg \"22\" or \"80,443\") or "
 "as a portrange (eg \"1024:2048\") without quotes"
@@ -446,7 +452,7 @@ msgid ""
 "config/network."
 msgstr ""
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:83
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:84
 msgid ""
 "Name of IPset rule. Requires IPset rule in /etc/dnsmasq.conf (eg \"ipset=/"
 "youtube.com/youtube\")"
@@ -472,7 +478,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:74
 msgid "No"
-msgstr ""
+msgstr "না"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:20
 msgid "No MWAN interfaces found"
@@ -493,7 +499,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:30
 msgid "Notice"
-msgstr ""
+msgstr "নির্দেশনা"
 
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:96
 msgid "Notify"
@@ -503,13 +509,13 @@ msgstr ""
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:37
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/status/include/90_mwan3.js:45
 msgid "Offline"
-msgstr ""
+msgstr "অফলাইন"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/interface.js:37
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/status/overview.js:30
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/status/include/90_mwan3.js:39
 msgid "Online"
-msgstr ""
+msgstr "অনলাইন"
 
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:13
 msgid "Overview"
@@ -561,15 +567,15 @@ msgstr ""
 
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:80
 msgid "Policy"
-msgstr ""
+msgstr "নীতি"
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:96
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:97
 msgid "Policy assigned"
 msgstr ""
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:60
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:42
 msgid "Protocol"
-msgstr ""
+msgstr "প্রোটোকল"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/notify.js:35
 msgid ""
@@ -627,11 +633,11 @@ msgstr ""
 msgid "Seconds. Acceptable values: 1-1000000. Defaults to 600 if not set"
 msgstr ""
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:42
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:52
 msgid "Source address"
 msgstr ""
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:46
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:56
 msgid "Source port"
 msgstr ""
 
@@ -640,7 +646,7 @@ msgstr ""
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/status/include/90_mwan3.js:106
 #: applications/luci-app-mwan3/root/usr/share/luci/menu.d/luci-app-mwan3.json:21
 msgid "Status"
-msgstr ""
+msgstr "অবস্থা"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:70
 msgid "Sticky"
@@ -650,8 +656,8 @@ msgstr ""
 msgid "Sticky timeout"
 msgstr ""
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:43
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:52
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:53
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:62
 msgid "Supports CIDR notation (eg \"192.168.100.0/24\") without quotes"
 msgstr ""
 
@@ -741,13 +747,13 @@ msgstr ""
 msgid "Uptime"
 msgstr ""
 
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:61
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:43
 msgid "View the content of /etc/protocols for protocol description"
 msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/globals.js:29
 msgid "Warning"
-msgstr ""
+msgstr "সতর্কতা"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:38
 msgid ""
@@ -756,10 +762,10 @@ msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:73
 msgid "Yes"
-msgstr ""
+msgstr "হ্যাঁ"
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:41
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:103
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:104
 msgid "blackhole (drop)"
 msgstr ""
 
@@ -768,7 +774,7 @@ msgid "connected (mwan3)"
 msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:42
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:104
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:105
 msgid "default (use main routing table)"
 msgstr ""
 
@@ -785,6 +791,6 @@ msgid "ifup (netifd)"
 msgstr ""
 
 #: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js:40
-#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:102
+#: applications/luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/rule.js:103
 msgid "unreachable (reject)"
 msgstr ""

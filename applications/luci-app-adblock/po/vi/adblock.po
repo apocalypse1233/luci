@@ -391,7 +391,7 @@ msgstr ""
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:355
 msgid ""
 "Gather DNS related network traffic via tcpdump and provide a DNS Report on "
-"demand. Please note: this needs additional 'tcpdump-mini' package "
+"demand. Please note: this needs additional 'tcpdump' or 'tcpdump-mini' package "
 "installation and a full adblock service restart to take effect."
 msgstr ""
 
@@ -744,7 +744,7 @@ msgstr ""
 
 #: applications/luci-app-adblock/htdocs/luci-static/resources/view/adblock/overview.js:16
 msgid ""
-"To keep your adblock lists up-to-date, you should setup an automatic update "
+"To keep your adblock lists up-to-date, you should set up an automatic update "
 "job for these lists."
 msgstr ""
 
