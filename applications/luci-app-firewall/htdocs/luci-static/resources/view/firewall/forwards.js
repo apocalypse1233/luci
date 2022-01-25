@@ -281,12 +281,10 @@ return view.extend({
 		fwtool.addLimitOption(s);
 		fwtool.addLimitBurstOption(s);
 
-		if (!L.hasSystemFeature('firewall4')) {
-			o = s.taboption('advanced', form.Value, 'extra', _('Extra arguments'),
-				_('Passes additional arguments to iptables. Use with care!'));
-			o.modalonly = true;
-			o.rmempty = true;
-		}
+		o = s.taboption('advanced', form.Value, 'extra', _('Extra arguments'),
+			_('Passes additional arguments to iptables. Use with care!'));
+		o.modalonly = true;
+		o.rmempty = true;
 
 		return m.render();
 	}
