@@ -165,11 +165,7 @@ local methods = {
 			local ok, fd = pcall(io.open, "/usr/share/fw3/helpers.conf", "r")
 			local rv = {}
 
-			if not (ok and fd) then
-				ok, fd = pcall(io.open, "/usr/share/firewall4/helpers", "r")
-			end
-
-			if ok and fd then
+			if ok then
 				local entry
 
 				while true do
