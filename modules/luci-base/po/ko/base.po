@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-10 03:40+0200\n"
-"PO-Revision-Date: 2021-12-13 23:52+0000\n"
-"Last-Translator: Josef Schlehofer <pepe@bloodkings.eu>\n"
+"PO-Revision-Date: 2022-03-28 07:52+0000\n"
+"Last-Translator: dikastia <dikastia@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/openwrt/luci/ko/"
 ">\n"
 "Language: ko\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.10-dev\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:916
 msgid "%.1f dB"
@@ -246,7 +246,7 @@ msgstr ""
 msgid "A directory with the same name already exists."
 msgstr "이미 같은 이름의 디렉터리가 존재합니다."
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2636
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2638
 msgid "A new login is required since the authentication session expired."
 msgstr "인증 세션이 만료되어 새 로그인이 필요합니다."
 
@@ -663,7 +663,7 @@ msgstr ""
 msgid "Apply request failed with status <code>%h</code>"
 msgstr ""
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2156
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2158
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4106
 msgid "Apply unchecked"
 msgstr ""
@@ -700,7 +700,7 @@ msgstr ""
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:154
 msgid "Attempt to enable configured mount points for attached devices"
-msgstr ""
+msgstr "연결된 장치에 대해 설정된 마운트 연결 시도"
 
 #: protocols/luci-proto-openconnect/htdocs/luci-static/resources/protocol/openconnect.js:104
 #: protocols/luci-proto-vpnc/htdocs/luci-static/resources/protocol/vpnc.js:64
@@ -2030,7 +2030,7 @@ msgstr ""
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:191
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:313
 msgid "Filesystem"
-msgstr ""
+msgstr "파일 시스템"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:213
 msgid "Filter private"
@@ -2050,6 +2050,8 @@ msgid ""
 "Find all currently attached filesystems and swap and replace configuration "
 "with defaults based on what was detected"
 msgstr ""
+"현재 연결된 모든 파일/스왑 시스템을 찾고 감지된 항목에 따라 설정을 교체/기본"
+"값으로 바꿉니다."
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:813
 msgid "Find and join network"
@@ -2236,7 +2238,7 @@ msgstr "기본 설정"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:150
 msgid "Generate Config"
-msgstr ""
+msgstr "설정 생성"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1445
 msgid "Generate PMK locally"
@@ -2252,11 +2254,11 @@ msgstr ""
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:146
 msgid "Global Settings"
-msgstr ""
+msgstr "전역 설정"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:865
 msgid "Global network options"
-msgstr ""
+msgstr "전역 네트워크 옵션"
 
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:57
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:215
@@ -2947,7 +2949,7 @@ msgstr ""
 
 #: modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json:83
 msgid "LED Configuration"
-msgstr ""
+msgstr "LED 설정"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:961
 msgid "LLC"
@@ -3109,7 +3111,7 @@ msgstr "부하 평균"
 msgid "Loading directory contents…"
 msgstr ""
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:1939
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:1941
 #: modules/luci-base/luasrc/view/view.htm:4
 #: modules/luci-mod-status/luasrc/view/admin_status/index.htm:12
 msgid "Loading view…"
@@ -3458,7 +3460,7 @@ msgstr ""
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:227
 #: modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json:71
 msgid "Mount Points"
-msgstr ""
+msgstr "마운트 포인트"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:228
 msgid "Mount Points - Mount Entry"
@@ -3476,7 +3478,7 @@ msgstr ""
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:154
 msgid "Mount attached devices"
-msgstr ""
+msgstr "연결된 장치 마운트"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:162
 msgid "Mount filesystems not specifically configured"
@@ -4163,7 +4165,7 @@ msgstr ""
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:253
 msgid "Paste or drag SSH key file…"
-msgstr ""
+msgstr "SSH 키 파일 붙여넣기 또는 드래그…"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1483
 msgid "Path to CA-Certificate"
@@ -4189,7 +4191,7 @@ msgstr ""
 msgid "Path to inner Private Key"
 msgstr ""
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2697
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2699
 msgid "Paused"
 msgstr ""
 
@@ -4531,7 +4533,7 @@ msgstr "이 인터페이스를 재연결합니다"
 msgid "References"
 msgstr ""
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2691
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2693
 msgid "Refreshing"
 msgstr ""
 
@@ -4693,7 +4695,7 @@ msgstr ""
 msgid "Requires wpa-supplicant with SAE support"
 msgstr ""
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2175
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2177
 #: modules/luci-base/luasrc/view/sysauth.htm:39
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:17
 #: modules/luci-compat/luasrc/view/cbi/footer.htm:30
@@ -4819,7 +4821,7 @@ msgstr "기기 마운트 전에 파일시스템 검사 실행"
 msgid "Run filesystem check"
 msgstr "파일시스템 검사 실행"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2336
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2338
 msgid "Runtime error"
 msgstr "런타임 오류"
 
@@ -4868,7 +4870,7 @@ msgid "SWAP"
 msgstr ""
 
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2701
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2171
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2173
 #: modules/luci-compat/luasrc/view/cbi/error.htm:17
 #: modules/luci-compat/luasrc/view/cbi/footer.htm:26
 #: modules/luci-compat/luasrc/view/cbi/header.htm:17
@@ -4877,7 +4879,7 @@ msgstr ""
 msgid "Save"
 msgstr "저장"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2155
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2157
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4013
 #: modules/luci-compat/luasrc/view/cbi/footer.htm:22
 msgid "Save & Apply"
@@ -4959,7 +4961,7 @@ msgstr "서비스 유형"
 msgid "Services"
 msgstr "서비스"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2634
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2636
 msgid "Session expired"
 msgstr "세션 만료됨"
 
@@ -5758,7 +5760,7 @@ msgstr ""
 msgid "Timezone"
 msgstr "시간대"
 
-#: modules/luci-base/htdocs/luci-static/resources/luci.js:2644
+#: modules/luci-base/htdocs/luci-static/resources/luci.js:2646
 msgid "To login…"
 msgstr ""
 
@@ -6166,7 +6168,7 @@ msgstr ""
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/20_memory.js:36
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:194
 msgid "Used"
-msgstr ""
+msgstr "사용된"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1379
 msgid "Used Key Slot"
