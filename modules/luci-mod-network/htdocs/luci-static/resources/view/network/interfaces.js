@@ -13,6 +13,16 @@
 
 var isReadonlyView = !L.hasViewPermission() || null;
 
+function strcmp(a, b) {
+	if (a < b)
+		return -1;
+
+	if (a > b)
+		return 1;
+
+	return 0;
+}
+
 function count_changes(section_id) {
 	var changes = ui.changes.changes, n = 0;
 
@@ -535,7 +545,7 @@ return view.extend({
 				var protocols = network.getProtocols();
 
 				protocols.sort(function(a, b) {
-					return a.getProtocol() > b.getProtocol();
+					return strcmp(a.getProtocol(), b.getProtocol());
 				});
 
 				o = s.taboption('general', form.DummyValue, '_ifacestat_modal', _('Status'));
@@ -1253,7 +1263,7 @@ return view.extend({
 
 		s.cfgsections = function() {
 			var sections = uci.sections('network', 'device'),
-			    section_ids = sections.sort(function(a, b) { return a.name > b.name }).map(function(s) { return s['.name'] });
+			    section_ids = sections.sort(function(a, b) { return strcmp(a.name, b.name) }).map(function(s) { return s['.name'] });
 
 			for (var i = 0; i < netDevs.length; i++) {
 				if (sections.filter(function(s) { return s.name == netDevs[i].getName() }).length)
@@ -1450,7 +1460,7 @@ return view.extend({
 			    mac = dev ? dev.getMAC() : null;
 
 			return val ? E('strong', {
-				'data-tooltip': _('The value is overridden by configuration. Original: %s').format(mac || _('unknown'))
+				'data-tooltip': _('The value is overridden by configuration.')
 			}, [ val.toUpperCase() ]) : (mac || '-');
 		};
 
@@ -1462,7 +1472,7 @@ return view.extend({
 			    mtu = dev ? dev.getMTU() : null;
 
 			return val ? E('strong', {
-				'data-tooltip': _('The value is overridden by configuration. Original: %s').format(mtu || _('unknown'))
+				'data-tooltip': _('The value is overridden by configuration.')
 			}, [ val ]) : (mtu || '-').toString();
 		};
 
