@@ -126,7 +126,7 @@ function validateHostname(sid, s) {
 	if (s.length > 256)
 		return _('Expecting: %s').format(_('valid hostname'));
 
-	var labels = s.replace(/^\.+|\.$/g, '').split(/\./);
+	var labels = s.replace(/^\*?\.?|\.$/g, '').split(/\./);
 
 	for (var i = 0; i < labels.length; i++)
 		if (!labels[i].match(/^[a-z0-9_](?:[a-z0-9-]{0,61}[a-z0-9])?$/i))
@@ -156,13 +156,15 @@ function validateServerSpec(sid, s) {
 	if (s == null || s == '')
 		return true;
 
-	var m = s.match(/^(?:\/(.+)\/)?(.*)$/);
+	var m = s.match(/^(\/.*\/)?(.*)$/);
 	if (!m)
 		return _('Expecting: %s').format(_('valid hostname'));
 
-	var res = validateAddressList(sid, m[1]);
-	if (res !== true)
-		return res;
+	if (m[1] != '//' && m[1] != '/#/') {
+		var res = validateAddressList(sid, m[1]);
+		if (res !== true)
+			return res;
+	}
 
 	if (m[2] == '' || m[2] == '#')
 		return true;
@@ -231,7 +233,8 @@ return view.extend({
 		return Promise.all([
 			callHostHints(),
 			callDUIDHints(),
-			getDHCPPools()
+			getDHCPPools(),
+			network.getDevices()
 		]);
 	},
 
@@ -240,6 +243,7 @@ return view.extend({
 		    hosts = hosts_duids_pools[0],
 		    duids = hosts_duids_pools[1],
 		    pools = hosts_duids_pools[2],
+		    ndevs = hosts_duids_pools[3],
 		    m, s, o, ss, so;
 
 		m = new form.Map('dhcp', _('DHCP and DNS'),
@@ -250,6 +254,7 @@ return view.extend({
 		s.addremove = false;
 
 		s.tab('general', _('General Settings'));
+		s.tab('relay', _('Relay'));
 		s.tab('files', _('Resolv and Hosts Files'));
 		s.tab('pxe_tftp', _('PXE/TFTP Settings'));
 		s.tab('advanced', _('Advanced Settings'));
@@ -345,6 +350,66 @@ return view.extend({
 		o.optional = true;
 		o.placeholder = 'loopback';
 
+		o = s.taboption('relay', form.SectionValue, '__relays__', form.TableSection, 'relay', null,
+			_('Relay DHCP requests elsewhere. OK: v4↔v4, v6↔v6. Not OK: v4↔v6, v6↔v4.')
+			+ '<br />' + _('Note: you may also need a DHCP Proxy (currently unavailable) when specifying a non-standard Relay To port(<code>addr#port</code>).')
+			+ '<br />' + _('You may add multiple unique Relay To on the same Listen addr.'));
+
+		ss = o.subsection;
+
+		ss.addremove = true;
+		ss.anonymous = true;
+		ss.sortable  = true;
+		ss.rowcolors = true;
+		ss.nodescriptions = true;
+
+		so = ss.option(form.Value, 'id', _('ID'));
+		so.rmempty = false;
+		so.optional = true;
+
+		so = ss.option(widgets.NetworkSelect, 'interface', _('Interface'));
+		so.optional = true;
+		so.rmempty = false;
+		so.placeholder = 'lan';
+
+		so = ss.option(form.Value, 'local_addr', _('Listen address'));
+		so.rmempty = false;
+		so.datatype = 'ipaddr';
+
+		for (var family = 4; family <= 6; family += 2) {
+			for (var i = 0; i < ndevs.length; i++) {
+				var addrs = (family == 6) ? ndevs[i].getIP6Addrs() : ndevs[i].getIPAddrs();
+				for (var j = 0; j < addrs.length; j++)
+					so.value(addrs[j].split('/')[0]);
+			}
+		}
+
+		so = ss.option(form.Value, 'server_addr', _('Relay To address'));
+		so.rmempty = false;
+		so.optional = false;
+		so.placeholder = '192.168.10.1#535';
+
+		so.validate = function(section, value) {
+			var m = this.section.formvalue(section, 'local_addr'),
+			    n = this.section.formvalue(section, 'server_addr'),
+			    p;
+			if (n != null && n != '')
+			    p = n.split('#');
+				if (p.length > 1 && !/^[0-9]+$/.test(p[1]))
+					return _('Expected port number.');
+				else
+					n = p[0];
+
+			if ((m == null || m == '') && (n == null || n == ''))
+				return _('Both Listen addr and Relay To must be specified.');
+
+			if ((validation.parseIPv6(m) && validation.parseIPv6(n)) ||
+				validation.parseIPv4(m) && validation.parseIPv4(n))
+				return true;
+			else
+				return _('Listen and Relay To IP family must be homogeneous.')
+		};
+
 		s.taboption('files', form.Flag, 'readethers',
 			_('Use <code>/etc/ethers</code>'),
 			_('Read <code>/etc/ethers</code> to configure the DHCP server.'));
@@ -389,9 +454,20 @@ return view.extend({
 		o.default = o.enabled;
 
 		s.taboption('advanced', form.Flag, 'filterwin2k',
-			_('Filter useless'),
-			_('Avoid uselessly triggering dial-on-demand links (filters SRV/SOA records and names with underscores).') + '<br />' +
+			_('Filter SRV/SOA service discovery'),
+			_('Filters SRV/SOA service discovery, to avoid triggering dial-on-demand links.') + '<br />' +
 			_('May prevent VoIP or other services from working.'));
+
+		o = s.taboption('advanced', form.Flag, 'filter_aaaa',
+			_('Filter IPv6 AAAA records'),
+			_('Remove IPv6 addresses from the results and only return IPv4 addresses.') + '<br />' +
+			_('Can be useful if ISP has IPv6 nameservers but does not provide IPv6 routing.'));
+		o.optional = true;
+
+		o = s.taboption('advanced', form.Flag, 'filter_a',
+			_('Filter IPv4 A records'),
+			_('Remove IPv4 addresses from the results and only return IPv6 addresses.'));
+		o.optional = true;
 
 		s.taboption('advanced', form.Flag, 'localise_queries',
 			_('Localise queries'),

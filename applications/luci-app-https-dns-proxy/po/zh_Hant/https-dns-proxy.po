@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-18 16:08+0000\n"
-"Last-Translator: Hulen <shift0106@gmail.com>\n"
+"PO-Revision-Date: 2022-11-25 14:34+0000\n"
+"Last-Translator: James Tien <jamestien.1219@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "openwrt/luciapplicationshttps-dns-proxy/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -112,14 +112,16 @@ msgstr "BlahDNS - SG（新加坡）"
 msgid ""
 "Blocks access to Mozilla resolvers, forcing local devices to use router for "
 "DNS resolution (%smore information%s)."
-msgstr "阻止存取 Mozilla 解析器，強迫本地裝置使用路由器進行 DNS 解析 (%s更多資訊%s)。"
+msgstr ""
+"阻止存取 Mozilla 解析器，強迫本地裝置使用路由器進行 DNS 解析 (%s更多資訊%s)。"
 
 #: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:136
 msgid ""
 "Blocks access to iCloud Private Relay resolvers, forcing local devices to "
 "use router for DNS resolution (%smore information%s)."
-msgstr "阻止存取 iCloud 私人轉送，強迫本地裝置使用路由器進行 DNS 解析 "
-"(%s更多資訊%s)。"
+msgstr ""
+"阻止存取 iCloud 私人轉送，強迫本地裝置使用路由器進行 DNS 解析 (%s更多資"
+"訊%s)。"
 
 #: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/net.cfiec.dns.lua:3
 msgid "CFIEC Public DNS (IPv6 Only)"
@@ -242,7 +244,6 @@ msgid "DNSlify DNS"
 msgstr "DNSlify 域名解析"
 
 #: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:205
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:195
 msgid "DSCP Codepoint"
 msgstr "DSCP 代碼點"
 
@@ -318,7 +319,6 @@ msgstr ""
 "選取的 DoH 提供者 (%s更多資訊%s)。"
 
 #: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:148
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:138
 msgid "Instances"
 msgstr "例項"
 
@@ -347,12 +347,10 @@ msgid "LibreDNS - GR (No Ads)"
 msgstr "LibreDNS - GR (無廣告)"
 
 #: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:188
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:178
 msgid "Listen Address"
 msgstr "監聽位址"
 
 #: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:201
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:191
 msgid "Listen Port"
 msgstr "監聽連接埠"
 
@@ -393,7 +391,6 @@ msgid "OpenDNS (Family Shield)"
 msgstr "OpenDNS (家庭護盾)"
 
 #: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:209
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:199
 msgid "Proxy Server"
 msgstr "代理伺服器"
 
@@ -422,7 +419,6 @@ msgid "Reload"
 msgstr "重新載入"
 
 #: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:155
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:145
 msgid "Resolver"
 msgstr "解析程式"
 
@@ -478,6 +474,10 @@ msgstr "Tiarap Public DNS - 日本"
 msgid "Tiarap Public DNS - SG"
 msgstr "Tiarap Public DNS - 新加坡"
 
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/cn.edu.tsinghua.tuna.dns.lua:3
+msgid "Tsinghua University Secure DNS - CN"
+msgstr ""
+
 #: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:65
 msgid "Unknown Provider"
 msgstr "未知的提供商"
@@ -500,7 +500,7 @@ msgstr "和"
 
 #: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:101
 msgid "disabled"
-msgstr "已停用"
+msgstr "已禁用"
 
 #: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/cn.rubyfish.dns.lua:3
 msgid "rubyfish.cn"

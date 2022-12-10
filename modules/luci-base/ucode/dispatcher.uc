@@ -423,8 +423,23 @@ function build_pagetree() {
 	return tree;
 }
 
+function apply_tree_acls(node, acl) {
+	for (let name, spec in node?.children)
+		apply_tree_acls(spec, acl);
+
+	if (node?.depends?.acl) {
+		switch (check_acl_depends(node.depends.acl, acl["access-group"])) {
+		case null:  node.satisfied = false; break;
+		case false: node.readonly = true;   break;
+		}
+	}
+}
+
 function menu_json(acl) {
 	tree ??= build_pagetree();
+
+	if (acl)
+		apply_tree_acls(tree, acl);
 
 	return tree;
 }
@@ -749,10 +764,22 @@ function rollback_pending() {
 
 let dispatch;
 
+function render_action(fn) {
+	const data = render(fn);
+
+	http.write_headers();
+	http.output(data);
+}
+
 function run_action(request_path, lang, tree, resolved, action) {
 	switch (action?.type) {
 	case 'template':
-		runtime.render(action.path, {});
+		if (runtime.is_ucode_template(action.path))
+			runtime.render(action.path, {});
+		else
+			render_action(() => {
+				runtime.call('luci.dispatcher', 'render_lua_template', action.path);
+			});
 		break;
 
 	case 'view':
@@ -760,12 +787,12 @@ function run_action(request_path, lang, tree, resolved, action) {
 		break;
 
 	case 'call':
-		http.write(render(() => {
+		render_action(() => {
 			runtime.call(action.module, action.function,
 				...(action.parameters ?? []),
 				...resolved.ctx.request_args
 			);
-		}));
+		});
 		break;
 
 	case 'function':
@@ -774,30 +801,30 @@ function run_action(request_path, lang, tree, resolved, action) {
 		assert(type(mod[action.function]) == 'function',
 			`Module '${action.module}' does not export function '${action.function}'`);
 
-		http.write(render(() => {
+		render_action(() => {
 			call(mod[action.function], mod, runtime.env,
 				...(action.parameters ?? []),
 				...resolved.ctx.request_args
 			);
-		}));
+		});
 		break;
 
 	case 'cbi':
-		http.write(render(() => {
+		render_action(() => {
 			runtime.call('luci.dispatcher', 'invoke_cbi_action',
 				action.path, null,
 				...resolved.ctx.request_args
 			);
-		}));
+		});
 		break;
 
 	case 'form':
-		http.write(render(() => {
+		render_action(() => {
 			runtime.call('luci.dispatcher', 'invoke_form_action',
 				action.path,
 				...resolved.ctx.request_args
 			);
-		}));
+		});
 		break;
 
 	case 'alias':
@@ -834,7 +861,7 @@ dispatch = function(_http, path) {
 	let version = determine_version();
 	let lang = determine_request_language();
 
-	runtime = LuCIRuntime({
+	runtime = runtime || LuCIRuntime({
 		http,
 		ubus,
 		uci,
@@ -870,7 +897,8 @@ dispatch = function(_http, path) {
 		let resolved = resolve_page(menu, path);
 
 		runtime.env.ctx = resolved.ctx;
-		runtime.env.node = resolved.node;
+		runtime.env.dispatched = resolved.node;
+		runtime.env.requested ??= resolved.node;
 
 		if (length(resolved.ctx.auth)) {
 			let session = is_authenticated(resolved.ctx.auth);
@@ -894,15 +922,18 @@ dispatch = function(_http, path) {
 					http.header('X-LuCI-Login-Required', 'yes');
 
 					let scope = { duser: 'root', fuser: user };
+					let theme_sysauth = `themes/${basename(runtime.env.media)}/sysauth`;
 
-					try {
-						runtime.render(`themes/${basename(runtime.env.media)}/sysauth`, scope);
-					}
-					catch (e) {
-						runtime.render('sysauth', scope);
+					if (runtime.is_ucode_template(theme_sysauth) || runtime.is_lua_template(theme_sysauth)) {
+						try {
+							return runtime.render(theme_sysauth, scope);
+						}
+						catch (e) {
+							runtime.env.media_error = `${e}`;
+						}
 					}
 
-					return;
+					return runtime.render('sysauth', scope);
 				}
 
 				let cookie_name = (http.getenv('HTTPS') == 'on') ? 'sysauth_https' : 'sysauth_http',
@@ -925,6 +956,14 @@ dispatch = function(_http, path) {
 			resolved.ctx.authtoken ??= session.data?.token;
 			resolved.ctx.authuser ??= session.data?.username;
 			resolved.ctx.authacl ??= session.acls;
+
+			/* In case the Lua runtime was already initialized, e.g. by probing legacy
+			 * theme header templates, make sure to update the session ID of the uci
+			 * module. */
+			if (runtime.L) {
+				runtime.L.invoke('require', 'luci.model.uci');
+				runtime.L.get('luci', 'model', 'uci').invoke('set_session_id', session.sid);
+			}
 		}
 
 		if (length(resolved.ctx.acls)) {
