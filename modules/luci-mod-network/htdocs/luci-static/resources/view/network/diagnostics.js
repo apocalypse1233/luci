@@ -28,7 +28,7 @@ return view.extend({
 	handlePing: function(ev, cmd) {
 		var exec = cmd || 'ping',
 		    addr = ev.currentTarget.parentNode.previousSibling.value,
-		    args = (exec == 'ping') ? [ '-c', '5', '-W', '1', addr ] : [ '-c', '5', addr ];
+		    args = (exec == 'ping') ? [ '-c', '5', '-W', '1', addr ] : [ '-6', '-c', '5', addr ];
 
 		return this.handleCommand(exec, args);
 	},
@@ -36,7 +36,7 @@ return view.extend({
 	handleTraceroute: function(ev, cmd) {
 		var exec = cmd || 'traceroute',
 		    addr = ev.currentTarget.parentNode.previousSibling.value,
-		    args = (exec == 'traceroute') ? [ '-q', '1', '-w', '1', '-n', addr ] : [ '-q', '1', '-w', '2', '-n', addr ];
+		    args = (exec == 'traceroute') ? [ '-q', '1', '-w', '1', '-n', '-m', String(L.env.rpctimeout || 20), addr ] : [ '-q', '1', '-w', '2', '-n', addr ];
 
 		return this.handleCommand(exec, args);
 	},
