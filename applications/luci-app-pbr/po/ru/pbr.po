@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-01-28 16:35+0000\n"
+"PO-Revision-Date: 2023-04-11 15:37+0000\n"
 "Last-Translator: st7105 <st7105@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationspbr/ru/>\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: applications/luci-app-pbr/htdocs/luci-static/resources/pbr/status.js:179
 #: applications/luci-app-pbr/htdocs/luci-static/resources/pbr/status.js:219
@@ -42,7 +42,7 @@ msgstr "Добавить"
 
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:168
 msgid "Add Ignore Target"
-msgstr "Добавить Ignore в интерфейсы"
+msgstr "Добавить игнорируемую цель"
 
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:169
 msgid ""
@@ -138,12 +138,12 @@ msgstr "Отображать эти протоколы в строке прот�
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:109
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:110
 msgid "Dnsmasq ipset"
-msgstr "Dnsmasq ipset"
+msgstr "ipset Dnsmasq"
 
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:113
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:114
 msgid "Dnsmasq nft set"
-msgstr "Dnsmasq nft set"
+msgstr "nft set Dnsmasq"
 
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:77
 msgid "Do not enforce policies when their gateway is down"
@@ -158,7 +158,7 @@ msgstr "Включить"
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:189
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:267
 msgid "Enabled"
-msgstr "Включено"
+msgstr "Включен"
 
 #: applications/luci-app-pbr/htdocs/luci-static/resources/pbr/status.js:295
 msgid "Enabling %s service"
@@ -591,7 +591,7 @@ msgstr "Параметры веб-интерфейса"
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:224
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:225
 msgid "all"
-msgstr "все"
+msgstr "любой"
 
 #~ msgid "%s (disabled)"
 #~ msgstr "%s (отключено)"
