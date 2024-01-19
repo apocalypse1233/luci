@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-26 11:55+0000\n"
-"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
+"PO-Revision-Date: 2023-10-29 19:41+0000\n"
+"Last-Translator: semih <semiht@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsshadowsocks-libev/tr/>\n"
 "Language: tr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 5.2-dev\n"
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:45
 msgid "-- instance type --"
@@ -17,6 +17,10 @@ msgstr "-- örnek türü --"
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/shadowsocks-libev.js:225
 msgid "<hidden>"
 msgstr "<gizli>"
+
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:113
+msgid "ACL file"
+msgstr "ACL dosyası"
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:78
 msgid "Advanced Settings"
@@ -80,7 +84,7 @@ msgstr "Hedef Ayarları"
 msgid "Disable"
 msgstr "Devre dışı bırak"
 
-#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:139
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:145
 msgid "Disabled"
 msgstr "Devre dışı"
 
@@ -116,11 +120,11 @@ msgstr "TCP Hızlı Açmayı Etkinleştir"
 msgid "Enable TCP_NODELAY"
 msgstr "TCP_NODELAY'i etkinleştir"
 
-#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:132
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:138
 msgid "Enable/Disable"
 msgstr "Etkinleştir/Devre dışı bırak"
 
-#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:142
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:148
 msgid "Enabled"
 msgstr "Etkin"
 
@@ -129,8 +133,8 @@ msgid ""
 "Extra nftables expression for matching tcp traffics, e.g. \"tcp dport { 80, "
 "443 }\""
 msgstr ""
-"Eşleşen tcp trafikleri için ek nftables ifadesi, örn. \"tcp dport {80, 443 }"
-"\""
+"Eşleşen tcp trafikleri için ek nftables ifadesi, örn. \"tcp dport {80, "
+"443 }\""
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/rules.js:72
 msgid ""
@@ -146,6 +150,10 @@ msgstr "Ek tcp ifadesi"
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/rules.js:71
 msgid "Extra udp expression"
 msgstr "Ek udp ifadesi"
+
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:114
+msgid "File containing Access Control List"
+msgstr "Erişim Kontrol Listesini içeren dosya"
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/rules.js:98
 msgid ""
@@ -270,7 +278,7 @@ msgstr ""
 msgid "Only apply rules on packets from these network interfaces"
 msgstr "Kuralları yalnızca bu ağ arabirimlerinden gelen paketlere uygulayın"
 
-#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:115
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:121
 msgid "Overview"
 msgstr "Genel bakış"
 
@@ -312,7 +320,7 @@ msgstr "Uzak sunucu"
 msgid "Run as"
 msgstr "Olarak çalıştır"
 
-#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:127
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:133
 msgid "Running"
 msgstr "Çalışıyor"
 

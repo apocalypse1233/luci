@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-02-22 12:40+0000\n"
-"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"PO-Revision-Date: 2023-12-24 10:33+0000\n"
+"Last-Translator: Mc Giver <mcgivergim@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsshadowsocks-libev/es/>\n"
 "Language: es\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:45
 msgid "-- instance type --"
@@ -21,9 +21,13 @@ msgstr "-- tipo de instancia --"
 msgid "<hidden>"
 msgstr "<oculto>"
 
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:113
+msgid "ACL file"
+msgstr "Archivo ACL"
+
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:78
 msgid "Advanced Settings"
-msgstr "Configuración avanzada"
+msgstr "Ajustes avanzados"
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/rules.js:90
 msgid "Bypass ss-redir for packets with dst address in this list"
@@ -83,7 +87,7 @@ msgstr "Configuración de destino"
 msgid "Disable"
 msgstr "Desactivar"
 
-#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:139
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:145
 msgid "Disabled"
 msgstr "Desactivado"
 
@@ -119,11 +123,11 @@ msgstr "Activar TCP Fast Open"
 msgid "Enable TCP_NODELAY"
 msgstr "Activar TCP_NODELAY"
 
-#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:132
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:138
 msgid "Enable/Disable"
 msgstr "Activar/Desactivar"
 
-#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:142
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:148
 msgid "Enabled"
 msgstr "Activado"
 
@@ -150,6 +154,10 @@ msgstr "Expresión tcp adicional"
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/rules.js:71
 msgid "Extra udp expression"
 msgstr "Expresión UDP adicional"
+
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:114
+msgid "File containing Access Control List"
+msgstr "Archivo que contiene la lista de control de acceso"
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/rules.js:98
 msgid ""
@@ -283,7 +291,7 @@ msgstr ""
 msgid "Only apply rules on packets from these network interfaces"
 msgstr "Solo aplicar reglas en paquetes desde estas interfaces de red"
 
-#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:115
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:121
 msgid "Overview"
 msgstr "Visión general"
 
@@ -325,7 +333,7 @@ msgstr "Servidor remoto"
 msgid "Run as"
 msgstr "Correr como"
 
-#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:127
+#: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/instances.js:133
 msgid "Running"
 msgstr "Corriendo"
 
@@ -387,7 +395,7 @@ msgstr "Direccion del tunel"
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/shadowsocks-libev.js:191
 msgid "Verbose"
-msgstr "Verbosidad"
+msgstr "Detallado"
 
 #: applications/luci-app-shadowsocks-libev/htdocs/luci-static/resources/view/shadowsocks-libev/rules.js:51
 msgid "ss-redir for TCP"

@@ -198,7 +198,7 @@ var cbiFlagTristate = form.ListValue.extend({
 			this.vallist[0] = sysdef ? _('automatic (enabled)') : _('automatic (disabled)');
 		}
 
-		return this.super('renderWidget', [section_id, option_index, cfgvalue]);
+		return this.super('renderWidget', [section_id, option_index, cfgvalue ? cfgvalue + '!' : null]);
 	}
 });
 
@@ -475,7 +475,7 @@ return baseclass.extend({
 			    vid = this.section.formvalue(section_id, 'vid'),
 			    name = this.section.getUIElement(section_id, 'name_complex');
 
-			if (base && vid && name && !name.isChanged()) {
+			if (base && vid && name && !name.isChanged() && isNew) {
 				name.setValue('%s.%d'.format(base, vid));
 				name.triggerValidation();
 			}
@@ -724,7 +724,6 @@ return baseclass.extend({
 
 		o = this.replaceOption(s, 'devgeneral', cbiFlagTristate, 'ipv6', _('Enable IPv6'));
 		o.sysfs = '!/proc/sys/net/ipv6/conf/%s/disable_ipv6'.format(devname || 'default');
-		o.migrate = false;
 
 		o = this.replaceOption(s, 'devadvanced', cbiFlagTristate, 'ip6segmentrouting', _('Enable IPv6 segment routing'));
 		o.sysfs = '/proc/sys/net/ipv6/conf/%s/seg6_enabled'.format(devname || 'default');

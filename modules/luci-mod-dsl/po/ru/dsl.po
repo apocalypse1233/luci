@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-17 08:10+0000\n"
-"Last-Translator: st7105 <st7105@gmail.com>\n"
+"PO-Revision-Date: 2023-06-29 14:15+0000\n"
+"Last-Translator: sergio <sergio+it@outerface.net>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luci_modules_luci-mod-dsl/ru/>\n"
 "Language: ru\n"
@@ -9,10 +9,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.17-dev\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/stats.js:157
-msgid "ATM Header Error Code Errors (HEC-P)"
+msgid "ATM Header Error Control Errors (HEC-P)"
 msgstr "Ошибки кода заголовка ATM (HEC-P)"
 
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/stats.js:111
@@ -55,10 +55,6 @@ msgstr "Исправленные DTU (rtx-c)"
 msgid "Corrected by FEC (FEC-C)"
 msgstr "Исправлено FEC (FEC-C)"
 
-#: modules/luci-mod-dsl/root/usr/share/luci/menu.d/luci-mod-dsl.json:3
-msgid "DSL Status"
-msgstr "Состояние DSL"
-
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/spectrum.js:24
 msgid "DSL line spectrum"
 msgstr "Спектр линии DSL"
@@ -97,7 +93,7 @@ msgstr "Счетчики ошибок"
 
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/stats.js:139
 msgid "Error Seconds"
-msgstr "Секунды ошибки"
+msgstr "Продолжительность ошибок в секундах"
 
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/stats.js:142
 msgid "Errored Seconds (ES)"
@@ -283,9 +279,16 @@ msgstr "выкл"
 msgid "on"
 msgstr "вкл"
 
+#: modules/luci-mod-dsl/root/usr/share/luci/menu.d/luci-mod-dsl.json:3
+msgid "xDSL"
+msgstr "xDSL"
+
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/stats.js:104
 msgid "xTU-C Vendor ID"
 msgstr "Идентификатор поставщика xTU-C"
+
+#~ msgid "DSL Status"
+#~ msgstr "Состояние DSL"
 
 #~ msgid "Grant access to luci-mod-dsl spectrum"
 #~ msgstr "Предоставить доступ к спектру luci-mod-dsl"

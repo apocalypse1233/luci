@@ -158,6 +158,7 @@ config statistics 'collectd_load'
 
 config statistics 'collectd_memory'
 	option enable '1'
+	option HideFree '0'
 	option ValuesAbsolute '1'
 	option ValuesPercentage '0'
 
@@ -203,7 +204,8 @@ config statistics 'collectd_splash_leases'
 config statistics 'collectd_tcpconns'
 	option enable '0'
 	option ListeningPorts '0'
-	option LocalPorts '22 80'
+	list LocalPorts '22'
+	option AllPortsSummary '0'
 
 config statistics 'collectd_thermal'
 	option enable '0'
