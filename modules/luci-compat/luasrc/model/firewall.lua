@@ -461,6 +461,18 @@ function zone.get_color(self)
 		return "#90f090"
 	elseif self and self:name() == "wan" then
 		return "#f09090"
+	elseif self and self:name() == "vpn" then
+		return "#96ebe8"
+	elseif self and self:name() == "freewifi" then
+		return "#e3ed93"
+	elseif self and self:name() == "vpn_tap1" then
+		return "#ca8bb5"
+	elseif self and self:name() == "vpn_tap2" then
+		return "#8da0ee"
+	elseif self and self:name() == "cpe" then
+		return "#81f9d1"
+	elseif self and self:name() == "mngt" then
+		return "#bcb9bc"
 	elseif self then
 		math.randomseed(tpl.hash(self:name()))
 

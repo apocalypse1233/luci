@@ -56,6 +56,18 @@ function getColorForName(forName) {
 		return '#90f090';
 	else if (forName == 'wan')
 		return '#f09090';
+	else if (forName == 'vpn')
+		return '#96ebe8';
+	else if (forName == 'freewifi')
+		return '#e3ed93';
+	else if (forName == 'vpn_tap1')
+		return '#ca8bb5';
+	else if (forName == 'vpn_tap2')
+		return '#8da0ee';
+	else if (forName == 'cpe')
+		return '#81f9d1';
+	else if (forName == 'mngt')
+		return '#bcb9bc';
 
 	return random.derive_color(forName);
 }
