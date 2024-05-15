@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-01-18 05:15+0000\n"
+"PO-Revision-Date: 2024-05-07 16:02+0000\n"
 "Last-Translator: Džiugas J <dziugas1959@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsddns/lt/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5.4-rc\n"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:432
 msgid "\"../\" not allowed in path for Security Reason."
@@ -29,7 +29,7 @@ msgstr "Pažangūs nustatymai"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:401
 msgid "Allow non-public IP's"
-msgstr "Leisti neviešus „IP's“"
+msgstr "Leisti neviešus IP adresus"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:607
 msgid "Basic Settings"
@@ -149,7 +149,7 @@ msgstr "„DDns“ tarnyba"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:369
 msgid "DNS requests via TCP not supported"
-msgstr ""
+msgstr "„DNS“ prašymai per „TCP“ yra nepalaikomi"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:907
 msgid "DNS-Server"
@@ -193,7 +193,7 @@ msgstr ""
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:17
 msgid "Disabled"
-msgstr "Išjungtas/-i"
+msgstr "Išjungta/Neįgalinta (-as/-i)"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:737
 msgid "Domain"
@@ -220,7 +220,7 @@ msgstr "Įjungti/Įgalinti saugią komunikaciją su „DDNS“ tiekėju"
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:613
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1132
 msgid "Enabled"
-msgstr "Įjungta/-as"
+msgstr "Įjungta/Įgalinta (-as/-i)"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:949
 msgid "Error"
@@ -241,11 +241,11 @@ msgstr "Įvykio tinklas"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:838
 msgid "Example for IPv4"
-msgstr "„IPv4“ pavyzdys"
+msgstr "IPv4 pavyzdys"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:840
 msgid "Example for IPv6"
-msgstr "„IPv6“ pavyzdys"
+msgstr "IPv6 pavyzdys"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:958
 msgid "File"
@@ -261,11 +261,11 @@ msgstr ""
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:898
 msgid "Force IP Version"
-msgstr "Priversti „IP“ versiją"
+msgstr "Priversti IP versiją"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:358
 msgid "Force IP Version not supported"
-msgstr "„Priversti „IP“ versiją“ – yra nepalaikomas"
+msgstr "„Priversti IP versiją“ – yra nepalaikomas"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:988
 msgid "Force Interval"
@@ -285,7 +285,7 @@ msgstr "Formatas"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:910
 msgid "Format: IP or FQDN"
-msgstr "Formatas: „IP“ arba „FQDN“"
+msgstr "Formatas: IP arba „FQDN“"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:337
 msgid ""
@@ -299,7 +299,7 @@ msgstr "Pagrindiniai/Vieši nustatymai"
 
 #: applications/luci-app-ddns/root/usr/share/rpcd/acl.d/luci-app-ddns.json:3
 msgid "Grant access to ddns procedures"
-msgstr ""
+msgstr "Duoti prieigą prie „DDNS“ procedūrų"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:320
 msgid "HTTPS not supported"
@@ -311,17 +311,17 @@ msgstr ""
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:789
 msgid "IP address source"
-msgstr "„IP“ adreso šaltinis"
+msgstr "IP adreso šaltinis"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:511
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:630
 msgid "IP address version"
-msgstr "„IP“ adreso versija"
+msgstr "IP adreso versija"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:514
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:635
 msgid "IPv4-Address"
-msgstr "„IPv4-Adresas“"
+msgstr "IPv4-Adresas"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:933
 msgid "IPv6 address must be given in square brackets"
@@ -329,16 +329,16 @@ msgstr ""
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:311
 msgid "IPv6 is currently not (fully) supported by this system"
-msgstr "„IPv6“ dabartiniu metu, nepalaikoma (pilnai) šioje sistemoje"
+msgstr "IPv6 dabartiniu metu, nepalaikoma (pilnai) šioje sistemoje"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:310
 msgid "IPv6 not supported"
-msgstr "„IPv6“ yra nepalaikomas"
+msgstr "IPv6 yra nepalaikomas"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:516
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:637
 msgid "IPv6-Address"
-msgstr "„IPv6-Adresas“"
+msgstr "IPv6-Adresas"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:445
 msgid ""
@@ -363,7 +363,7 @@ msgstr ""
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:946
 msgid "Info"
-msgstr "Info"
+msgstr "Informacija"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:264
 msgid "Information"
@@ -387,7 +387,7 @@ msgstr "Įdiegti tarnybą"
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:795
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:845
 msgid "Interface"
-msgstr "Sąsaja ir Sietuvas"
+msgstr "Sąsaja ir/arba Sietuvas"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:989
 msgid "Interval to force updates send to DDNS Provider"
@@ -395,7 +395,7 @@ msgstr ""
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:980
 msgid "Interval unit to check for changed IP"
-msgstr ""
+msgstr "Intervalo vienetas, norint patikrinti dėl pakeisto IP"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1015
 msgid "Interval unit to force updates sent to DDNS Provider."
@@ -462,7 +462,7 @@ msgstr "Tinklas"
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:870
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:889
 msgid "Network on which the ddns-updater scripts will be started"
-msgstr ""
+msgstr "Tinklas, kuriame „ddns-updater“ skriptai bus vykdomi"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:216
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1141
@@ -566,7 +566,7 @@ msgstr "Kelias į „CA-Sertifikatas“"
 msgid ""
 "Please follow the instructions on OpenWrt's homepage to enable IPv6 support"
 msgstr ""
-"Prašome sekti instrukcijas telkiantis į „OpenWrt“ puslapį apie „IPv6“ "
+"Prašome sekti instrukcijas telkiantis į „OpenWrt“ puslapį apie IPv6 "
 "palaikymo įgalinimą"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1071
@@ -575,7 +575,7 @@ msgstr "Prašome paspausti [Skaityta] mygtuką"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1054
 msgid "Read / Reread log file"
-msgstr ""
+msgstr "Skaityti / Iš naujo perskaityti žurnalo failą"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:686
 msgid "Really switch service?"
@@ -584,15 +584,15 @@ msgstr "Ar tikrai pakeisti tarnybą?"
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1120
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/status/include/70_ddns.js:30
 msgid "Registered IP"
-msgstr "Registruotas „IP“"
+msgstr "Registruotas IP"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:575
 msgid "Reload"
-msgstr ""
+msgstr "Perleidimas/-sti"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:558
 msgid "Reload this service"
-msgstr ""
+msgstr "Perleisti šią tarnybą"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:738
 msgid "Replaces [DOMAIN] in Update-URL (URL-encoded)"
@@ -637,7 +637,7 @@ msgstr "Pasirinkti tarnybą"
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:660
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:680
 msgid "Service doesn't support this ip type"
-msgstr "Tarnyba nepalaiko šio „IP“ tipo"
+msgstr "Tarnyba nepalaiko šio IP tipo"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:659
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:670
@@ -743,7 +743,7 @@ msgstr ""
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:1141
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/status/include/70_ddns.js:38
 msgid "Unknown"
-msgstr "Nežinomas"
+msgstr "Nežinoma/-s/-i"
 
 #: applications/luci-app-ddns/htdocs/luci-static/resources/view/ddns/overview.js:301
 msgid "Update DDns Services List"

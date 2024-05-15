@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-01-09 10:43+0000\n"
+"PO-Revision-Date: 2024-05-10 07:37+0000\n"
 "Last-Translator: Džiugas J <dziugas1959@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationstransmission/lt/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5.4-rc\n"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:65
 msgid "Alternative download speed"
@@ -52,11 +52,11 @@ msgstr ""
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:174
 msgid "Binding address IPv4"
-msgstr "Pririšamas adresas „IPv4“"
+msgstr "Pririšamas adresas IPv4"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:176
 msgid "Binding address IPv6"
-msgstr "Pririšamas adresas „IPv6“"
+msgstr "Pririšamas adresas IPv6"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:86
 msgid "Block list enabled"
@@ -108,7 +108,7 @@ msgstr ""
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:47
 msgid "Enabled"
-msgstr "Įjungta/-as"
+msgstr "Įjungta/Įgalinta (-as/-i)"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:136
 msgid "Encryption"
@@ -160,7 +160,7 @@ msgstr ""
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:150
 msgid "Info"
-msgstr "Info"
+msgstr "Informacija"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:144
 msgid "LPD enabled"
@@ -180,7 +180,7 @@ msgstr "Pašaliniai"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:148
 msgid "None"
-msgstr "Joks"
+msgstr "Joks (-ia/-ie)"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:283
 msgid ""
@@ -191,7 +191,7 @@ msgstr ""
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:106
 msgid "Off"
-msgstr "Išjungta"
+msgstr "Išjungta/-s"
 
 #: applications/luci-app-transmission/htdocs/luci-static/resources/view/transmission.js:38
 msgid "Open Web Interface"

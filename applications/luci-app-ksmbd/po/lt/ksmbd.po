@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-01-08 01:06+0000\n"
+"PO-Revision-Date: 2024-05-07 16:02+0000\n"
 "Last-Translator: Džiugas J <dziugas1959@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsksmbd/lt/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5.4-rc\n"
 
 #: applications/luci-app-ksmbd/htdocs/luci-static/resources/view/ksmbd.js:100
 msgid "Allow guests"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: applications/luci-app-ksmbd/htdocs/luci-static/resources/view/ksmbd.js:54
 msgid "Description"
-msgstr "Aprašymas"
+msgstr "Aprašas/-ymas"
 
 #: applications/luci-app-ksmbd/htdocs/luci-static/resources/view/ksmbd.js:122
 msgid "Directory mask"
@@ -81,11 +81,13 @@ msgstr "Įsisavinti/Paveldėti savininką"
 
 #: applications/luci-app-ksmbd/htdocs/luci-static/resources/view/ksmbd.js:36
 msgid "Interface"
-msgstr "Sąsaja ir Sietuvas"
+msgstr "Sąsaja ir/arba Sietuvas"
 
 #: applications/luci-app-ksmbd/htdocs/luci-static/resources/view/ksmbd.js:37
 msgid "Listen only on the given interface or, if unspecified, on lan"
 msgstr ""
+"Laukti (-iama/-s) prisijungimo/jungties ryšio tik ant pateiktos sąsajos ir/"
+"ar sietuvo arba, jei nenustatyta/-s/-i, ant „lan“"
 
 #: applications/luci-app-ksmbd/htdocs/luci-static/resources/view/ksmbd.js:78
 msgid "Name"
@@ -121,6 +123,9 @@ msgid ""
 "('|') should not be changed. They get their values from the 'General "
 "Settings' tab."
 msgstr ""
+"Čia yra „/etc/ksmbd/ksmbd.conf.template“ failo turinys iš kurio Jūsų „ksmbd“ "
+"konfigūracija bus sugeneruota. Reikšmės apibrėžtas simboliu – ('|') neturėtų "
+"būti pakeisti. Jie gauna savo reikšmes iš „Bendrųjų nustatymų“ skyrelio."
 
 #: applications/luci-app-ksmbd/htdocs/luci-static/resources/view/ksmbd.js:51
 msgid "Workgroup"
