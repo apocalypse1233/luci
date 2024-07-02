@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-03-20 03:44+0000\n"
-"Last-Translator: Džiugas J <dziugas1959@hotmail.com>\n"
+"PO-Revision-Date: 2024-06-22 23:09+0000\n"
+"Last-Translator: \"Džiugas Jan.\" <dziugas1959@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsfirewall/lt/>\n"
 "Language: lt\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.6-rc\n"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:48
 msgid ""
@@ -222,8 +222,9 @@ msgid ""
 "those bits set in the mask are zeroed out."
 msgstr ""
 "Taikyti duotosios vertės ir esamos žymos reikšmės bitinį „XOR“ sukurtiems "
-"ryšiams. Formatas yra „value[/mask]“. Jei nurodyta kaukė, tada tie kaukėje "
-"nustatyti bitai yra nuliniai."
+"ryšiams. Formatas yra „value[/mask]“. Jei nurodyta tinklavimo „kaukė“ – "
+"adresų segregatorius, tada tinklavimo „kaukėje“ – adresų segregatoriuje "
+"nustatyti bitai yra – nuliniai."
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/tools/firewall.js:264
 msgid "Apply the given DSCP class or value to established connections."
@@ -377,7 +378,7 @@ msgstr ""
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:210
 msgid "Enabled"
-msgstr "Įjungta/Įgalinta (-as)"
+msgstr "Įjungta/Įgalinta (-as/-i)"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:204
 msgid "Enables packet and byte count tracking for the set."
@@ -843,7 +844,7 @@ msgstr "Vardas/Pavadinimas"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:165
 msgid "Netmask"
-msgstr "„Tinklo kaukė – „Netmask““"
+msgstr "Tinklavimo „net-kaukė“ – 32-bitų adresas, IP užmaskãvimas"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:274
 msgid "Only match incoming traffic directed at the given IP address."
@@ -1030,8 +1031,9 @@ msgid ""
 "Set the given mark value on established connections. Format is value[/mask]. "
 "If a mask is specified then only those bits set in the mask are modified."
 msgstr ""
-"Nustatyti nurodytą žymos reikšmę užmegztiems ryšiams. Formatas yra reikšmė[/"
-"kaukė] („value[/mask]“). Jei nurodyta kaukė, keičiami tik tie kaukėje "
+"Nustatyti nurodytą žymos reikšmę užmegztiems ryšiams. Formatas yra – "
+"reikšmė[/mask] („value[/mask]“). Jei nurodyta tinklavimo „kaukė“ – adresų "
+"segregatorius, keičiami tik tie tinklavimo „kaukėje“ – adresų segregatoriuje "
 "nustatyti bitai."
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:84
@@ -1437,7 +1439,7 @@ msgstr "diena"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:92
 msgid "dest_ip: Destination IP"
-msgstr "dest_ip: Paskirties IP adresas"
+msgstr "„dest_ip“: Paskirties IP adresas"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:94
 msgid "dest_mac: Destination MAC addr"
@@ -1445,15 +1447,15 @@ msgstr "dest_mac: Paskirties „MAC“ adresas"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:95
 msgid "dest_net: Destination (sub)net"
-msgstr "dest_net: Paskirties „(sub)net“"
+msgstr "„dest_net“: Paskirties „(sub)net“"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:93
 msgid "dest_port: Destination Port"
-msgstr "dest_port: Paskirties Prievadas"
+msgstr "„dest_port“: Paskirties Prievadas"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:97
 msgid "dest_set: Destination ipset*"
-msgstr "dest_set: Paskirties „ipset“*"
+msgstr "„dest_set“: Paskirties „ipset“*"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/snats.js:311
 msgid "do not rewrite"
@@ -1461,7 +1463,7 @@ msgstr "neperrašyti"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:416
 msgid "don't track"
-msgstr "Nesekti"
+msgstr "nesekti"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:413
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:69
@@ -1496,7 +1498,7 @@ msgstr "valanda"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:80
 msgid "ip: IP addr"
-msgstr "ip: IP adresas"
+msgstr "„ip“: IP adresas"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:152
 msgid "ip[/cidr]<br />"
@@ -1509,7 +1511,7 @@ msgstr ""
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:69
 msgid "ipv4"
-msgstr "„ipv4“"
+msgstr "ipv4"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:132
 msgid "list"
@@ -1517,7 +1519,7 @@ msgstr "sąrašas"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:82
 msgid "mac: MAC addr"
-msgstr "mac: „MAC“ adresas"
+msgstr "„mac“: „MAC“ adresas"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:107
 msgid "macaddr|ip[/cidr]<br />"
@@ -1531,11 +1533,11 @@ msgstr "minutė"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:83
 msgid "net: (sub)net"
-msgstr "tinklas: (po)tinklis"
+msgstr "„net“: (po)tinklis/tinklas"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:81
 msgid "port: Port"
-msgstr "port: Prievadas"
+msgstr "„port“: Prievadas"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/rules.js:415
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/zones.js:68
@@ -1571,7 +1573,7 @@ msgstr "„src_net“: Šaltinio (po)tinklis"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/ipsets.js:87
 msgid "src_port: Source Port"
-msgstr "src_port: Šaltinio prievadas"
+msgstr "„src_port“: Šaltinio prievadas"
 
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:53
 #: applications/luci-app-firewall/htdocs/luci-static/resources/view/firewall/forwards.js:62
