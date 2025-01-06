@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-06-25 19:21+0000\n"
-"Last-Translator: \"Džiugas Jan.\" <dziugas1959@hotmail.com>\n"
+"PO-Revision-Date: 2024-10-18 12:58+0000\n"
+"Last-Translator: Džiugas Januševičius <dziugas1959@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsaria2/lt/>\n"
 "Language: lt\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.6-rc\n"
+"X-Generator: Weblate 5.8-rc\n"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:433
 msgid "<abbr title=\"Local Peer Discovery\">LPD</abbr> enabled"
@@ -25,7 +25,7 @@ msgstr "Papildomas „BT sekiklis“"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:556
 msgid "Advanced Options"
-msgstr "Pažangūs pasirinkimai"
+msgstr "Pažangios parinktys"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:309
 msgid "All proxy"
@@ -48,8 +48,8 @@ msgid ""
 "Aria2 is a lightweight multi-protocol &amp; multi-source, cross platform "
 "download utility."
 msgstr ""
-"„Aria2“ yra supaprastintas daugiaprotokolinis &amp; daugumos/kelių šaltinių "
-"ir tarpplatforminis atsisiuntimo įrankis."
+"„Aria2“ yra supaprastintas daugia-protokolinis; daugumos/kelių šaltinių ir "
+"tarp-platforminis atsisiuntimo įrankis."
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:565
 msgid "Auto save interval"
@@ -57,7 +57,7 @@ msgstr "Automatiško išsaugojimo intervalas"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:204
 msgid "Basic Options"
-msgstr "Įprasti pasirinkimai"
+msgstr "Įprastos parinktys"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:413
 msgid "BitTorrent Options"
@@ -111,7 +111,7 @@ msgstr "Konfigūracijos failo turinys: <code>%s</code>"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/files.js:48
 msgid "Content of session file: <code>%s</code>"
-msgstr "Sesijos failo turinys: <code>%s</code>"
+msgstr "Seanso failo turinys: <code>%s</code>"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:478
 msgid "DHT Listen port"
@@ -182,7 +182,7 @@ msgstr "Įjungti/Įgalinti įgaliotąjį/-us"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:206
 msgid "Enabled"
-msgstr "Įjungta/Įgalinta (-as/-i)"
+msgstr "Įjungta/Įgalinta (-s/-i)"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:234
 msgid "Error"
@@ -300,7 +300,7 @@ msgstr "„syslog“ failo paskutinės 50-imt eilučių:"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:210
 msgid "Leave blank to use default user."
-msgstr "Palikite tuščią, norint naudoti numatytąjį vartotoją."
+msgstr "Palikite tuščią, norint naudoti numatytąjį naudotoją/vartotoją."
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:552
 msgid "List of additional BitTorrent tracker's announce URI."
@@ -433,7 +433,7 @@ msgstr "Įgaliotojo slaptažodis"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:314
 msgid "Proxy user"
-msgstr "Įgaliotojo vartotojas"
+msgstr "Įgaliotojo naudotojas/vartotojas"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:240
 msgid "RPC Options"
@@ -478,7 +478,7 @@ msgstr ""
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:262
 msgid "RPC username"
-msgstr "„RPC“ slapyvardis/vartotojo vardas"
+msgstr "„RPC“ naudotojo/vartotojo vardas (t.y. slapyvardis)"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/log.js:62
 msgid "Refresh every %s seconds."
@@ -508,7 +508,7 @@ msgstr "Pakartojimo laukimas"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:209
 msgid "Run daemon as user"
-msgstr "Vykdyti „daemon“ kaip vartotoją"
+msgstr "Vykdyti paslaugų teikimo sistema kaip naudotojas/vartotojas"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:194
 msgid "Running Status"
@@ -685,7 +685,7 @@ msgid ""
 "it blocks aria2 entirely until allocation finishes."
 msgstr ""
 "Nurodyti failų paskirstymo metodą. Jei naudojate naujesnes failų sistemas, "
-"tokias kaip „ext4“ (su apimties/failo fragmento palaikymu), „btrfs, „xfs“ "
+"tokias kaip „ext4“ (su apimties/failo nuotrupos palaikymu), „btrfs, „xfs“ "
 "arba „NTFS“ (tik „MinGW“ darinio versija), tada „falloc“ yra geriausias "
 "pasirinkimas. Jis beveik akimirksniu paskiria didelius (kelių GiB) failus, "
 "bet gali būti nepasiekiamas, jei Jūsų sistemoje nėra „posix_fallocate(3)“ "
@@ -765,7 +765,7 @@ msgstr "„Aria2“ tarnyba veikia."
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:217
 msgid "The directory to store the config file, session file and DHT file."
-msgstr "Katalogas kuriame laikomi konfigūracijos, sesijos ir „DHT“ failai."
+msgstr "Katalogas kuriame laikomi konfigūracijos, seanso ir „DHT“ failai."
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:213
 msgid ""
@@ -825,10 +825,10 @@ msgid ""
 "PKCS12 files with a blank import password can be opened!<br/>When using PEM, "
 "you have to specify the \"RPC private key\" as well."
 msgstr ""
-"Naudoti „RPC“ serverio „FAILO“ sertifikatą. Sertifikatas turi būti "
-"„PKCS12“ („.p12“, „.pfx“) arba „PEM“ formato.<br/>„PKCS12“ failuose turi "
-"būti sertifikatas, kodas/šifras/raktas ir pasirinktinai papildomų "
-"sertifikatų grandinė. Tik „PKCS12“ failus galima atidaryti su tuščiu importo "
+"Naudoti „RPC“ serverio „FAILO“ sertifikatą. Sertifikatas turi būti „PKCS12“ "
+"(„.p12“, „.pfx“) arba „PEM“ formato.<br/>„PKCS12“ failuose turi būti "
+"sertifikatas, kodas/šifras/raktas ir pasirinktinai papildomų sertifikatų "
+"grandinė. Tik „PKCS12“ failus galima atidaryti su tuščiu importo "
 "slaptažodžiu!<br/>Naudodami „PEM“, turite nurodyti – „RPC privatųjį raktą“ "
 "taip pat."
 
@@ -866,11 +866,11 @@ msgstr ""
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:408
 msgid "User agent"
-msgstr "Vartotojo/Naudotojo agentas"
+msgstr "Naudotojo/Vartotojo agentas"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:259
 msgid "Username & Password"
-msgstr "Vartotojo vardas ir slaptažodis"
+msgstr "Naudotojo/Vartotojo vardas (t.y. Slapyvardis) ir slaptažodis"
 
 #: applications/luci-app-aria2/htdocs/luci-static/resources/view/aria2/config.js:323
 msgid ""

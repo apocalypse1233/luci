@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-01-07 15:21+0000\n"
-"Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
+"PO-Revision-Date: 2024-10-14 17:15+0000\n"
+"Last-Translator: hmzs <hmzs@1szer1.hu>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsprivoxy/hu/>\n"
 "Language: hu\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10.1-dev\n"
+"X-Generator: Weblate 5.8-rc\n"
 
 #: applications/luci-app-privoxy/luasrc/model/cbi/privoxy.lua:236
 msgid ""
@@ -414,7 +414,7 @@ msgstr "Rendszerindítási reklámcsík és figyelmeztetések."
 
 #: applications/luci-app-privoxy/luasrc/model/cbi/privoxy.lua:455
 msgid "Syntax:"
-msgstr "Szintaxis:"
+msgstr "Elrendezés:"
 
 #: applications/luci-app-privoxy/luasrc/model/cbi/privoxy.lua:786
 msgid "Syntax: Client header names delimited by spaces."

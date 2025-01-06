@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-07-22 17:43-0300\n"
-"PO-Revision-Date: 2023-10-20 00:56+0000\n"
-"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"PO-Revision-Date: 2024-11-01 07:42+0000\n"
+"Last-Translator: Franco Castillo <castillofrancodamian@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsattendedsysupgrade/es/>\n"
 "Language: es\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.8.2-dev\n"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/configuration.js:21
 msgid "Address"
@@ -37,7 +37,7 @@ msgstr "Configuración de actualización asistida."
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:521
 msgid "Board Name / Profile"
-msgstr "Nombre de Placa / Perfil"
+msgstr "Nombre de placa / Perfil"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:132
 msgid "Build Date"
@@ -160,7 +160,7 @@ msgstr ""
 
 #: applications/luci-app-attendedsysupgrade/root/usr/share/luci/menu.d/luci-app-attendedsysupgrade.json:15
 msgid "Overview"
-msgstr "Visión general"
+msgstr "Descripción general"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:522
 msgid "Packages"
@@ -208,7 +208,7 @@ msgstr "Solicitud en la posición %s de la cola de compilación"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:122
 msgid "SHA256"
-msgstr "SHA256"
+msgstr "SHA-256"
 
 #: applications/luci-app-attendedsysupgrade/htdocs/luci-static/resources/view/attendedsysupgrade/overview.js:636
 msgid "Search for firmware upgrade"
