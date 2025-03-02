@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-10-16 19:05+0000\n"
-"Last-Translator: Lorekin <lorekine@outlook.com>\n"
+"PO-Revision-Date: 2025-02-15 16:12+0000\n"
+"Last-Translator: Alexander <dmitriev8925@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsmosquitto/ru/>\n"
 "Language: ru\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.8-rc\n"
+"X-Generator: Weblate 5.10\n"
 
 #: applications/luci-app-mosquitto/htdocs/luci-static/resources/view/mosquitto/mosquitto.js:60
 msgid "Allow anonymous connections"
@@ -129,7 +129,7 @@ msgstr "Запретить удаленный доступ к этому бро�
 
 #: applications/luci-app-mosquitto/htdocs/luci-static/resources/view/mosquitto/mosquitto.js:9
 msgid "Enabled"
-msgstr "Включен"
+msgstr "Включено"
 
 #: applications/luci-app-mosquitto/root/usr/share/rpcd/acl.d/luci-app-mosquitto.json:3
 msgid "Grant UCI access for luci-app-mosquitto"
@@ -163,8 +163,8 @@ msgid ""
 "unchecked, mosquitto runs with the config in %s (and this page is ignored)."
 msgstr ""
 "Если флажок установлен, mosquitto запускается с конфигом, сгенерированным на "
-"этой странице. Если флажок снят, mosquitto запускается с конфигурацией в %s ("
-"и эта страница игнорируется)."
+"этой странице. Если флажок снят, mosquitto запускается с конфигурацией в %s "
+"(и эта страница игнорируется)."
 
 #: applications/luci-app-mosquitto/htdocs/luci-static/resources/view/mosquitto/mosquitto.js:170
 msgid "Keep-alive interval for this bridge"
@@ -410,14 +410,3 @@ msgstr "тема"
 #: applications/luci-app-mosquitto/htdocs/luci-static/resources/view/mosquitto/mosquitto.js:145
 msgid "unique name for this bridge configuration"
 msgstr "уникальное имя для этой конфигурации моста"
-
-#~ msgid "Only hex numbers are allowed (use A-F characters and 0-9 digits)"
-#~ msgstr ""
-#~ "Допускаются только шестнадцатеричные числа (используйте символы A-F и "
-#~ "цифры 0-9)"
-
-#~ msgid "Please enter a hostname or an IP address"
-#~ msgstr "Введите имя хоста или IP-адрес"
-
-#~ msgid "Please enter a valid port after the :"
-#~ msgstr "Пожалуйста, введите действительный порт после :"

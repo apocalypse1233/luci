@@ -38,15 +38,15 @@ msgstr ""
 msgid "AdGuardHome ipset"
 msgstr "IP setare AdGuard Home"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:168
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:177
 msgid "Add"
 msgstr "Adăugați"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:225
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:234
 msgid "Add Ignore Target"
 msgstr "Adăugați Ignoră Ținta"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:227
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:236
 msgid ""
 "Adds 'ignore' to the list of interfaces for policies. See the %sREADME%s for "
 "details."
@@ -62,27 +62,23 @@ msgstr "Configurație avansată"
 msgid ""
 "Allows to specify the list of interface names (in lower case) to be "
 "explicitly supported by the service. Can be useful if your OpenVPN tunnels "
-"have dev option other than tun* or tap*."
+"have dev option other than tun* or tap* or specific use cases of WireGuard "
+"servers. See the %sREADME%s for details."
 msgstr ""
-"Permite specificarea listei de nume de interfețe (în minuscule) care trebuie "
-"să fie acceptate în mod explicit de către serviciu. Poate fi util dacă "
-"tunelurile OpenVPN au opțiunea dev, alta decât tun* sau tap*."
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:155
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:159
 msgid ""
-"Allows to specify the list of interface names (in lower case) to be ignored "
-"by the service. Can be useful if running both VPN server and VPN client on "
-"the router."
+"Allows to specify the list of interface names (lower case) to be ignored by "
+"the service. Can be useful for an OpenVPN server running on OpenWrt device. "
+"WireGuard servers, which have a listen_port defined, are handled "
+"automatically, do not add those here.See the %sREADME%s for details."
 msgstr ""
-"Permite specificarea listei de nume de interfețe (în minuscule) care trebuie "
-"ignorate de serviciu. Poate fi util dacă se execută atât serverul VPN, cât "
-"și clientul VPN pe router."
 
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:43
 msgid "Basic Configuration"
 msgstr "Configurație de Bază"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:312
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:321
 msgid "Chain"
 msgstr "Legătură"
 
@@ -103,7 +99,7 @@ msgid "Controls both system log and console output verbosity."
 msgstr ""
 "Controlează atât jurnalul de sistem, cât și verbalitatea ieșirii în consolă."
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:393
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:402
 msgid "Custom User File Includes"
 msgstr "Fișierul de utilizator personalizat include"
 
@@ -112,19 +108,19 @@ msgid "Custom user file '%s' not found or empty"
 msgstr ""
 "Fișierul de utilizator personalizat \"%s\" nu a fost găsit sau este gol"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:331
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:340
 msgid "DNS Policies"
 msgstr ""
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:384
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:393
 msgid "DSCP Tag"
 msgstr "Etichetă DSCP"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:371
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:380
 msgid "DSCP Tagging"
 msgstr "Etichetarea DSCP"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:176
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:185
 msgid "Default ICMP Interface"
 msgstr "Interfață ICMP implicită"
 
@@ -142,7 +138,7 @@ msgstr "Dezactivați"
 
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:114
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:134
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:233
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:242
 msgid "Disabled"
 msgstr "Dezactivat"
 
@@ -150,7 +146,7 @@ msgstr "Dezactivat"
 msgid "Disabling %s service"
 msgstr "Dezactivarea serviciului %s"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:243
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:252
 msgid "Display these protocols in protocol column in Web UI."
 msgstr "Afișați aceste protocoale în coloana Protocol din Web UI."
 
@@ -181,10 +177,10 @@ msgid "Enable"
 msgstr "Activează"
 
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:135
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:234
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:265
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:345
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:406
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:243
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:274
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:354
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:415
 msgid "Enabled"
 msgstr "activat"
 
@@ -200,7 +196,7 @@ msgstr "Eroare la rularea fișierului de utilizator personalizat \"%s"
 msgid "Errors encountered, please check the %sREADME%s"
 msgstr ""
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:210
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:219
 msgid ""
 "FW Mask used by the service. High mask is used to avoid conflict with SQM/"
 "QoS. Change with caution together with"
@@ -236,7 +232,7 @@ msgstr "A eșuat la configurarea \"%s"
 msgid "Failed to set up any gateway"
 msgstr "Nu a reușit să configureze nicio poartă de acces"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:177
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:186
 msgid "Force the ICMP protocol interface."
 msgstr "Forțează interfața protocolului ICMP."
 
@@ -248,7 +244,7 @@ msgstr "Acordă acces la UCI și fișiere pentru luci-app-pbr"
 msgid "IPv6 Support"
 msgstr "Suport IPv6"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:153
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:157
 msgid "Ignored Interfaces"
 msgstr "Interfețe ignorate"
 
@@ -270,7 +266,7 @@ msgid ""
 "support"
 msgstr ""
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:169
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:178
 msgid "Insert"
 msgstr "Introduceți"
 
@@ -286,7 +282,7 @@ msgstr ""
 msgid "Installed AdGuardHome (%s) doesn't support 'ipset_file' option."
 msgstr "AdGuardHome instalat (%s) nu acceptă opțiunea 'ipset_file'."
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:321
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:330
 msgid "Interface"
 msgstr "Interfață"
 
@@ -302,12 +298,12 @@ msgstr "Configurație OpenVPN invalidă pentru interfața %s"
 msgid "Invalid OpenVPN config for '%s' interface"
 msgstr ""
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:271
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:352
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:280
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:361
 msgid "Local addresses / devices"
 msgstr "Adrese / dispozitive locale"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:277
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:286
 msgid "Local ports"
 msgstr "Porturi locale"
 
@@ -319,12 +315,12 @@ msgstr ""
 msgid "Mode"
 msgstr ""
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:269
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:349
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:278
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:358
 msgid "Name"
 msgstr "Nume"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:252
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:261
 msgid ""
 "Name, interface and at least one other field are required. Multiple local "
 "and remote addresses/devices/domains and ports can be space separated. "
@@ -332,14 +328,14 @@ msgid ""
 "fields are left blank. For more information on options, check the %sREADME%s."
 msgstr ""
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:333
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:342
 msgid ""
 "Name, local address and remote DNS fields are required. Multiple local "
 "addresses/devices can be space separated. For more information on options, "
 "check the %sREADME%s."
 msgstr ""
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:179
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:188
 msgid "No Change"
 msgstr "Nici o schimbare"
 
@@ -352,7 +348,7 @@ msgstr "Nu este instalat sau nu a fost găsit"
 msgid "Output verbosity"
 msgstr "Verbalizarea ieșirii"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:411
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:420
 msgid "Path"
 msgstr "Cale"
 
@@ -395,7 +391,7 @@ msgstr ""
 "Vă rugăm să dezactivați 'src_addr', 'src_port' și 'dest_port' pentru "
 "politica '%s'"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:250
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:259
 msgid "Policies"
 msgstr "Politici"
 
@@ -436,7 +432,7 @@ msgstr "Rutare bazată pe politici - Stare"
 msgid "Policy Routing"
 msgstr "Politica de rutare"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:295
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:304
 msgid "Protocol"
 msgstr "Protocol"
 
@@ -449,15 +445,15 @@ msgstr ""
 msgid "Refer to https://docs.openwrt.melmac.net/pbr/#procd_wan_interface"
 msgstr ""
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:359
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:368
 msgid "Remote DNS"
 msgstr ""
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:283
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:292
 msgid "Remote addresses / domains"
 msgstr "Adrese / domenii la distanță"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:289
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:298
 msgid "Remote ports"
 msgstr "Porturi la distanță"
 
@@ -499,11 +495,11 @@ msgstr "Reporniți"
 msgid "Restarting %s service"
 msgstr "Repornirea serviciului %s"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:165
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:174
 msgid "Rule Create option"
 msgstr "Opțiunea de creare a regulilor"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:395
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:404
 msgid ""
 "Run the following user files after setting up but before restarting DNSMASQ. "
 "See the %sREADME%s for details."
@@ -519,7 +515,7 @@ msgstr "Rulare"
 msgid "See the %sREADME%s for details."
 msgstr "Consultați %sREADME%s pentru detalii."
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:166
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:175
 msgid "Select Add for -A/add and Insert for -I/Insert."
 msgstr "Selectați Add pentru -A/add și Insert pentru -I/Insert."
 
@@ -531,8 +527,8 @@ msgstr "Controlul serviciilor"
 msgid "Service Errors"
 msgstr "Erori de serviciu"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:197
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:208
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:206
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:217
 msgid "Service FW Mask"
 msgstr "Masca de serviciu FW"
 
@@ -548,7 +544,7 @@ msgstr "Starea serviciului"
 msgid "Service Warnings"
 msgstr "Avertismente de serviciu"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:373
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:382
 msgid ""
 "Set DSCP tags (in range between 1 and 63) for specific interfaces. See the "
 "%sREADME%s for details."
@@ -568,7 +564,7 @@ msgstr "Porniți"
 msgid "Starting %s service"
 msgstr "Pornirea serviciului %s"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:193
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:202
 msgid ""
 "Starting (WAN) FW Mark for marks used by the service. High starting mark is "
 "used to avoid conflict with SQM/QoS. Change with caution together with"
@@ -609,7 +605,7 @@ msgstr "Aplică cu strictețe politicile atunci când gateway-ul lor este oprit"
 msgid "Supported Interfaces"
 msgstr "Interfețe acceptate"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:242
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:251
 msgid "Supported Protocols"
 msgstr "Protocoale acceptate"
 
@@ -715,8 +711,8 @@ msgstr ""
 msgid "Version %s"
 msgstr ""
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:191
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:214
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:200
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:223
 msgid "WAN Table FW Mark"
 msgstr "Tabel WAN FW Mark"
 
@@ -724,7 +720,7 @@ msgstr "Tabel WAN FW Mark"
 msgid "Web UI Configuration"
 msgstr "Configurarea interfeței web"
 
-#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:304
+#: applications/luci-app-pbr/htdocs/luci-static/resources/view/pbr/overview.js:313
 msgid "all"
 msgstr "toate"
 
@@ -746,283 +742,3 @@ msgstr ""
 #: applications/luci-app-pbr/htdocs/luci-static/resources/view/status/include/72_pbr.js:48
 msgid "unknown"
 msgstr ""
-
-#~ msgid ""
-#~ "Name, interface and at least one other field are required. Multiple local "
-#~ "and remote addresses/devices/domains and ports can be space separated. "
-#~ "Placeholders below represent just the format/syntax and will not be used "
-#~ "if fields are left blank."
-#~ msgstr ""
-#~ "Numele, interfața și cel puțin un alt câmp sunt obligatorii. Mai multe "
-#~ "adrese/dispozitive/domenii și porturi locale și la distanță pot fi "
-#~ "separate prin spații. Semnele de poziție de mai jos reprezintă doar "
-#~ "formatul/sintaxa și nu vor fi utilizate dacă câmpurile sunt lăsate goale."
-
-#~ msgid "The WebUI application is outdated (version %s), please update it"
-#~ msgstr ""
-#~ "Aplicația WebUI este învechită (versiunea %s), vă rugăm să o actualizați"
-
-#~ msgid "Failed to resolve %s"
-#~ msgstr "Nu a reușit să rezolve %s"
-
-#~ msgid "Insertion failed for IPv4 for policy %s"
-#~ msgstr "Inserarea a eșuat pentru IPv4 pentru politica %s"
-
-#~ msgid "Insertion failed for both IPv4 and IPv6 for policy %s"
-#~ msgstr ""
-#~ "Inserarea a eșuat atât pentru IPv4, cât și pentru IPv6 pentru politica %s"
-
-#~ msgid "Mismatched IP family between in policy %s"
-#~ msgstr "Familie IP necorespunzătoare în politica %s"
-
-#~ msgid "Resolver %s"
-#~ msgstr "Rezolvare %s"
-
-#~ msgid "Running (version: %s using iptables)"
-#~ msgstr "Rulează (versiunea: %s folosind iptables)"
-
-#~ msgid "Running (version: %s using nft)"
-#~ msgstr "Se execută (versiunea: %s folosind nft)"
-
-#~ msgid "Running (version: %s)"
-#~ msgstr "Se execută (versiunea: %s)"
-
-#~ msgid "Starting (WAN) Table ID number for tables created by the service."
-#~ msgstr ""
-#~ "Starting (WAN) Numărul de identificare a tabelului pentru tabelele create "
-#~ "de serviciu."
-
-#~ msgid "Stopped (Disabled)"
-#~ msgstr "Oprit (Dezactivat)"
-
-#~ msgid "Stopped (version: %s)"
-#~ msgstr "S-a oprit (versiunea: %s)"
-
-#~ msgid "The nft set name '%s' is longer than allowed 31 characters"
-#~ msgstr ""
-#~ "Numele setului nft '%s' este mai lung decât cele 31 de caractere permise"
-
-#~ msgid "Unknown Error!"
-#~ msgstr "Eroare necunoscută!"
-
-#~ msgid "Unknown Warning."
-#~ msgstr "Avertizare Necunoscută."
-
-#~ msgid "Unknown protocol in policy %s"
-#~ msgstr "Protocol necunoscut în politica %s"
-
-#~ msgid "WAN Table ID"
-#~ msgstr "ID-ul tabelului WAN"
-
-#~ msgid "%s binary cannot be found!"
-#~ msgstr "Binarul %s nu poate fi găsit!"
-
-#~ msgid "Config (%s) validation failure!"
-#~ msgstr "Eșec de validare a configurației (%s)!"
-
-#~ msgid "Custom user file '%s' not found or empty!"
-#~ msgstr ""
-#~ "Fișierul de utilizator personalizat \"%s\" nu a fost găsit sau este gol!"
-
-#~ msgid "Error running custom user file '%s'!"
-#~ msgstr "Eroare la rularea fișierului de utilizator personalizat \"%s\"!"
-
-#~ msgid "Failed to reload '%s'!"
-#~ msgstr "Nu s-a reușit reîncărcarea '%s'!"
-
-#~ msgid "Failed to set up '%s'!"
-#~ msgstr "Nu s-a reușit configurarea lui \"%s\"!"
-
-#~ msgid "Failed to set up any gateway!"
-#~ msgstr "Nu a reușit să configureze nici o poartă de acces!"
-
-#~ msgid "Policy '%s' has an unknown interface!"
-#~ msgstr "Politica \"%s\" are o interfață necunoscută!"
-
-#~ msgid "Policy '%s' has no assigned interface!"
-#~ msgstr "Politica \"%s\" nu are o interfață atribuită!"
-
-#~ msgid "Policy '%s' has no source/destination parameters!"
-#~ msgstr "Politica \"%s\" nu are parametri sursă/destinație!"
-
-#~ msgid "Resolver set (%s) is not supported on this system!"
-#~ msgstr "Setul Resolver (%s) nu este acceptat pe acest sistem!"
-
-#~ msgid ""
-#~ "Resolver set support (%s) requires ipset, but ipset binary cannot be "
-#~ "found!"
-#~ msgstr ""
-#~ "Suportul pentru setul de rezolvare (%s) necesită ipset, dar binarul ipset "
-#~ "nu poate fi găsit!"
-
-#~ msgid ""
-#~ "Resolver set support (%s) requires nftables, but nft binary cannot be "
-#~ "found!"
-#~ msgstr ""
-#~ "Resolver set support (%s) necesită nftables, dar binarul nft nu poate fi "
-#~ "găsit!"
-
-#~ msgid "Syntax error in custom user file '%s'!"
-#~ msgstr "Eroare de sintaxă în fișierul de utilizator personalizat \"%s\"!"
-
-#~ msgid "The %s service failed to discover WAN gateway!"
-#~ msgstr "Serviciul %s nu a reușit să descopere gateway-ul WAN!"
-
-#~ msgid "The %s service is currently disabled!"
-#~ msgstr "Serviciul %s este în prezent dezactivat!"
-
-#~ msgid "The ipset name '%s' is longer than allowed 31 characters!"
-#~ msgstr ""
-#~ "Numele ipset \"%s\" este mai lung decât cele 31 de caractere permise!"
-
-#~ msgid "The nft set name '%s' is longer than allowed 31 characters!"
-#~ msgstr ""
-#~ "Numele setului nft \"%s\" este mai lung decât cele 31 de caractere "
-#~ "permise!"
-
-#~ msgid "Unexpected exit or service termination: '%s'!"
-#~ msgstr "Ieșire neașteptată sau încheiere neașteptată a serviciului: \"%s\"!"
-
-#~ msgid "Unknown Warning!"
-#~ msgstr "Avertisment necunoscut!"
-
-#~ msgid ""
-#~ "Use of 'curl' is detected in custom user file '%s', but 'curl' isn't "
-#~ "installed!"
-#~ msgstr ""
-#~ "Utilizarea 'curl' este detectată în fișierul utilizator personalizat "
-#~ "'%s', dar 'curl' nu este instalat!"
-
-#~ msgid "%s (disabled)"
-#~ msgstr "%s (dezactivat)"
-
-#~ msgid "%s (strict mode)"
-#~ msgstr "%s (mod strict)"
-
-#~ msgid "%s is not installed or not found"
-#~ msgstr "%s nu este instalat sau nu este găsit"
-
-#~ msgid "Add IGNORE Target"
-#~ msgstr "Adăugați țintă IGNORE"
-
-#~ msgid ""
-#~ "Adds `IGNORE` to the list of interfaces for policies, allowing you to "
-#~ "skip further processing by VPN Policy Routing."
-#~ msgstr ""
-#~ "Adaugă `IGNORE` la lista de interfețe pentru politici, permițându-vă să "
-#~ "săriți peste procesarea ulterioară de către VPN Policy Routing."
-
-#~ msgid "Append"
-#~ msgstr "Adăugați"
-
-#~ msgid "Boot Time-out"
-#~ msgstr "Timp de așteptare la boot"
-
-#~ msgid "Comment"
-#~ msgstr "Comentariu"
-
-#~ msgid ""
-#~ "Comment, interface and at least one other field are required. Multiple "
-#~ "local and remote addresses/devices/domains and ports can be space "
-#~ "separated. Placeholders below represent just the format/syntax and will "
-#~ "not be used if fields are left blank."
-#~ msgstr ""
-#~ "Comentariul, interfața și cel puțin un alt câmp sunt obligatorii. Mai "
-#~ "multe adrese/dispozitive/domenii și porturi locale și la distanță pot fi "
-#~ "separate prin spații. Semnele de poziție de mai jos reprezintă doar "
-#~ "formatul/sintaxa și nu vor fi utilizate dacă câmpurile sunt lăsate goale."
-
-#~ msgid "Configuration"
-#~ msgstr "Configurație"
-
-#~ msgid "DNSMASQ ipset"
-#~ msgstr "DNSMASQ ipset"
-
-#~ msgid "Grant UCI and file access for luci-app-vpn-policy-routing"
-#~ msgstr "Acordă UCI și acces la fișiere pentru luci-app-vpn-policy-routing"
-
-#~ msgid "IPTables rule option"
-#~ msgstr "Opțiunea de regulă IPTables"
-
-#~ msgid "Loading"
-#~ msgstr "Încărcare"
-
-#~ msgid "Select Append for -A and Insert for -I."
-#~ msgstr "Selectați Append pentru -A și Insert pentru -I."
-
-#~ msgid "Service Status [%s %s]"
-#~ msgstr "Starea serviciului [%s %s]"
-
-#~ msgid "Show Chain Column"
-#~ msgstr "Afișare coloană lanț"
-
-#~ msgid "Show Enable Column"
-#~ msgstr "Afișare coloană de activare"
-
-#~ msgid "Show Protocol Column"
-#~ msgstr "Afișați coloana de protocol"
-
-#~ msgid "Show Up/Down Buttons"
-#~ msgstr "Afișați butoanele sus/jos"
-
-#~ msgid ""
-#~ "Shows the Up/Down buttons for policies, allowing you to move a policy up "
-#~ "or down in the list."
-#~ msgstr ""
-#~ "Afișează butoanele sus/jos pentru politici, permițându-vă să mutați o "
-#~ "politică în sus sau în jos în listă."
-
-#~ msgid ""
-#~ "Shows the chain column for policies, allowing you to assign a PREROUTING, "
-#~ "FORWARD, INPUT or OUTPUT chain to a policy."
-#~ msgstr ""
-#~ "Afișează coloana de lanț pentru politici, permițându-vă să atribuiți un "
-#~ "lanț PREROUTING, FORWARD, INPUT sau OUTPUT unei politici."
-
-#~ msgid ""
-#~ "Shows the enable checkbox column for policies, allowing you to quickly "
-#~ "enable/disable specific policy without deleting it."
-#~ msgstr ""
-#~ "Afișează coloana de activare a casetei de selectare pentru politici, "
-#~ "permițându-vă să activați/dezactivați rapid o politică specifică fără a o "
-#~ "șterge."
-
-#~ msgid ""
-#~ "Shows the protocol column for policies, allowing you to assign a specific "
-#~ "protocol to a policy."
-#~ msgstr ""
-#~ "Afișează coloana de protocol pentru politici, permițându-vă să atribuiți "
-#~ "un protocol specific unei politici."
-
-#~ msgid "Stopped"
-#~ msgstr "S-a oprit"
-
-#~ msgid "The ipset option for local policies"
-#~ msgstr "Opțiunea ipset pentru politicile locale"
-
-#~ msgid "The ipset option for remote policies"
-#~ msgstr "Opțiunea ipset pentru politicile la distanță"
-
-#~ msgid ""
-#~ "Time (in seconds) for service to wait for WAN gateway discovery on boot."
-#~ msgstr ""
-#~ "Timpul (în secunde) de așteptare a serviciului pentru descoperirea "
-#~ "gateway-ului WAN la pornire."
-
-#~ msgid "Use ipset command"
-#~ msgstr "Utilizați comanda ipset"
-
-#~ msgid "Use resolver's ipset for domains"
-#~ msgstr "Utilizați ipset-ul rezolvatorului pentru domenii"
-
-#~ msgid "VPN"
-#~ msgstr "VPN"
-
-#~ msgid "VPN Policy Routing"
-#~ msgstr "Politica de rutare VPN"
-
-#~ msgid "VPN and WAN Policy-Based Routing"
-#~ msgstr "Rutarea bazată pe politici VPN și WAN"
-
-#~ msgid "WAN"
-#~ msgstr "WAN"

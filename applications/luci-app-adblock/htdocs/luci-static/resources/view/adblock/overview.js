@@ -173,7 +173,7 @@ return view.extend({
 				}
 				var domains = document.getElementById('domains');
 				if (domains && info) {
-					domains.textContent = parseInt(info.blocked_domains, 10).toLocaleString() || '-';
+					domains.textContent = info.blocked_domains || '-';
 				}
 				var sources = document.getElementById('sources');
 				var src_array = [];
@@ -421,6 +421,7 @@ return view.extend({
 		o.value('dnsmasq', _('dnsmasq (/tmp/dnsmasq.d)'));
 		o.value('unbound', _('unbound (/var/lib/unbound)'));
 		o.value('named', _('bind (/var/lib/bind)'));
+		o.value('smartdns', _('smartdns (/tmp/smartdns)'));
 		o.value('kresd', _('kresd (/etc/kresd)'));
 		o.value('raw', _('raw (/tmp)'));
 		o.optional = true;
@@ -522,11 +523,6 @@ return view.extend({
 
 		o = s.taboption('adv_email', form.Value, 'adb_mailprofile', _('E-Mail Profile'), _('Profile used by \'msmtp\' for adblock notification E-Mails.'));
 		o.placeholder = 'adb_notify';
-		o.rmempty = true;
-
-		o = s.taboption('adv_email', form.Value, 'adb_mailcnt', _('E-Mail Notification Count'), _('Raise the notification count, to get E-Mails if the overall blocklist count is less or equal to the given limit.'));
-		o.placeholder = '0';
-		o.datatype = 'min(0)';
 		o.rmempty = true;
 
 		/*

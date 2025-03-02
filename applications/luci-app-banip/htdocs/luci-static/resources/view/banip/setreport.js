@@ -137,7 +137,7 @@ return view.extend({
 	load: function () {
 		return Promise.all([
 			L.resolveDefault(fs.exec_direct('/etc/init.d/banip', ['report', 'json']), ''),
-			L.resolveDefault(fs.exec_direct('/usr/sbin/nft', ['-tj', 'list', 'ruleset']), '')
+			L.resolveDefault(fs.exec_direct('/usr/sbin/nft', ['-tj', 'list', 'table', 'inet', 'banIP']), '')
 		]);
 	},
 
@@ -158,35 +158,35 @@ return view.extend({
 		tblSets = E('table', { 'class': 'table', 'id': 'sets' }, [
 			E('tr', { 'class': 'tr table-titles' }, [
 				E('th', { 'class': 'th' }, _('Set')),
-				E('th', { 'class': 'th right', 'style': 'padding-right: 20px' }, _('Elements')),
-				E('th', { 'class': 'th' }, _('WAN-Input (packets)')),
-				E('th', { 'class': 'th' }, _('WAN-Forward (packets)')),
-				E('th', { 'class': 'th' }, _('LAN-Forward (packets)')),
-				E('th', { 'class': 'th' }, _('Port/Protocol Limit'))
+				E('th', { 'class': 'th right', 'style': 'padding-right: 20px' }, _('Count')),
+				E('th', { 'class': 'th' }, _('Inbound&#160;(packets)')),
+				E('th', { 'class': 'th' }, _('Outbound&#160;(packets)')),
+				E('th', { 'class': 'th' }, _('Port&#160;/&#160;Protocol')),
+				E('th', { 'class': 'th' }, _('Elements'))
 			])
 		]);
 
 		if (content.sets) {
-			let cnt1, cnt2, cnt3;
+			let cnt1, cnt2;
 			Object.keys(content.sets).forEach(function (key) {
-				cnt1 = content.sets[key].cnt_input ? ': (' + content.sets[key].cnt_input + ')' : '';
-				cnt2 = content.sets[key].cnt_forwardwan ? ': (' + content.sets[key].cnt_forwardwan + ')' : '';
-				cnt3 = content.sets[key].cnt_forwardlan ? ': (' + content.sets[key].cnt_forwardlan + ')' : '';
+				cnt1 = content.sets[key].cnt_inbound ? ': (' + content.sets[key].cnt_inbound + ')' : '';
+				cnt2 = content.sets[key].cnt_outbound ? ': (' + content.sets[key].cnt_outbound + ')' : '';
 				rowSets.push([
 					E('em', key),
 					E('em', { 'style': 'padding-right: 20px' }, content.sets[key].cnt_elements),
-					E('em', content.sets[key].input + cnt1),
-					E('em', content.sets[key].wan_forward + cnt2),
-					E('em', content.sets[key].lan_forward + cnt3),
-					E('em', content.sets[key].port)
+					E('em', content.sets[key].inbound + cnt1),
+					E('em', content.sets[key].outbound + cnt2),
+					E('em', content.sets[key].port),
+					E('em', content.sets[key].set_elements)
 				]);
 			});
 			rowSets.push([
 				E('em', { 'style': 'font-weight: bold' }, content.sum_sets),
-				E('em', { 'style': 'font-weight: bold; padding-right: 20px' }, content.sum_setelements),
-				E('em', { 'style': 'font-weight: bold' }, content.sum_setinput + ' (' + content.sum_cntinput + ')'),
-				E('em', { 'style': 'font-weight: bold' }, content.sum_setforwardwan + ' (' + content.sum_cntforwardwan + ')'),
-				E('em', { 'style': 'font-weight: bold' }, content.sum_setforwardlan + ' (' + content.sum_cntforwardlan + ')')
+				E('em', { 'style': 'font-weight: bold; padding-right: 20px' }, content.sum_cntelements),
+				E('em', { 'style': 'font-weight: bold' }, content.sum_setinbound + ' (' + content.sum_cntinbound + ')'),
+				E('em', { 'style': 'font-weight: bold' }, content.sum_setoutbound + ' (' + content.sum_cntoutbound + ')'),
+				E('em', { 'style': 'font-weight: bold' }, content.sum_setports),
+				E('em', { 'style': 'font-weight: bold' }, content.sum_setelements)
 			]);
 		}
 		cbi_update_table(tblSets, rowSets);
@@ -228,38 +228,37 @@ return view.extend({
 				E('div', { 'class': 'cbi-value' }, [
 					E('div', { 'class': 'cbi-value-title', 'style': 'margin-top:-5px;width:230px;font-weight:bold;' }, _('auto-added IPs to blocklist')),
 					E('div', { 'class': 'cbi-value-title', 'id': 'start', 'style': 'margin-top:-5px;color:#37c;font-weight:bold;' }, content.autoadd_block || '-')
-				]),
-				E('div', { 'class': 'right' }, [
-					E('button', {
-						'class': 'btn cbi-button cbi-button-apply',
-						'click': ui.createHandlerFn(this, function () {
-							return handleAction(report, 'survey');
-						})
-					}, [_('Set Survey...')]),
-					'\xa0',
-					E('button', {
-						'class': 'btn cbi-button cbi-button-apply',
-						'click': ui.createHandlerFn(this, function () {
-							return handleAction(report, 'search');
-						})
-					}, [_('IP Search...')]),
-					'\xa0',
-					E('button', {
-						'class': 'btn cbi-button cbi-button-positive',
-						'click': ui.createHandlerFn(this, function () {
-							location.reload();
-						})
-					}, [_('Refresh')]),
-					'\xa0'
-				]),
-			])
-			,
+				])
+			]),
 			E('br'),
 			E('div', { 'class': 'cbi-section' }, [
 				E('div', { 'class': 'left' }, [
 					E('h3', _('Set details')),
 					tblSets
 				])
+			]),
+			E('div', { 'class': 'cbi-page-actions' }, [
+				E('button', {
+					'class': 'btn cbi-button cbi-button-apply',
+					'style': 'float:none;margin-right:.4em;',
+					'click': ui.createHandlerFn(this, function () {
+						return handleAction(report, 'survey');
+					})
+				}, [_('Set Survey...')]),
+				E('button', {
+					'class': 'btn cbi-button cbi-button-apply',
+					'style': 'float:none;margin-right:.4em;',
+					'click': ui.createHandlerFn(this, function () {
+						return handleAction(report, 'search');
+					})
+				}, [_('IP Search...')]),
+				E('button', {
+					'class': 'btn cbi-button cbi-button-positive important',
+					'style': 'float:none',
+					'click': ui.createHandlerFn(this, function () {
+						location.reload();
+					})
+				}, [_('Refresh')]),
 			])
 		]);
 	},

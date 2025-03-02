@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-10-17 17:10+0000\n"
-"Last-Translator: Max <Prototypem95@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2025-02-13 13:09+0000\n"
+"Last-Translator: Максим Горпиніч <maksimgorpinic2005a@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationscoovachilli/uk/>\n"
 "Language: uk\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.8-rc\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: applications/luci-app-coovachilli/htdocs/luci-static/resources/view/coovachilli/coovachilli.js:168
 #: applications/luci-app-coovachilli/htdocs/luci-static/resources/view/coovachilli/coovachilli.js:173
@@ -174,7 +174,7 @@ msgstr "Основний DNS"
 
 #: applications/luci-app-coovachilli/htdocs/luci-static/resources/view/coovachilli/coovachilli.js:83
 msgid "Debug"
-msgstr "Відлагодження"
+msgstr "Налагодження"
 
 #: applications/luci-app-coovachilli/htdocs/luci-static/resources/view/coovachilli/coovachilli.js:183
 msgid ""
@@ -282,7 +282,7 @@ msgstr "Виконується після вилучення мережевог�
 
 #: applications/luci-app-coovachilli/htdocs/luci-static/resources/view/coovachilli/coovachilli.js:65
 msgid "General"
-msgstr "Загальне"
+msgstr "Загальний"
 
 #: applications/luci-app-coovachilli/root/usr/share/rpcd/acl.d/luci-app-coovachilli.json:3
 msgid "Grant UCI access for luci-app-coovachilli"
@@ -627,7 +627,8 @@ msgstr "UDP-порт, який прослуховувати для прийом�
 
 #: applications/luci-app-coovachilli/htdocs/luci-static/resources/view/coovachilli/coovachilli.js:454
 msgid "UDP port to listen to for accepting RADIUS disconnect requests"
-msgstr "UDP-порт, який прослуховувати для прийому запитів на відключення RADIUS"
+msgstr ""
+"UDP-порт, який прослуховувати для прийому запитів на відключення RADIUS"
 
 #: applications/luci-app-coovachilli/htdocs/luci-static/resources/view/coovachilli/coovachilli.js:210
 msgid "UI"
@@ -635,7 +636,8 @@ msgstr "UI"
 
 #: applications/luci-app-coovachilli/htdocs/luci-static/resources/view/coovachilli/coovachilli.js:136
 msgid "URL of homepage to redirect unauthenticated users to"
-msgstr "URL домашньої сторінки для перенаправлення неавторизованих користувачів"
+msgstr ""
+"URL домашньої сторінки для перенаправлення неавторизованих користувачів"
 
 #: applications/luci-app-coovachilli/htdocs/luci-static/resources/view/coovachilli/coovachilli.js:117
 msgid "URL of web server to use for authenticating clients"
@@ -708,9 +710,8 @@ msgid "port"
 msgstr "порт"
 
 #: applications/luci-app-coovachilli/htdocs/luci-static/resources/view/coovachilli/coovachilli.js:207
-#, fuzzy
 msgid "www binary"
-msgstr "www binary"
+msgstr "двійковий файл www"
 
 #: applications/luci-app-coovachilli/htdocs/luci-static/resources/view/coovachilli/coovachilli.js:205
 msgid "www directory"

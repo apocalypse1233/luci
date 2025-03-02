@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LuCI: base\n"
 "POT-Creation-Date: 2010-05-09 01:01+0300\n"
-"PO-Revision-Date: 2024-12-20 06:20+0000\n"
-"Last-Translator: sergio <sergio+it@outerface.net>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/luci/ru/>"
-"\n"
+"PO-Revision-Date: 2025-02-15 21:19+0000\n"
+"Last-Translator: Lorekin <lorekine@outlook.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/luci/ru/"
+">\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.9.2-dev\n"
+"X-Generator: Weblate 5.10\n"
 "Project-Info: Это технический перевод, не дословный. Главное-удобный русский "
 "интерфейс, все проверялось в графическом режиме, совместим с другими apps\n"
 
@@ -25,7 +25,7 @@ msgctxt "Yet unknown nftables table family (\"family\" table \"name\")"
 msgid "\"%h\" table \"%h\""
 msgstr "\"%h\" таблица \"%h\""
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1642
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1643
 msgid "%.1f dB"
 msgstr "%.1f дБ"
 
@@ -33,7 +33,7 @@ msgstr "%.1f дБ"
 msgid "%d Bit"
 msgstr "%d бит"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4288
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4287
 msgid "%d invalid field(s)"
 msgstr "%d неверных полей"
 
@@ -68,8 +68,8 @@ msgstr ""
 
 #: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:311
 msgid ""
-"%s is an independent project that aims to transparently reduce latency of a "
-"connection over Yggdrasil network, utilizing NAT traversal to bypass "
+"%s is an independent project that aims to reduce latency of a connection "
+"over Yggdrasil network transparently, utilizing NAT traversal to bypass "
 "intermediary nodes."
 msgstr ""
 "%s - это независимый проект, цель которого - прозрачно снизить задержку "
@@ -120,7 +120,7 @@ msgstr "(пусто)"
 #: modules/luci-base/htdocs/luci-static/resources/tools/widgets.js:364
 #: modules/luci-compat/luasrc/view/cbi/network_netinfo.htm:23
 #: modules/luci-compat/luasrc/view/cbi/network_netlist.htm:58
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:271
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:275
 msgid "(no interfaces attached)"
 msgstr "(нет связанных интерфейсов)"
 
@@ -209,7 +209,7 @@ msgctxt "sstp log level value"
 msgid "2"
 msgstr "2"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1587
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1588
 msgid "256"
 msgstr "256"
 
@@ -333,11 +333,11 @@ msgstr "802.11w время ожидания повтора"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:759
 msgid "802.3ad LACPDU packet rate"
-msgstr ""
+msgstr "802.3ad LACPDU скорость передачи пакетов"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:731
 msgid "802.3ad aggregation logic"
-msgstr ""
+msgstr "802.3ad логика агрегации"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:235
 msgid "; invalid MAC:"
@@ -462,7 +462,7 @@ msgstr ""
 "По умолчанию Yggdrasil устанавливает MTU 65535. Рекомендуется использовать "
 "это значение по умолчанию."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2919
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2918
 msgid "A directory with the same name already exists."
 msgstr "Директория с таким же именем уже существует."
 
@@ -479,83 +479,83 @@ msgstr ""
 "Индекс числовой таблицы или псевдоним символа, объявленный в %s. Также "
 "допустимы специальные псевдонимы local (255), main (254) и default (253)"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1622
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1623
 msgid "A43C + J43 + A43"
 msgstr "A43C + J43 + A43"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1623
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1624
 msgid "A43C + J43 + A43 + V43"
 msgstr "A43C + J43 + A43 + V43"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1635
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1636
 msgid "ADSL"
 msgstr "ADSL"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1609
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1610
 msgid "ADSL (G.992.1) Annex A"
 msgstr "ADSL (G.992.1) Annex A"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1610
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1611
 msgid "ADSL (G.992.1) Annex B"
 msgstr "ADSL (G.992.1) Annex B"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1603
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1604
 msgid "ADSL (all variants) Annex A/L/M"
 msgstr "ADSL (все варианты) Annex A/L/M"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1599
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1600
 msgid "ADSL (all variants) Annex A/L/M + VDSL2 Annex A/B/C"
 msgstr "ADSL (все варианты) Annex A/L/M + VDSL2 Annex A/B/C"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1604
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1605
 msgid "ADSL (all variants) Annex B"
 msgstr "ADSL (все варианты) Annex B"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1600
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1601
 msgid "ADSL (all variants) Annex B + VDSL2 Annex A/B/C"
 msgstr "ADSL (все варианты) Annex B + VDSL2 Annex A/B/C"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1605
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1606
 msgid "ADSL (all variants) Annex B/J"
 msgstr "ADSL (все варианты) Annex B/J"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1601
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1602
 msgid "ADSL (all variants) Annex B/J + VDSL2 Annex A/B/C"
 msgstr "ADSL (все варианты) Annex B/J + VDSL2 Annex A/B/C"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1607
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1608
 msgid "ADSL (all variants) Annex M"
 msgstr "ADSL (все варианты) Annex M"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1612
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1613
 msgid "ADSL2 (G.992.3) Annex A"
 msgstr "ADSL2 (G.992.3) Annex A"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1613
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1614
 msgid "ADSL2 (G.992.3) Annex B"
 msgstr "ADSL2 (G.992.3) Annex B"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1614
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1615
 msgid "ADSL2 (G.992.3) Annex L"
 msgstr "ADSL2 (G.992.3) Annex L"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1615
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1616
 msgid "ADSL2 (G.992.3) Annex M"
 msgstr "ADSL2 (G.992.3) Annex M"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1616
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1617
 msgid "ADSL2+ (G.992.5) Annex A"
 msgstr "ADSL2+ (G.992.5) Annex A"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1617
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1618
 msgid "ADSL2+ (G.992.5) Annex B"
 msgstr "ADSL2+ (G.992.5) Annex B"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1618
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1619
 msgid "ADSL2+ (G.992.5) Annex M"
 msgstr "ADSL2+ (G.992.5) Annex M"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1608
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1609
 msgid "ANSI T1.413"
 msgstr "ANSI T1.413"
 
@@ -573,11 +573,11 @@ msgstr "Индекс APN профиля"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:875
 msgid "ARP link monitoring"
-msgstr ""
+msgstr "Мониторинг ARP-соединения"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:901
 msgid "ARP monitor target IP address"
-msgstr ""
+msgstr "ARP-монитор целевого IP-адреса"
 
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan.js:107
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan6.js:107
@@ -594,7 +594,7 @@ msgstr "Таблица ARP трафика «%h»"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:909
 msgid "ARP validation policy"
-msgstr ""
+msgstr "Политика проверки ARP"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1213
 msgid ""
@@ -607,25 +607,25 @@ msgstr ""
 "это не Directed Multicast Service (DMS) в 802.11v. Примечание: может "
 "нарушить ожидаемые многоадресные рассылки приемника STA."
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1630
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1631
 msgid "ATM (Asynchronous Transfer Mode)"
 msgstr "ATM (режим асинхронной передачи)"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1651
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1652
 msgid "ATM Bridges"
 msgstr "ATM мосты"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1683
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1684
 #: protocols/luci-proto-ppp/htdocs/luci-static/resources/protocol/pppoa.js:66
 msgid "ATM Virtual Channel Identifier (VCI)"
 msgstr "ATM идентификатор виртуального канала (VCI)"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1684
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1685
 #: protocols/luci-proto-ppp/htdocs/luci-static/resources/protocol/pppoa.js:70
 msgid "ATM Virtual Path Identifier (VPI)"
 msgstr "ATM идентификатор виртуального пути (VPI)"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1651
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1652
 msgid ""
 "ATM bridges expose encapsulated ethernet in AAL5 connections as virtual "
 "Linux network interfaces which can be used in conjunction with DHCP or PPP "
@@ -635,7 +635,7 @@ msgstr ""
 "как виртуальные сетевые интерфейсы Linux, которые могут использоваться "
 "совместно с DHCP или PPP для набора номера в сети провайдера."
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1690
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1691
 #: protocols/luci-proto-ppp/htdocs/luci-static/resources/protocol/pppoa.js:62
 msgid "ATM device number"
 msgstr "ATM номер устройства"
@@ -728,7 +728,7 @@ msgstr "Активные IPv6 правила"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:623
 msgid "Active backup"
-msgstr ""
+msgstr "Активное резервное копирование"
 
 #: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:256
 msgid "Active peers"
@@ -742,11 +742,11 @@ msgstr "Ad-Hoc"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:629
 msgid "Adaptive load balancing"
-msgstr ""
+msgstr "Адаптивная балансировка нагрузки"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:628
 msgid "Adaptive transmit load balancing"
-msgstr ""
+msgstr "Адаптивная балансировка нагрузки передачи"
 
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2241
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2244
@@ -763,7 +763,7 @@ msgstr ""
 msgid "Add"
 msgstr "Добавить"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1655
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1656
 msgid "Add ATM Bridge"
 msgstr "Добавить ATM мост"
 
@@ -942,7 +942,7 @@ msgstr "Администрирование"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:464
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:628
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1681
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1682
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:43
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:136
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:985
@@ -978,11 +978,11 @@ msgstr "Агрегировать сообщения отправителей"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1499
 msgid "Aggregation device"
-msgstr ""
+msgstr "Устройство агрегации"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:585
 msgid "Aggregation ports"
-msgstr ""
+msgstr "Порты агрегации"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:192
 msgid "Alert"
@@ -1000,19 +1000,20 @@ msgstr "Псевдоним интерфейса \"%s\""
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:914
 msgid "All"
-msgstr ""
+msgstr "Все"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:905
 msgid "All ARP Targets"
-msgstr ""
+msgstr "Все цели ARP"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:905
 msgid "All ARP targets must be reachable to consider the link valid"
 msgstr ""
+"Все ARP-цели должны быть достижимы, чтобы считать соединение действительным"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:668
 msgid "All ports active"
-msgstr ""
+msgstr "Все порты активны"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:771
 msgid "All servers"
@@ -1047,8 +1048,8 @@ msgstr ""
 
 #: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:356
 msgid ""
-"Allow Yggdrasil Jumper to automatically configure Yggdrasil with proper "
-"listen address and random port."
+"Allow Yggdrasil Jumper to configure Yggdrasil with proper listen address and "
+"random port automatically."
 msgstr ""
 "Позвольте Yggdrasil Jumper автоматически настроить Yggdrasil на правильный "
 "адрес прослушивания и произвольный порт."
@@ -1079,7 +1080,7 @@ msgstr "Разрешить перезагрузку устройства"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:668
 msgid "Allow receiving on inactive ports"
-msgstr ""
+msgstr "Разрешить прием на неактивных портах"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/dropbear.js:38
 msgid "Allow remote hosts to connect to local SSH forwarded ports"
@@ -1163,7 +1164,7 @@ msgstr "При сохранении формы произошла ошибка:"
 msgid "An optional, short description for this device"
 msgstr "Необязательное, краткое описание для этого устройства"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1597
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1598
 msgid "Annex"
 msgstr "Annex"
 
@@ -1240,22 +1241,22 @@ msgstr "Любая зона"
 msgid "Apply backup?"
 msgstr "Восстановить резервную копию?"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4932
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4931
 msgid "Apply request failed with status <code>%h</code>"
 msgstr "Ошибка <code>%h</code> запроса на применение"
 
 #: modules/luci-base/htdocs/luci-static/resources/luci.js:2125
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4649
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4770
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4906
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4648
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4769
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4905
 msgid "Apply unchecked"
 msgstr "Применить без проверки"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4902
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4901
 msgid "Apply, reverting in case of connectivity loss"
 msgstr "Применять, возвращаясь в случае потери соединения"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4843
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4842
 msgid "Applying configuration changes… %ds"
 msgstr "Применение изменений... %d сек"
 
@@ -1438,11 +1439,11 @@ msgstr "Средняя:"
 msgid "Avoid Bridge Loops"
 msgstr "Избегать мостовых петель"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1624
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1625
 msgid "B43 + B43C"
 msgstr "B43 + B43C"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1625
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1626
 msgid "B43 + B43C + V43"
 msgstr "B43 + B43C + V43"
 
@@ -1474,7 +1475,7 @@ msgstr "Вернуться к конфигурации узла"
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:913
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:393
 msgid "Backup"
-msgstr "Резервная копия настроек"
+msgstr "Резервная копия"
 
 #: modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json:128
 msgid "Backup / Flash Firmware"
@@ -1551,7 +1552,7 @@ msgstr ""
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:820
 msgid "Better"
-msgstr ""
+msgstr "Лучше"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:287
 msgid "Bind NTP server"
@@ -1613,11 +1614,11 @@ msgstr "Режим бондинга"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:621
 msgid "Bonding Policy"
-msgstr "Политика объединения"
+msgstr "Политика бондинга"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:459
 msgid "Bonding/Aggregation device"
-msgstr ""
+msgstr "Устройство бондинга/агрегации"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:600
 msgid "Both \"Relay from\" and \"Relay to address\" must be specified."
@@ -1657,7 +1658,7 @@ msgstr "Порты моста"
 msgid "Bridge traffic table \"%h\""
 msgstr "Таблица трафика моста «%h»"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1691
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1692
 msgid "Bridge unit number"
 msgstr "Номер моста"
 
@@ -1678,8 +1679,8 @@ msgstr "Активировать интерфейс моста даже если
 msgid "Broadcast"
 msgstr "Broadcast"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3009
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4398
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3008
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4397
 msgid "Browse…"
 msgstr "Обзор…"
 
@@ -1753,9 +1754,9 @@ msgstr ""
 "Может быть полезно, когда провайдер имеет IPv6 серверы имён, но не "
 "предоставляет IPv6 маршрутизацию."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3101
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4407
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4898
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3100
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4406
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4897
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:14
 #: modules/luci-compat/luasrc/view/cbi/simpleform.htm:52
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:174
@@ -1883,11 +1884,11 @@ msgctxt "Yet unknown nftables chain hook"
 msgid "Chain hook \"%h\""
 msgstr "Хук цепочки ‎«%h»"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4629
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4628
 msgid "Changes"
 msgstr "Изменения"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4893
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4892
 msgid ""
 "Changes have been made to the existing connection via \"%h\". This could "
 "inhibit access to this device. Any IP change requires <strong>connecting to "
@@ -1898,7 +1899,7 @@ msgstr ""
 "<strong>подключения к новому IP</strong> в течение %d секунд, чтобы "
 "сохранить изменения."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4968
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4967
 msgid "Changes have been reverted."
 msgstr "Изменения отменены."
 
@@ -2011,7 +2012,7 @@ msgstr "ID клиента при DHCP-запросе"
 msgid "Clone"
 msgstr "Клонировать"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4646
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4645
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:173
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:179
 msgid "Close"
@@ -2040,7 +2041,7 @@ msgstr ""
 msgid "Collecting data..."
 msgstr "Сбор данных..."
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:250
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:254
 msgid "Collisions seen"
 msgstr "Наблюдаемые коллизии"
 
@@ -2087,7 +2088,7 @@ msgstr "Вычислять исходящую контрольную сумму 
 msgid "Config File"
 msgstr "Конфигурационный файл"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4629
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4628
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:456
 msgid "Configuration"
 msgstr "Конфигурация"
@@ -2096,11 +2097,11 @@ msgstr "Конфигурация"
 msgid "Configuration Export"
 msgstr "Экспорт конфигурации"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4818
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4817
 msgid "Configuration changes applied."
 msgstr "Конфигурация применена."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4756
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4755
 msgid "Configuration changes have been rolled back!"
 msgstr "Конфигурация возвращена назад!"
 
@@ -2178,7 +2179,7 @@ msgstr "Подтверждение пароля"
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:98
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:101
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:47
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:232
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:236
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/30_network.js:42
 msgid "Connected"
 msgstr "Подключен"
@@ -2205,7 +2206,7 @@ msgstr "Подключение потеряно"
 msgid "Connections"
 msgstr "Соединения"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4892
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4891
 msgid "Connectivity change"
 msgstr "Изменение подключения"
 
@@ -2247,7 +2248,7 @@ msgctxt "Chain policy: accept"
 msgid "Continue processing unmatched packets"
 msgstr "Продолжать обработку несопоставленных пакетов"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4792
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4791
 msgid ""
 "Could not regain access to the device after applying the configuration "
 "changes. You might need to reconnect if you modified network related "
@@ -2259,7 +2260,7 @@ msgstr ""
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:736
 msgid "Count"
-msgstr ""
+msgstr "Количество"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:189
 msgid "Country"
@@ -2467,7 +2468,7 @@ msgstr "DPD время простоя"
 msgid "DS-Lite AFTR address"
 msgstr "DS-Lite AFTR-адрес"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1594
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1595
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/50_dsl.js:37
 msgid "DSL"
 msgstr "DSL"
@@ -2476,7 +2477,7 @@ msgstr "DSL"
 msgid "DSL Status"
 msgstr "Состояние DSL"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1633
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1634
 msgid "DSL line mode"
 msgstr "DSL линейный режим"
 
@@ -2567,10 +2568,11 @@ msgstr "Задержка"
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:970
 msgid "Delay before enabling port after MII link down event (msec)"
 msgstr ""
+"Задержка перед включением порта после события отключения канала MII (мс)"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:964
 msgid "Delay before enabling port after MII link up event (msec)"
-msgstr ""
+msgstr "Задержка перед включением порта после события подключения MII (мс)"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1060
 msgid "Delegate IPv6 prefixes"
@@ -2580,7 +2582,7 @@ msgstr "Делегировать IPv6 префиксы"
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2744
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2748
 #: modules/luci-base/htdocs/luci-static/resources/form.js:3585
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3070
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3069
 #: modules/luci-compat/luasrc/view/cbi/nsection.htm:11
 #: modules/luci-compat/luasrc/view/cbi/tblsection.htm:162
 #: modules/luci-compat/luasrc/view/cbi/tsection.htm:16
@@ -2592,7 +2594,7 @@ msgstr "Удалить"
 msgid "Delete key"
 msgstr "Удалить ключ"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2968
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2967
 msgid "Delete request failed: %s"
 msgstr "Ошибка запроса на удаление: %s"
 
@@ -2613,7 +2615,7 @@ msgstr "Интервал сообщений, регламентирующий д
 msgid "Description"
 msgstr "Описание"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3062
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3061
 msgid "Deselect"
 msgstr "Отменить выбор"
 
@@ -2709,7 +2711,7 @@ msgstr "Устройство отсутствует"
 msgid "Device type"
 msgstr "Тип устройства"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4791
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4790
 msgid "Device unreachable!"
 msgstr "Устройство недоступно!"
 
@@ -2739,11 +2741,11 @@ msgstr "Dial номер"
 msgid "Dir"
 msgstr "Каталог"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2864
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2863
 msgid "Directory"
 msgstr "Папка"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1583
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1584
 msgid ""
 "Directs packet flows to specific CPUs where the local socket owner listens "
 "(the local service)."
@@ -2854,8 +2856,8 @@ msgstr "Дисковое пространство"
 #: modules/luci-base/htdocs/luci-static/resources/form.js:3030
 #: modules/luci-base/htdocs/luci-static/resources/form.js:3266
 #: modules/luci-base/htdocs/luci-static/resources/form.js:3280
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3883
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4762
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3882
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4761
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1996
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:360
 #: protocols/luci-proto-wireguard/htdocs/luci-static/resources/view/wireguard/status.js:45
@@ -2955,9 +2957,13 @@ msgctxt "nft notrack action"
 msgid "Do not track"
 msgstr "Не отслеживать"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2954
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2953
 msgid "Do you really want to delete \"%s\" ?"
 msgstr "Удалить «%s»?"
+
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2951
+msgid "Do you really want to delete the \"%s\" directory recursively?"
+msgstr "Вы действительно хотите рекурсивно удалить директорию «%s»?"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:206
 msgid "Do you really want to delete the following SSH key?"
@@ -2966,10 +2972,6 @@ msgstr "Вы действительно хотите удалить следую
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:94
 msgid "Do you really want to erase all settings?"
 msgstr "Вы действительно хотите стереть все настройки?"
-
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2952
-msgid "Do you really want to recursively delete the directory \"%s\" ?"
-msgstr "Вы действительно хотите рекурсивно удалить директорию «%s»?"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:97
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:991
@@ -2995,7 +2997,7 @@ msgstr "Не фрагментировать"
 msgid "Down"
 msgstr "Вниз"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3066
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3065
 msgid "Download"
 msgstr "Скачать"
 
@@ -3003,7 +3005,7 @@ msgstr "Скачать"
 msgid "Download backup"
 msgstr "Загрузить резервную копию"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3142
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3141
 msgid "Download failed: %s"
 msgstr "Загрузка не удалась: %s"
 
@@ -3011,7 +3013,7 @@ msgstr "Загрузка не удалась: %s"
 msgid "Download mtdblock"
 msgstr "Скачать MTD раздел"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1638
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1639
 msgid "Downstream SNR offset"
 msgstr "SNR offset внутренней сети"
 
@@ -3123,7 +3125,7 @@ msgstr "Секрет расширения динамической автори�
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:800
 msgid "Dynamic load balance"
-msgstr ""
+msgstr "Динамическая балансировка нагрузки"
 
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/6in4.js:60
 msgid "Dynamic tunnel"
@@ -3468,7 +3470,7 @@ msgstr "Включить юникаст-флудинг (unicast flooding)"
 #: protocols/luci-proto-mbim/htdocs/luci-static/resources/protocol/mbim.js:109
 #: protocols/luci-proto-mbim/htdocs/luci-static/resources/protocol/mbim.js:118
 msgid "Enabled"
-msgstr "Включен"
+msgstr "Включено"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1577
 msgid "Enabled (all CPUs)"
@@ -3504,19 +3506,19 @@ msgstr "Включает Spanning Tree Protocol на этом мосту"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:686
 msgid "Encap 2+3"
-msgstr ""
+msgstr "Encap 2+3"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:687
 msgid "Encap 3+4"
-msgstr ""
+msgstr "Encap 3+4"
 
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/dslite.js:61
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/ipip6.js:62
 msgid "Encapsulation limit"
 msgstr "Предел инкапсуляции"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1628
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1686
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1629
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1687
 msgid "Encapsulation mode"
 msgstr "Режим инкапсуляции"
 
@@ -3699,11 +3701,11 @@ msgstr ""
 
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/dhcpv6.js:34
 msgid "Extend 3GPP WAN interface /64 prefix via PD to LAN (RFC 7278)"
-msgstr ""
+msgstr "Расширение интерфейса 3GPP WAN /64 префикса через PD в LAN (RFC 7278)"
 
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/dhcpv6.js:34
 msgid "Extend prefix"
-msgstr ""
+msgstr "Расширить префикс"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:842
 msgid ""
@@ -3799,7 +3801,7 @@ msgstr "Не удалось изменить системный пароль."
 msgid "Failed to configure modem"
 msgstr "Не удалось сконфигурировать модем"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4750
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4749
 msgid "Failed to confirm apply within %ds, waiting for rollback…"
 msgstr "Не удалось подтвердить применение в течении %d сек., ожидание отката…"
 
@@ -3829,13 +3831,13 @@ msgstr "Не удалось установить режим работы"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:821
 msgid "Failure"
-msgstr ""
+msgstr "Сбой"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:763
 msgid "Fast (every second)"
-msgstr ""
+msgstr "Быстро (каждую секунду)"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2872
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2871
 msgid "File"
 msgstr "Файл"
 
@@ -3847,7 +3849,7 @@ msgstr ""
 "Этот файл может содержать такие строки, как {servers_file_entry01} или "
 "{servers_file_entry02}."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2809
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2808
 msgid "File not accessible"
 msgstr "Файл не доступен"
 
@@ -3861,7 +3863,7 @@ msgstr ""
 msgid "File with upstream resolvers."
 msgstr "Локальный <abbr title=\"Служба доменных имён\">DNS</abbr>-файл."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3010
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3009
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:882
 msgid "Filename"
 msgstr "Имя файла"
@@ -3894,7 +3896,7 @@ msgstr "Фильтрация обнаружения служб SRV/SOA"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:916
 msgid "Filter active"
-msgstr ""
+msgstr "Фильтровать активные"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:701
 msgid "Filter arbitrary RR"
@@ -3902,7 +3904,7 @@ msgstr "Фильтр произвольных ресурсных записей"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:917
 msgid "Filter backup"
-msgstr ""
+msgstr "Фильтровать резервные"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:678
 msgid "Filter private"
@@ -3959,7 +3961,7 @@ msgstr "Состояние межсетевого экрана"
 msgid "Firewall mark"
 msgstr "Метка межсетевого экрана"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1645
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1646
 msgid "Firmware File"
 msgstr "Файл прошивки"
 
@@ -3999,7 +4001,7 @@ msgstr "Прошивка…"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:848
 msgid "Follow"
-msgstr ""
+msgstr "Следовать"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1011
 msgid "Follow IPv4 Lifetime"
@@ -4007,7 +4009,7 @@ msgstr "Соблюдать время жизни IPv4"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:455
 msgid "For bonding, install %s"
-msgstr ""
+msgstr "Для бондинга установите %s"
 
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan.js:211
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan6.js:211
@@ -4148,7 +4150,7 @@ msgstr "Прямой/обратный DNS"
 msgid "Forwarding DataBase"
 msgstr "База данных пересылки"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1693
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1694
 msgid "Forwarding mode"
 msgstr "Режим перенаправления"
 
@@ -4239,7 +4241,7 @@ msgstr "Метрика шлюза"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:387
 msgid "General"
-msgstr "Основное"
+msgstr "Общий"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:463
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:42
@@ -4250,7 +4252,7 @@ msgid "General Settings"
 msgstr "Основные Настройки"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:627
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1680
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1681
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:984
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1046
 msgid "General Setup"
@@ -4620,12 +4622,12 @@ msgstr "Тип ICMPv6"
 
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan.js:128
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan6.js:128
-msgid "ID used to uniquely identify the VXLAN"
+msgid "ID used to identify the VXLAN uniquely"
 msgstr "ID, используемый для уникальной идентификации VXLAN"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:804
 msgid "IGMP reports"
-msgstr ""
+msgstr "Отчеты IGMP"
 
 #: protocols/luci-proto-vpnc/htdocs/luci-static/resources/protocol/vpnc.js:75
 msgid "IKE DH Group"
@@ -4637,11 +4639,11 @@ msgstr "IMEI"
 
 #: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:141
 msgid "IP Address"
-msgstr "IP-адрес"
+msgstr "IP адрес"
 
 #: protocols/luci-proto-wireguard/htdocs/luci-static/resources/protocol/wireguard.js:167
 msgid "IP Addresses"
-msgstr "IP-адреса"
+msgstr "IP адреса"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:164
 #: protocols/luci-proto-ncm/htdocs/luci-static/resources/protocol/ncm.js:85
@@ -5308,7 +5310,7 @@ msgstr "Внутреннее ограничение сертификата (Wild
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:873
 msgid "Install %s"
-msgstr ""
+msgstr "Установить %s"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:289
 msgid "Install protocol extensions..."
@@ -5471,6 +5473,8 @@ msgid ""
 "Invalid DHCP lease time format. Use integer values optionally followed by s, "
 "m, h, d, or w."
 msgstr ""
+"Неверный формат времени аренды DHCP. Используйте целочисленные значения, за "
+"которыми могут следовать s, m, h, d или w."
 
 #: protocols/luci-proto-openconnect/htdocs/luci-static/resources/protocol/openconnect.js:121
 msgid "Invalid IPv6 address"
@@ -5691,7 +5695,7 @@ msgstr "L2TP-сервер"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:627
 msgid "LACP - 802.3ad"
-msgstr ""
+msgstr "LACP - 802.3ad"
 
 #: protocols/luci-proto-3g/htdocs/luci-static/resources/protocol/3g.js:130
 #: protocols/luci-proto-ppp/htdocs/luci-static/resources/protocol/ppp.js:102
@@ -5715,7 +5719,7 @@ msgstr "Интервал эхо-запросов LCP"
 msgid "LED Configuration"
 msgstr "Индикаторы"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1687
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1688
 msgid "LLC"
 msgstr "LLC"
 
@@ -5759,7 +5763,7 @@ msgstr "Последнее «рукопожатие» (handshake)"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:683
 msgid "Layer 2"
-msgstr ""
+msgstr "Уровень 2"
 
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan.js:201
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan6.js:201
@@ -5768,11 +5772,11 @@ msgstr "Адрес уровня 2"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:684
 msgid "Layer 2+3"
-msgstr ""
+msgstr "Уровень 2+3"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:685
 msgid "Layer 3+4"
-msgstr ""
+msgstr "Уровень 3+4"
 
 #: protocols/luci-proto-hnet/htdocs/luci-static/resources/protocol/hnet.js:21
 msgid "Leaf"
@@ -5793,7 +5797,7 @@ msgstr "Обучение"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:793
 msgid "Learning packets Interval"
-msgstr ""
+msgstr "Интервал пакетов обучения"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:630
 msgid "Lease file"
@@ -5838,7 +5842,7 @@ msgstr ""
 msgid "Legacy rules detected"
 msgstr "Обнаружены устаревшие правила"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4631
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4630
 msgid "Legend:"
 msgstr "События:"
 
@@ -5881,7 +5885,7 @@ msgstr "Биты заголовка канального уровня %d–%d"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:871
 msgid "Link monitoring mode"
-msgstr ""
+msgstr "Режим мониторинга соединения"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:502
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1122
@@ -6001,7 +6005,7 @@ msgstr "Загрузка конфигурации…"
 msgid "Loading data…"
 msgstr "Загрузка данных…"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3152
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3151
 msgid "Loading directory contents…"
 msgstr "Загрузка содержимого директории…"
 
@@ -6217,11 +6221,11 @@ msgstr "MAC-адрес"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:720
 msgid "MAC address for LACPDUs"
-msgstr ""
+msgstr "MAC-адрес для LACPDUs"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:844
 msgid "MAC address selection policy"
-msgstr ""
+msgstr "Политика выбора MAC-адресов"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:1191
 msgid "MAC address(es)"
@@ -6260,7 +6264,7 @@ msgstr "МГц"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:876
 msgid "MII link monitoring"
-msgstr ""
+msgstr "Мониторинг соединения MII"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:1087
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1552
@@ -6314,7 +6318,7 @@ msgstr "Соответствие этому тегу"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:164
 msgid "Match traffic IP protocol type"
-msgstr ""
+msgstr "Соответствие трафика типу IP-протокола"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:170
 msgid "Match traffic destined to this interface"
@@ -6509,7 +6513,7 @@ msgstr ""
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:782
 msgid "Min Links"
-msgstr ""
+msgstr "Минимум соединений"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:841
 msgid "Min cache TTL"
@@ -6525,7 +6529,7 @@ msgstr "Минимальный срок действия ARP"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:782
 msgid "Minimum number of active links"
-msgstr ""
+msgstr "Минимальное количество активных соединений"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:1174
 msgid ""
@@ -6636,15 +6640,15 @@ msgstr "Монитор"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:895
 msgid "Monitor Interval"
-msgstr ""
+msgstr "Интервал монитора"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:969
 msgid "Monitor link-down delay"
-msgstr ""
+msgstr "Монитор задержки отключения"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:963
 msgid "Monitor link-up delay"
-msgstr ""
+msgstr "Монитор задержки подключения"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/password.js:31
 msgid "More Characters"
@@ -6790,7 +6794,7 @@ msgid "NTP server candidates"
 msgstr "Список NTP-серверов"
 
 #: modules/luci-base/htdocs/luci-static/resources/form.js:2609
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4384
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4383
 #: modules/luci-compat/luasrc/view/cbi/tblsection.htm:27
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:94
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1187
@@ -7026,7 +7030,7 @@ msgstr "Нет связанных клиентов"
 msgid "No control device specified"
 msgstr "Устройство управления не указано"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3390
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3389
 msgctxt "empty table placeholder"
 msgid "No data"
 msgstr "Нет данных"
@@ -7049,7 +7053,7 @@ msgstr "Любая"
 msgid "No entries available"
 msgstr "Нет доступных записей"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3076
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3075
 msgid "No entries in this directory"
 msgstr "Нет элементов в этом каталоге"
 
@@ -7129,7 +7133,7 @@ msgstr "Нет правил в данной цепочке."
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:139
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1287
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:259
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:263
 msgid "No zone assigned"
 msgstr "Зона не присвоена"
 
@@ -7229,7 +7233,7 @@ msgstr ""
 "Примечание: Режим обхода позволяет STA, заявляющему о возможности OCV, "
 "подключиться, даже если STA не отправляет OCI или не согласовывает PMF."
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1584
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1585
 msgid ""
 "Note: this setting is for local services on the device only (not for "
 "forwarding)."
@@ -7269,10 +7273,12 @@ msgid ""
 "Number of packets to transmit through a slave before moving to the next one. "
 "Slave is chosen at random when 0."
 msgstr ""
+"Количество пакетов, которые необходимо передать через ведомого, прежде чем "
+"переходить к следующему. Ведомый выбирается случайным образом при значении 0."
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:794
 msgid "Number of seconds between sent learning packets"
-msgstr ""
+msgstr "Количество секунд между отправкой обучающих пакетов"
 
 #: protocols/luci-proto-vpnc/htdocs/luci-static/resources/protocol/vpnc.js:69
 msgid "Obfuscated Group Password"
@@ -7466,11 +7472,11 @@ msgstr "Опция \"%s\" содержит недопустимое значен
 msgid "Option \"%s\" must not be empty."
 msgstr "Опция \"%s\" не должна быть пустой."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4638
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4637
 msgid "Option changed"
 msgstr "Опция изменена"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4640
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4639
 msgid "Option removed"
 msgstr "Опция удалена"
 
@@ -7754,7 +7760,7 @@ msgstr "Назначить таблицу внутренних маршруто�
 msgid "Overview"
 msgstr "Обзор"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2920
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2919
 msgid "Overwrite existing file \"%s\" ?"
 msgstr "Перезаписать существующий файл «%s»?"
 
@@ -7882,7 +7888,7 @@ msgctxt "Label indicating that WireGuard peer uses a PSK"
 msgid "PSK"
 msgstr "PSK"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1631
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1632
 msgid "PTM/EFM (Packet Transfer Mode)"
 msgstr "PTM/EFM (Режим передачи пакетов)"
 
@@ -7918,9 +7924,9 @@ msgstr "Пакеты, превышающие это значение, могут
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:787
 msgid "Packets per slave"
-msgstr ""
+msgstr "Пакеты на одного ведомого"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:291
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:295
 msgid "Part of network:"
 msgid_plural "Part of networks:"
 msgstr[0] "Часть сети:"
@@ -7929,7 +7935,7 @@ msgstr[2] "Частей сети:"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:139
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1287
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:259
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:263
 msgid "Part of zone %q"
 msgstr "Часть зоны %q"
 
@@ -8049,7 +8055,7 @@ msgstr "Сведения об узле"
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan6.js:210
 #: protocols/luci-proto-vxlan/htdocs/luci-static/resources/protocol/vxlan6.js:241
 msgid "Peer IP"
-msgstr "IP-пира"
+msgstr "IP узла"
 
 #: protocols/luci-proto-pppossh/htdocs/luci-static/resources/protocol/pppossh.js:89
 msgid "Peer IP address to assign"
@@ -8061,7 +8067,7 @@ msgstr "MAC-адрес узла"
 
 #: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:276
 msgid "Peer URI"
-msgstr "URI пира"
+msgstr "URI узла"
 
 #: modules/luci-base/htdocs/luci-static/resources/network.js:14
 #: modules/luci-compat/luasrc/model/network.lua:32
@@ -8070,7 +8076,7 @@ msgstr "Отсутствует адрес узла"
 
 #: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:270
 msgid "Peer addresses"
-msgstr "Адреса пира"
+msgstr "Адреса узла"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:1101
 msgid "Peer device name"
@@ -8078,11 +8084,11 @@ msgstr "Имя устройства узла"
 
 #: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:279
 msgid "Peer interface"
-msgstr "Интерфейс пира"
+msgstr "Интерфейс узла"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:810
 msgid "Peer notifications"
-msgstr ""
+msgstr "Уведомления узлов"
 
 #: protocols/luci-proto-wireguard/htdocs/luci-static/resources/protocol/wireguard.js:200
 #: protocols/luci-proto-yggdrasil/htdocs/luci-static/resources/protocol/yggdrasil.js:254
@@ -8151,7 +8157,7 @@ msgstr "пакетов"
 msgid "Please enter your username and password."
 msgstr "Пожалуйста, введите имя пользователя и пароль."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4367
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4366
 msgid "Please select the file to upload."
 msgstr "Пожалуйста, выберите файл для загрузки."
 
@@ -8177,7 +8183,7 @@ msgctxt "WireGuard listen port"
 msgid "Port %d"
 msgstr "Порт %d"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:293
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:297
 msgid "Port is not part of any network"
 msgstr "Порт не является частью какой-либо сети"
 
@@ -8185,7 +8191,7 @@ msgstr "Порт не является частью какой-либо сети
 msgid "Port isolation"
 msgstr "Изоляция порта"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:299
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:303
 msgid "Port status"
 msgstr "Состояние порта"
 
@@ -8274,11 +8280,11 @@ msgstr ""
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:672
 msgid "Primary Device"
-msgstr ""
+msgstr "Основное устройство"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:816
 msgid "Primary port reselection policy"
-msgstr ""
+msgstr "Политика повторного выбора основного порта"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:725
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:1015
@@ -8616,11 +8622,11 @@ msgstr "Перезагрузка устройства"
 msgid "Receive"
 msgstr "Приём"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:243
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:247
 msgid "Receive dropped"
 msgstr "Прием прекращен"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:242
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:246
 msgid "Receive errors"
 msgstr "Ошибки приема"
 
@@ -8628,15 +8634,15 @@ msgstr "Ошибки приема"
 msgid "Received Data"
 msgstr "Принятые данные"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:239
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:243
 msgid "Received bytes"
 msgstr "Полученные байты"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:241
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:245
 msgid "Received multicast"
 msgstr "Полученная многоадресная рассылка"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:240
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:244
 msgid "Received packets"
 msgstr "Полученные пакеты"
 
@@ -9060,19 +9066,19 @@ msgstr "Показать/скрыть пароль"
 msgid "Reverse path filter"
 msgstr "Фильтр обратного пути"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4660
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4659
 msgid "Revert"
 msgstr "Вернуть"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4766
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4765
 msgid "Revert changes"
 msgstr "Вернуть изменения"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4977
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4976
 msgid "Revert request failed with status <code>%h</code>"
 msgstr "Ошибка <code>%h</code> отмены конфигурации"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4957
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4956
 msgid "Reverting configuration…"
 msgstr "Отмена конфигурации…"
 
@@ -9159,7 +9165,7 @@ msgstr "Подготовка корневой директории"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:624
 msgid "Round robin"
-msgstr ""
+msgstr "Round robin"
 
 #: protocols/luci-proto-wireguard/htdocs/luci-static/resources/protocol/wireguard.js:644
 msgid "Route Allowed IPs"
@@ -9347,7 +9353,7 @@ msgid "Save"
 msgstr "Сохранить"
 
 #: modules/luci-base/htdocs/luci-static/resources/luci.js:2124
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4648
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4647
 #: modules/luci-compat/luasrc/view/cbi/footer.htm:22
 msgid "Save & Apply"
 msgstr "Применить"
@@ -9394,11 +9400,11 @@ msgstr "Поиск домена"
 msgid "Section %s is empty."
 msgstr "Раздел %s пуст."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4634
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4633
 msgid "Section added"
 msgstr "Раздел добавлен"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4636
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4635
 msgid "Section removed"
 msgstr "Раздел удалён"
 
@@ -9416,9 +9422,9 @@ msgstr ""
 "формата завершается с ошибкой. Используйте эту опцию только если уверены, "
 "что файл образа корректный и предназначен именно для данного устройства!"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2811
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2961
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3125
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2810
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2960
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3124
 msgid "Select file…"
 msgstr "Выбрать файл…"
 
@@ -9635,7 +9641,7 @@ msgstr "Частота обновления сигнала"
 msgid "Signal:"
 msgstr "Сигнал:"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4385
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4384
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:224
 msgid "Size"
 msgstr "Размер"
@@ -9669,11 +9675,11 @@ msgstr "Перейти к навигации"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:680
 msgid "Slave selection hash policy"
-msgstr ""
+msgstr "Хеш-политика выбора ведомых"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:762
 msgid "Slow (every 30 seconds)"
-msgstr ""
+msgstr "Медленно (каждые 30 секунд)"
 
 #: modules/luci-base/htdocs/luci-static/resources/network.js:3038
 #: modules/luci-compat/luasrc/model/network.lua:1428
@@ -9811,7 +9817,7 @@ msgstr ""
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:896
 msgid "Specifies the link monitoring frequency in milliseconds"
-msgstr ""
+msgstr "Указывает частоту мониторинга соединения в миллисекундах"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:45
 msgid ""
@@ -9863,6 +9869,8 @@ msgid ""
 "Specifies the number of IGMP membership reports to be issued after a "
 "failover event"
 msgstr ""
+"Указывает количество отчетов о членстве в IGMP, которые должны быть выданы "
+"после события обхода отказа"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:107
 msgid ""
@@ -9882,7 +9890,7 @@ msgstr "Определяет целевое действие маршрутиз�
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:611
 msgid "Specifies the wired ports to attach to this bonding."
-msgstr ""
+msgstr "Укажите проводные порты для подключения к этому бондингу."
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:1001
 msgid ""
@@ -9966,6 +9974,8 @@ msgstr ""
 msgid ""
 "Specify the number of peer notifications to be issued after a failover event."
 msgstr ""
+"Укажите количество уведомлений узлов, которые будут выданы после события "
+"обхода отказа."
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:2273
 msgid "Specify the secret encryption key here."
@@ -9975,19 +9985,19 @@ msgstr "Укажите закрытый ключ."
 msgid "Speed: %d Mibit/s, Duplex: %s"
 msgstr "Скорость: %d Mibit/s, Дуплекс: %s"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1611
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1612
 msgid "Splitterless ADSL (G.992.2) Annex A"
 msgstr "Splitterless ADSL (G.992.2) Annex A"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:734
 msgid "Stable"
-msgstr ""
+msgstr "Стабильный"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:1170
 msgid "Stale neighbour cache timeout"
 msgstr "Таймаут кэша просроченных соседей"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1585
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1586
 msgid "Standard: none"
 msgstr "Стандарт: отсутствует"
 
@@ -10008,7 +10018,7 @@ msgstr "Приоритет"
 msgid "Start refresh"
 msgstr "Запустить обновление"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4881
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4880
 msgid "Starting configuration apply…"
 msgstr "Применение конфигурации…"
 
@@ -10071,7 +10081,7 @@ msgstr "Максимально допустимое время бездейст�
 msgid "Status"
 msgstr "Статус"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1582
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1583
 msgid "Steering flows (<abbr title=\"Receive Packet Steering\">RPS</abbr>)"
 msgstr ""
 "Направляющие потоки (<abbr title=\"Receive Packet Steering\">RPS</abbr>)"
@@ -10111,7 +10121,7 @@ msgstr "Сильная"
 msgid "Submit"
 msgstr "Применить"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1586
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1587
 msgid "Suggested: 128"
 msgstr "Предлагается: 128"
 
@@ -10162,7 +10172,7 @@ msgstr "Изменить протокол"
 msgid "Switch to CIDR list notation"
 msgstr "Переключить в формат CIDR"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2856
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2855
 msgid "Symbolic link"
 msgstr "Символическая ссылка"
 
@@ -10519,7 +10529,7 @@ msgstr ""
 msgid "The default (%s) is zero for both IPv4 and IPv6."
 msgstr "По умолчанию (%s) равен нулю как для IPv4, так и для IPv6."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4757
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4756
 msgid ""
 "The device could not be reached within %d seconds after applying the pending "
 "changes, which caused the configuration to be rolled back for safety "
@@ -10889,7 +10899,7 @@ msgstr ""
 msgid "There are no active leases"
 msgstr "Нет активных арендованных адресов"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4924
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4923
 msgid "There are no changes to apply"
 msgstr "Нет изменений для применения"
 
@@ -11056,13 +11066,15 @@ msgstr "Здесь пока что пусто"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:726
 msgid "This specifies the AD system priority"
-msgstr ""
+msgstr "Это указывает приоритет системы AD"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:721
 msgid ""
 "This specifies the mac-address for the actor in protocol packet exchanges "
 "(LACPDUs). The value cannot be NULL or multicast."
 msgstr ""
+"Определяет mac-адрес для агента в протоколе обмена пакетами (LACPDUs). "
+"Значение не может быть NULL или multicast."
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/system.js:124
 msgid "Time Synchronization"
@@ -11113,7 +11125,7 @@ msgstr "Часовой пояс"
 
 #: protocols/luci-proto-wireguard/htdocs/luci-static/resources/protocol/wireguard.js:425
 msgid ""
-"To fully configure the local WireGuard interface from an existing (e.g. "
+"To configure fully the local WireGuard interface from an existing (e.g. "
 "provider supplied) configuration file, use the <strong><a class=\"full-"
 "import\" href=\"#\">configuration import</a></strong> instead."
 msgstr ""
@@ -11132,7 +11144,7 @@ msgstr ""
 "<br />Чтобы восстановить настройки из ранее созданной резервной копии, "
 "нажмите \"Выбрать архив\"."
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1620
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1621
 msgid "Tone"
 msgstr "Тон"
 
@@ -11193,27 +11205,27 @@ msgstr "Transix (только для Японии)"
 msgid "Transmit"
 msgstr "Передача"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:248
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:252
 msgid "Transmit dropped"
 msgstr "Передача прекращена"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:247
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:251
 msgid "Transmit errors"
 msgstr "Ошибки передачи"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:625
 msgid "Transmit hash - balance-xor"
-msgstr ""
+msgstr "Передача хэша - balance-xor"
 
 #: protocols/luci-proto-wireguard/htdocs/luci-static/resources/view/wireguard/status.js:58
 msgid "Transmitted Data"
 msgstr "Переданные данные"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:245
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:249
 msgid "Transmitted bytes"
 msgstr "Переданные байты"
 
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:246
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:250
 msgid "Transmitted packets"
 msgstr "Переданные пакеты"
 
@@ -11386,7 +11398,7 @@ msgstr "Невозможно перезапустить межсетевой э�
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:372
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/startup.js:56
 msgid "Unable to save contents: %s"
-msgstr "Невозможно сохранить содержимое: %s"
+msgstr "Не удалось сохранить содержимое: %s"
 
 #: protocols/luci-proto-modemmanager/htdocs/luci-static/resources/protocol/modemmanager.js:14
 msgid "Unable to set allowed mode list."
@@ -11469,7 +11481,7 @@ msgstr "Неименованный экземпляр #%d"
 msgid "Unnamed key"
 msgstr "Ключ без имени"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4573
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4572
 msgid "Unsaved Changes"
 msgstr "Не принятые изменения"
 
@@ -11513,7 +11525,7 @@ msgstr "Узел без имени"
 msgid "Up"
 msgstr "Вверх"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4459
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4458
 msgid "Upload"
 msgstr "Загрузить"
 
@@ -11529,25 +11541,25 @@ msgstr ""
 msgid "Upload archive..."
 msgstr "Загрузить архив..."
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:3015
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:3014
 msgid "Upload file"
 msgstr "Загрузка файла"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2990
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2989
 msgid "Upload file…"
 msgstr "Загрузка файла…"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4405
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4404
 msgid "Upload has been cancelled"
 msgstr "Загрузка отменена"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:2937
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4447
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:2936
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4446
 msgid "Upload request failed: %s"
 msgstr "Ошибка запроса на загрузку: %s"
 
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4366
-#: modules/luci-base/htdocs/luci-static/resources/ui.js:4420
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4365
+#: modules/luci-base/htdocs/luci-static/resources/ui.js:4419
 msgid "Uploading file…"
 msgstr "Загрузка файла…"
 
@@ -11585,7 +11597,7 @@ msgstr "Время работы"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:959
 msgid "Use Carrier"
-msgstr ""
+msgstr "Использовать оператора"
 
 #: protocols/luci-proto-mbim/htdocs/luci-static/resources/protocol/mbim.js:106
 msgid "Use DHCP"
@@ -11649,7 +11661,7 @@ msgstr "Использовать встроенный IPv6-менеджмент"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:959
 msgid "Use carrier status instead of MII result"
-msgstr ""
+msgstr "Использовать состояние оператора вместо результата MII"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1026
 #: protocols/luci-proto-mbim/htdocs/luci-static/resources/protocol/mbim.js:148
@@ -11769,11 +11781,11 @@ msgstr "Имя пользователя"
 msgid "Utilize flow table <strong>%h</strong>"
 msgstr "Использовать flow-таблицу <strong>%h</strong>"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1688
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1689
 msgid "VC-Mux"
 msgstr "VC-Mux"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1636
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1637
 msgid "VDSL"
 msgstr "VDSL"
 
@@ -12271,9 +12283,9 @@ msgstr ""
 msgid "any"
 msgstr "любой"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1621
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1629
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1634
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1622
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1630
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1635
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:89
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:104
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/routes.js:142
@@ -12302,7 +12314,7 @@ msgstr "автоматически (включено)"
 msgid "baseT"
 msgstr "baseT"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1694
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1695
 msgid "bridged"
 msgstr "соед. мостом"
 
@@ -12395,7 +12407,7 @@ msgstr "отключено"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:800
 msgid "distribute traffic according to port load"
-msgstr ""
+msgstr "распределять трафик в зависимости от нагрузки на порт"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:637
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:671
@@ -12551,7 +12563,7 @@ msgstr "нет"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/tools/network.js:104
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/switch.js:76
-#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:232
+#: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/29_ports.js:236
 msgid "no link"
 msgstr "нет соединения"
 
@@ -12651,7 +12663,7 @@ msgstr ""
 msgid "relay mode"
 msgstr "режим передачи"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1695
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:1696
 msgid "routed"
 msgstr "маршрутизируемый"
 
@@ -12996,1559 +13008,3 @@ msgstr "{example_nx} возвращает {nxdomain}."
 #: modules/luci-compat/luasrc/view/cbi/delegator.htm:20
 msgid "« Back"
 msgstr "« Назад"
-
-#~ msgid "ARP"
-#~ msgstr "ARP"
-
-#~ msgid "ARP IP Targets"
-#~ msgstr "IP-адреса ARP мониторинга"
-
-#~ msgid "ARP Interval"
-#~ msgstr "ARP интервал"
-
-#~ msgid "ARP Validation"
-#~ msgstr "ARP валидация"
-
-#~ msgid "ARP mode to consider a slave as being up"
-#~ msgstr ""
-#~ "Режим ARP для определения ведомого как находящегося в рабочем состоянии"
-
-#~ msgid "ARP monitoring is not supported for the selected policy!"
-#~ msgstr "Мониторинг ARP не поддерживается для выбранной политики!"
-
-#~ msgid "Active-Backup policy (active-backup, 1)"
-#~ msgstr "Политика активного резервирования (active-backup, 1)"
-
-#~ msgid "Adaptive load balancing (balance-alb, 6)"
-#~ msgstr "Адаптивная балансировка нагрузки (balance-alb, 6)"
-
-#~ msgid "Adaptive transmit load balancing (balance-tlb, 5)"
-#~ msgstr "Адаптивная балансировка нагрузки передачи (balance-tlb, 5)"
-
-#~ msgid "Aggregation Selection Logic"
-#~ msgstr "Логика выбора для агрегации"
-
-#~ msgid "Aggregator: All slaves down or has no slaves (stable, 0)"
-#~ msgstr ""
-#~ "Агрегатор: Все ведомые отключены (нет линка) или нет ведомых (stable, 0)"
-
-#~ msgid ""
-#~ "Aggregator: Chosen by the largest number of ports + slave added/removed "
-#~ "or state changes (count, 2)"
-#~ msgstr ""
-#~ "Агрегатор: Выбирается по наибольшему количеству портов + добавление/"
-#~ "удаление ведомых или изменение состояния (count, 2)"
-
-#~ msgid "Aggregator: Slave added/removed or state changes (bandwidth, 1)"
-#~ msgstr ""
-#~ "Агрегатор: Добавление/удаление ведомых или изменение состояния "
-#~ "(bandwidth, 1)"
-
-#~ msgid "Broadcast policy (broadcast, 3)"
-#~ msgstr "Широковещательная политика (broadcast, 3)"
-
-#~ msgid "Consider the slave up when all ARP IP targets are reachable (all, 1)"
-#~ msgstr ""
-#~ "Считать ведомый включенным, когда все IP-адреса ARP мониторинга достижимы "
-#~ "(all, 1)"
-
-#~ msgid "Consider the slave up when any ARP IP target is reachable (any, 0)"
-#~ msgstr ""
-#~ "Считать ведомый включенным, когда любой из IP-адресов ARP мониторинга "
-#~ "достижим (any, 0)"
-
-#~ msgid "Down Delay"
-#~ msgstr "Задержка отключения интерфейса"
-
-#~ msgid "Drop Duplicate Frames"
-#~ msgstr "Отбрасывать дубликаты кадров"
-
-#~ msgid "Enable Dynamic Shuffling Of Flows"
-#~ msgstr "Включить динамическую перестановку потоков"
-
-#~ msgid "Every 30 seconds (slow, 0)"
-#~ msgstr "Каждые 30 секунд (slow, 0)"
-
-#~ msgid "Every second (fast, 1)"
-#~ msgstr "Каждую секунду (fast, 1)"
-
-#~ msgid "Expecting: non-empty value"
-#~ msgstr "Ожидание: непустое значение"
-
-#~ msgid "Filtering for all slaves, no validation"
-#~ msgstr "Фильтрация для всех ведомых, без проверки"
-
-#~ msgid "Filtering for all slaves, validation only for active slave"
-#~ msgstr "Фильтрация для всех ведомых, проверка только для активного ведомого"
-
-#~ msgid "Filtering for all slaves, validation only for backup slaves"
-#~ msgstr "Фильтрация для всех ведомых, проверка только для резервных ведомых"
-
-#~ msgid "IEEE 802.3ad Dynamic link aggregation (802.3ad, 4)"
-#~ msgstr "Динамическая агрегация каналов IEEE 802.3ad (802.3ad, 4)"
-
-#~ msgid "Interval For Sending Learning Packets"
-#~ msgstr "Интервал отправки обучающих (learning) пакетов"
-
-#~ msgid "LACPDU Packets"
-#~ msgstr "LACPDU пакеты"
-
-#~ msgid "Link Aggregation (Channel Bonding)"
-#~ msgstr "Агрегация соединений (объединение каналов)"
-
-#~ msgid "Link Monitoring"
-#~ msgstr "Мониторинг соединения"
-
-#~ msgid "MAC Address For The Actor"
-#~ msgstr "MAC-адрес для актора"
-
-#~ msgid "MII"
-#~ msgstr "MII"
-
-#~ msgid "MII / ETHTOOL ioctls"
-#~ msgstr "MII / ioctl вызовы ETHTOOL"
-
-#~ msgid "MII Interval"
-#~ msgstr "MII интервал"
-
-#~ msgid "Method of link monitoring"
-#~ msgstr "Метод мониторинга соединений"
-
-#~ msgid "Method to determine link status"
-#~ msgstr "Метод определения состояния соединений"
-
-#~ msgid "Minimum Number of Links"
-#~ msgstr "Минимальное количество соединений"
-
-#~ msgid "No more slaves available"
-#~ msgstr "Больше нет доступных ведомых интерфейсов"
-
-#~ msgid "No more slaves available, can not save interface"
-#~ msgstr "Больше нет доступных ведомых, сохранить интерфейс невозможно"
-
-#~ msgid "No validation or filtering"
-#~ msgstr "Без проверки или фильтрации"
-
-#~ msgid "Number of IGMP membership reports"
-#~ msgstr "Количество отчётов о членстве IGMP"
-
-#~ msgid "Number of peer notifications after failover event"
-#~ msgstr "Количество peer-уведомлений после события отказа"
-
-#~ msgid ""
-#~ "Only if current active slave fails and the primary slave is up (failure, "
-#~ "2)"
-#~ msgstr ""
-#~ "Только в том случае, если текущий активный ведомый выходит из строя и "
-#~ "первичный ведомый работает (failure, 2)"
-
-#~ msgid "Packets To Transmit Before Moving To Next Slave"
-#~ msgstr "Количество пакетов перед переходом на следующий ведомый"
-
-#~ msgid "Primary Slave"
-#~ msgstr "Первичный ведомый интерфейс"
-
-#~ msgid ""
-#~ "Primary becomes active slave when it comes back up if speed and duplex "
-#~ "better than current slave (better, 1)"
-#~ msgstr ""
-#~ "Первичный становится активным ведомым при его восстановлении, если "
-#~ "скорость и дуплекс лучше, чем у текущего ведомого (better, 1)"
-
-#~ msgid "Primary becomes active slave whenever it comes back up (always, 0)"
-#~ msgstr ""
-#~ "Первичный становится активным ведомым всякий раз, когда он "
-#~ "восстанавливается (always, 0)"
-
-#~ msgid "Reselection policy for primary slave"
-#~ msgstr "Политика переизбрания для первичного ведомого"
-
-#~ msgid "Round-Robin policy (balance-rr, 0)"
-#~ msgstr "Политика round-robin (balance-rr, 0)"
-
-#~ msgid "Selects the transmit hash policy to use for slave selection"
-#~ msgstr ""
-#~ "Определяет хэш политику передачи пакетов через объединенные интерфейсы"
-
-#~ msgid "Set same MAC Address to all slaves"
-#~ msgstr "Установить один и тот же MAC-адрес для всех ведомых интерфейсов"
-
-#~ msgid "Set to currently active slave (active, 1)"
-#~ msgstr "Установить на текущем активном ведомом интерфейсе (active, 1)"
-
-#~ msgid "Set to first slave added to the bond (follow, 2)"
-#~ msgstr ""
-#~ "Установить на первом ведомом интерфейсе, добавленном в объединение "
-#~ "(follow, 2)"
-
-#~ msgid "Slave Interfaces"
-#~ msgstr "Ведомые интерфейсы"
-
-#~ msgid ""
-#~ "Specifies that duplicate frames (received on inactive ports) should be "
-#~ "dropped or delivered"
-#~ msgstr ""
-#~ "Определяет, должны ли дубликаты фреймов (полученные на неактивных портах) "
-#~ "быть отброшены или доставлены"
-
-#~ msgid "Specifies the ARP link monitoring frequency in milliseconds"
-#~ msgstr "Определяет частоту ARP мониторинга соединения в миллисекундах"
-
-#~ msgid "Specifies the IP addresses to use for ARP monitoring"
-#~ msgstr ""
-#~ "Определяет IP-адреса, которые будут использоваться для ARP мониторинга"
-
-#~ msgid "Specifies the MII link monitoring frequency in milliseconds"
-#~ msgstr "Определяет частоту MII мониторинга соединения в миллисекундах"
-
-#~ msgid "Specifies the aggregation selection logic to use"
-#~ msgstr "Определяет используемую логику выбора для агрегации"
-
-#~ msgid ""
-#~ "Specifies the mac-address for the actor in protocol packet exchanges "
-#~ "(LACPDUs). If empty, masters' mac address defaults to system default"
-#~ msgstr ""
-#~ "Определяет MAC-адрес для актора во время обмена пакетами протокола "
-#~ "(LACPDU). Если пустой, в качестве MAC-адреса актора будет использоваться "
-#~ "MAC-адрес мастера"
-
-#~ msgid ""
-#~ "Specifies the minimum number of links that must be active before "
-#~ "asserting carrier"
-#~ msgstr ""
-#~ "Определяет минимальное количество соединений, которое должно быть "
-#~ "активным для включения интерфейса объединения (carrier on)"
-
-#~ msgid "Specifies the mode to be used for this bonding interface"
-#~ msgstr ""
-#~ "Определяет режим, который будет использоваться для этого интерфейса "
-#~ "объединения"
-
-#~ msgid ""
-#~ "Specifies the number of IGMP membership reports to be issued after a "
-#~ "failover event in 200ms intervals"
-#~ msgstr ""
-#~ "Определяет количество отчетов о членстве в IGMP, которые должны быть "
-#~ "отправлены после события отказа с интервалом 200 мс"
-
-#~ msgid ""
-#~ "Specifies the number of packets to transmit through a slave before moving "
-#~ "to the next one"
-#~ msgstr ""
-#~ "Определяет количество пакетов для передачи через ведомый интерфейс перед "
-#~ "переходом к следующему ведомому"
-
-#~ msgid ""
-#~ "Specifies the number of peer notifications (gratuitous ARPs and "
-#~ "unsolicited IPv6 Neighbor Advertisements) to be issued after a failover "
-#~ "event"
-#~ msgstr ""
-#~ "Определяет количество peer-уведомлений (самообращённые ARP и "
-#~ "незапрашиваемые IPv6-объявления соседей), которые должны быть отправлены "
-#~ "после события отказа"
-
-#~ msgid ""
-#~ "Specifies the number of seconds between instances where the bonding "
-#~ "driver sends learning packets to each slaves peer switch"
-#~ msgstr ""
-#~ "Определяет количество секунд между моментами, когда драйвер объединения "
-#~ "посылает обучающие пакеты на каждый пир ведомого устройства"
-
-#~ msgid "Specifies the quantity of ARP IP targets that must be reachable"
-#~ msgstr ""
-#~ "Определяет количество IP-адресов ARP мониторинга, которые должны быть "
-#~ "достижимы"
-
-#~ msgid ""
-#~ "Specifies the rate in which the link partner will be asked to transmit "
-#~ "LACPDU packets"
-#~ msgstr ""
-#~ "Определяет скорость, с которой партнер соединения будет запрашивать "
-#~ "передачу пакетов LACPDU"
-
-#~ msgid ""
-#~ "Specifies the reselection policy for the primary slave when failure of "
-#~ "the active slave or recovery of the primary slave occurs"
-#~ msgstr ""
-#~ "Определяет политику повторного выбора для первичного ведомого, когда "
-#~ "происходит сбой активного ведомого или восстановление первичного ведомого"
-
-#~ msgid "Specifies the system priority"
-#~ msgstr "Определяет системный приоритет"
-
-#~ msgid ""
-#~ "Specifies the time in milliseconds to wait before disabling a slave after "
-#~ "a link failure detection"
-#~ msgstr ""
-#~ "Определяет время в миллисекундах для ожидания перед отключением ведомого "
-#~ "после обнаружения сбоя в соединении"
-
-#~ msgid ""
-#~ "Specifies the time in milliseconds to wait before enabling a slave after "
-#~ "a link recovery detection"
-#~ msgstr ""
-#~ "Определяет время в миллисекундах для ожидания перед включением ведомого "
-#~ "после обнаружения восстановления соединения"
-
-#~ msgid ""
-#~ "Specifies whether ARP probes and replies should be validated or non-ARP "
-#~ "traffic should be filtered for link monitoring"
-#~ msgstr ""
-#~ "Определяет, должны ли проверяться запросы и ответы ARP или же для "
-#~ "мониторинга соединения следует фильтровать трафик, не связанный с ARP"
-
-#~ msgid ""
-#~ "Specifies whether active-backup mode should set all slaves to the same "
-#~ "MAC address at enslavement"
-#~ msgstr ""
-#~ "Определяет, должен ли режим активного резервирования устанавливать для "
-#~ "всех ведомых устройств один и тот же MAC-адрес при добавлении устройства "
-#~ "в качестве ведомого"
-
-#~ msgid ""
-#~ "Specifies whether or not miimon should use MII or ETHTOOL ioctls vs. "
-#~ "netif_carrier_ok()"
-#~ msgstr ""
-#~ "Определяет, должен ли miimon использовать MII или ioctl вызовы ETHTOOL "
-#~ "вместо netif_carrier_ok()"
-
-#~ msgid ""
-#~ "Specifies whether to shuffle active flows across slaves based on the load"
-#~ msgstr ""
-#~ "Определяет, следует ли перемещать активные потоки между ведомыми в "
-#~ "зависимости от нагрузки"
-
-#~ msgid ""
-#~ "Specifies which slave interfaces should be attached to this bonding "
-#~ "interface"
-#~ msgstr ""
-#~ "Определяет, какие ведомые интерфейсы должны быть включены в этот "
-#~ "интерфейс объединения"
-
-#~ msgid ""
-#~ "Specifies which slave is the primary device. It will always be the active "
-#~ "slave while it is available"
-#~ msgstr ""
-#~ "Определяет, какой ведомый интерфейс является основным устройством. Он "
-#~ "всегда будет активным ведомым, пока он доступен"
-
-#~ msgid "System Priority"
-#~ msgstr "Системный приоритет"
-
-#~ msgid "The local IPv4 address"
-#~ msgstr "Локальный IPv4-адрес"
-
-#~ msgid "The local IPv4 netmask"
-#~ msgstr "Локальная маска сети IPv4"
-
-#~ msgid "Transmit Hash Policy"
-#~ msgstr "Хэш политика передачи пакетов"
-
-#~ msgid "Up Delay"
-#~ msgstr "Задержка включения интерфейса"
-
-#~ msgid "Use XOR of hardware MAC addresses (layer2)"
-#~ msgstr "Использовать XOR аппаратных MAC-адресов (layer2)"
-
-#~ msgid "Use XOR of hardware MAC addresses and IP addresses (layer2+3)"
-#~ msgstr "Использовать XOR аппаратных MAC-адресов и IP-адресов (layer2+3)"
-
-#~ msgid ""
-#~ "Use XOR of hardware MAC addresses and IP addresses, rely on "
-#~ "skb_flow_dissect (encap2+3)"
-#~ msgstr ""
-#~ "Использовать XOR аппаратных MAC-адресов и IP-адресов, используя "
-#~ "skb_flow_dissect (encap2+3)"
-
-#~ msgid "Use upper layer protocol information (layer3+4)"
-#~ msgstr "Использовать информацию протокола верхнего уровня (layer3+4)"
-
-#~ msgid ""
-#~ "Use upper layer protocol information, rely on skb_flow_dissect (encap3+4)"
-#~ msgstr ""
-#~ "Использовать информацию протокола верхнего уровня, используя "
-#~ "skb_flow_dissect (encap3+4)"
-
-#~ msgid "Validation for all slaves"
-#~ msgstr "Проверка для всех ведомых"
-
-#~ msgid "Validation only for active slave"
-#~ msgstr "Проверка только для активного ведомого"
-
-#~ msgid "Validation only for backup slaves"
-#~ msgstr "Проверка только для резервных ведомых"
-
-#~ msgid "XOR policy (balance-xor, 2)"
-#~ msgstr "Политика XOR (balance-xor, 2)"
-
-#~ msgid "Yes (none, 0)"
-#~ msgstr "Да (none, 0)"
-
-#~ msgid ""
-#~ "You must select a primary interface which is included in selected slave "
-#~ "interfaces!"
-#~ msgstr ""
-#~ "Вы должны выбрать основной интерфейс, который входит в состав выбранных "
-#~ "ведомых интерфейсов!"
-
-#~ msgid ""
-#~ "You must select at least one ARP IP target if ARP monitoring is selected!"
-#~ msgstr ""
-#~ "При указании IP-адресов ARP мониторинга необходимо выбрать по крайней "
-#~ "мере один IP-адрес!"
-
-#~ msgid "netif_carrier_ok()"
-#~ msgstr "netif_carrier_ok()"
-
-#~ msgid "Request IPv6-prefix of length"
-#~ msgstr "Запрос IPv6 префикс длины"
-
-#~ msgid "Ignore {etc_hosts}"
-#~ msgstr "Игнорировать {etc_hosts}"
-
-#~ msgid "Defines a specific MTU for this route"
-#~ msgstr "Определяет специальный MTU для этого маршрута"
-
-#~ msgid "Specifies the destination subnet to match (CIDR notation)"
-#~ msgstr "Определяет подсеть назначения для соответствия (CIDR-нотация)"
-
-#~ msgid "Specifies the incoming logical interface name"
-#~ msgstr "Определяет имя входящего логического интерфейса"
-
-#~ msgid "Specifies the ordering of the IP rules"
-#~ msgstr "Определяет порядок следования IP-правил"
-
-#~ msgid "Specifies the outgoing logical interface name"
-#~ msgstr "Определяет имя исходящего логического интерфейса"
-
-#~ msgid "Specifies the route metric to use"
-#~ msgstr "Определяет метрику маршрута для использования"
-
-#~ msgid "Specifies the source subnet to match (CIDR notation)"
-#~ msgstr "Определяет подсеть источника для сопоставления (CIDR-нотация)"
-
-#~ msgid ""
-#~ "The rule target is a jump to another rule specified by its priority value"
-#~ msgstr ""
-#~ "Целью правила является переход к другому правилу, определенному значением "
-#~ "его приоритета"
-
-#~ msgid ""
-#~ "The rule target is a table lookup ID: a numeric table index ranging from "
-#~ "0 to 65535 or symbol alias declared in /etc/iproute2/rt_tables. Special "
-#~ "aliases local (255), main (254) and default (253) are also valid"
-#~ msgstr ""
-#~ "Целью правила является идентификатор таблицы поиска: числовой индекс "
-#~ "таблицы в диапазоне от 0 до 65535 или символьный псевдоним, объявленный "
-#~ "в /etc/iproute2/rt_tables. Специальные псевдонимы local (255), main (254) "
-#~ "и default (253) также допустимы"
-
-#~ msgid "Required. Underlying interface."
-#~ msgstr "Обязательно. Основной интерфейс."
-
-#~ msgid "PAP/CHAP (both)"
-#~ msgstr "PAP/CHAP (оба)"
-
-#~ msgid "Back"
-#~ msgstr "Назад"
-
-#~ msgid "\"%h\" interface changes could inhibit access to this device."
-#~ msgstr ""
-#~ "Изменения интерфейса \"%h\" могут препятствовать доступу к этому "
-#~ "устройству."
-
-#~ msgid ""
-#~ "Any IP change requires <strong>connecting to the new IP</strong> within "
-#~ "%d seconds to retain the changes."
-#~ msgstr ""
-#~ "Любое изменение IP требует <strong>подключения к новому IP</strong> в "
-#~ "течение %d секунд, чтобы сохранить изменения."
-
-#~ msgid "Apply, committing now"
-#~ msgstr "Применить, начать прямо сейчас"
-
-#~ msgid "Apply, reverting if GUI remains unreachable"
-#~ msgstr "Применить, отменить, если GUI остается недоступным"
-
-#~ msgid "Choose how to apply changes:"
-#~ msgstr "Выберите способ применения изменений:"
-
-#~ msgid "Peer disabled"
-#~ msgstr "Узел отключен"
-
-#~ msgid ""
-#~ "The <em>qrencode</em> package is required for generating an QR code image "
-#~ "of the configuration."
-#~ msgstr ""
-#~ "Для генерации изображения QR-кода конфигурации необходим пакет "
-#~ "<em>qrencode</em>."
-
-#~ msgid "Unable to generate QR code: %s"
-#~ msgstr "Невозможно сгенерировать QR-код: %s"
-
-#~ msgid "Apply and keep settings"
-#~ msgstr "Применить и сохранить настройки"
-
-#~ msgid "Apply with revert after connectivity loss"
-#~ msgstr "Применить с восстановлением при потере соединения"
-
-#~ msgid ""
-#~ "If the IP address used to access LuCI changes, a <strong>manual reconnect "
-#~ "to the new IP</strong> is required within %d seconds to confirm the "
-#~ "settings, otherwise modifications will be reverted."
-#~ msgstr ""
-#~ "Если IP-адрес, используемый для доступа к веб-интерфейсу, изменился, в "
-#~ "течение %d секунд необходимо выполнить <strong>ручное переподключение c "
-#~ "использованием нового IP-адреса</strong> для подтверждения настроек, в "
-#~ "противном случае изменения будут автоматически отменены."
-
-#~ msgid ""
-#~ "The network access to this device could be interrupted by changing "
-#~ "settings of the \"%h\" interface."
-#~ msgstr ""
-#~ "Сетевой доступ к этому устройству может быть нарушен при изменении "
-#~ "настроек интерфейса «%h»."
-
-#~ msgid "User Group"
-#~ msgstr "Группа пользователя"
-
-#~ msgid "Bandwith"
-#~ msgstr "Пропускная способность"
-
-#~ msgid ""
-#~ "Enable packet steering across all CPUs. May help or hinder network speed."
-#~ msgstr ""
-#~ "Включить управление пакетами (packet steering) для всех CPU. Может как "
-#~ "помочь так и замедлить скорость сети (в зависимости от устройства)."
-
-#~ msgid "Mobile Service"
-#~ msgstr "Мобильный сервис"
-
-#~ msgid "Run a filesystem check before mounting the device"
-#~ msgstr "Проверять файловую систему перед монтированием раздела"
-
-#~ msgid "Run filesystem check"
-#~ msgstr "Проверить"
-
-#~ msgid ""
-#~ "Private Pre-Shared Key (PPSK) allows the use of different Pre-Shared Key "
-#~ "for each STA MAC address. Private MAC's PSKs are stored on RADIUS server."
-#~ msgstr ""
-#~ "Private Pre-Shared Key (PPSK) позволяет использовать различные Pre-Shared "
-#~ "Key для каждого MAC-адреса STA. Частные PSK MAC-адресов хранятся на "
-#~ "сервере RADIUS."
-
-#~ msgid "Always send DHCP Options. Sometimes needed, with e.g. PXELinux."
-#~ msgstr ""
-#~ "Всегда отправлять опции DHCP. Это требуется в некоторых случаях, "
-#~ "например, для PXELinux."
-
-#~ msgid "Apply DHCP Options to this net. (Empty = all clients)."
-#~ msgstr "Применить опции DHCP к этой сети (пусто = все клиенты)."
-
-#~ msgid "Network-ID"
-#~ msgstr "Network-ID"
-
-#~ msgid ""
-#~ "Options for the Network-ID. (Note: needs also Network-ID.) E.g. "
-#~ "\"<code>42,192.168.1.4</code>\" for NTP server, \"<code>3,192.168.4.4</"
-#~ "code>\" for default route. <code>0.0.0.0</code> means \"the address of "
-#~ "the system running dnsmasq\"."
-#~ msgstr ""
-#~ "Параметры для Network-ID (примечание: необходим также Network-ID). "
-#~ "Например, <code>42,192.168.1.4</code> для NTP-сервера, "
-#~ "<code>3,192.168.4.4</code> для маршрута по умолчанию. <code>0.0.0.0</"
-#~ "code> означает «адрес системы, на которой запущен dnsmasq»."
-
-#~ msgid "PXE/TFTP Settings"
-#~ msgstr "Настройки PXE/TFTP"
-
-#~ msgid "Resolv and Hosts Files"
-#~ msgstr "Файлы resolv и hosts"
-
-#~ msgid "Upstream resolvers will be queried in the order of the resolv file."
-#~ msgstr ""
-#~ "<abbr title=\"Система доменных имен\">DNS</abbr> сервера будут опрошены в "
-#~ "порядке, определенном в resolvfile файле."
-
-#~ msgid "IP set"
-#~ msgstr "Список IP"
-
-#~ msgid "Bind dynamically to interfaces rather than wildcard address."
-#~ msgstr ""
-#~ "Привязывать динамически к интерфейсам, а не по шаблону адреса "
-#~ "(рекомендуется по умолчанию для Linux)."
-
-#~ msgid "Do not forward DNS queries without dots or domain parts."
-#~ msgstr ""
-#~ "Не перенаправлять <abbr title=\"Служба доменных имён\">DNS</abbr>-запросы "
-#~ "без <abbr title=\"Служба доменных имён\">DNS</abbr>-имени."
-
-#~ msgid "Do not forward reverse lookups for local networks."
-#~ msgstr "Не перенаправлять обратные DNS-запросы для локальных сетей."
-
-#~ msgid "Ignore <code>/etc/hosts</code>"
-#~ msgstr "Игнорировать <code>/etc/hosts</code>"
-
-#~ msgid "List of IP addresses to convert into NXDOMAIN responses."
-#~ msgstr "Список IP адресов, поставляющих поддельные результаты домена NX."
-
-#~ msgid "List of upstream resolvers to forward queries to."
-#~ msgstr ""
-#~ "Список <abbr title=\"Domain Name System\">DNS</abbr>-серверов для "
-#~ "перенаправления запросов."
-
-#~ msgid "Local server"
-#~ msgstr "Локальный сервер"
-
-#~ msgid ""
-#~ "Never forward matching domains and subdomains, resolve from DHCP or hosts "
-#~ "files only."
-#~ msgstr ""
-#~ "Согласно требованиям, имена соответствующие этому домену, никогда не "
-#~ "передаются. И разрешаются только из файла DHCP (/etc/config/dhcp) или "
-#~ "файла hosts (/etc/hosts)."
-
-#~ msgid ""
-#~ "Return answers to DNS queries matching the subnet from which the query "
-#~ "was received if multiple IPs are available."
-#~ msgstr ""
-#~ "Локализировать имя хоста в зависимости от запрашиваемой подсети, если "
-#~ "доступно несколько IP-адресов."
-
-#~ msgid "Syntax: <code>_service._proto.example.com.</code>"
-#~ msgstr "Синтаксис: <code>_service._proto.example.com.</code>"
-
-#~ msgid "Master"
-#~ msgstr "Мастер"
-
-#~ msgid "Mesh"
-#~ msgstr "Mesh"
-
-#~ msgid ""
-#~ "<code>/#/</code> matches any domain. <code>/example.com/</code> returns "
-#~ "NXDOMAIN."
-#~ msgstr ""
-#~ "<code>/#/</code> соответствует любому домену. <code>/example.com/</code> "
-#~ "возвращает NXDOMAIN."
-
-#~ msgid ""
-#~ "{example_null} returns {null_addr} addresses ({null_ipv4},{null_ipv6}) "
-#~ "for {example_com} and its subdomains."
-#~ msgstr ""
-#~ "{example_null} возвращает {null_addr} адреса ({null_ipv4} и {null_ipv6}) "
-#~ "для {example_com} и его поддоменов."
-
-#~ msgid "Do you want to replace the current PSK?"
-#~ msgstr "Вы хотите заменить текущий PSK?"
-
-#~ msgid "Do you want to replace the current keys?"
-#~ msgstr "Вы хотите заменить текущие ключи?"
-
-#~ msgid ""
-#~ "Afer making changes to network using CNI protocol, network must be "
-#~ "manually restarted."
-#~ msgstr ""
-#~ "После внесения изменений в сеть с помощью протокола CNI необходимо "
-#~ "вручную перезагрузить сеть."
-
-#~ msgid "CNI (Externally managed interface)"
-#~ msgstr "CNI (интерфейс с внешним управлением)"
-
-#~ msgid "Distance to farthest network member in meters."
-#~ msgstr "Расстояние до самого удалённого сетевого узла в метрах."
-
-#~ msgid "Syntax: <code>_service._proto.example.com</code>."
-#~ msgstr "Синтаксис: <code>_service._proto.example.com</code>."
-
-#~ msgid ""
-#~ "The IPv6 interface identifier (address suffix) as hexadecimal number "
-#~ "(max. 8 chars)."
-#~ msgstr ""
-#~ "Идентификатор интерфейса IPv6 (суффикс адреса) в виде шестнадцатеричного "
-#~ "числа (не более 8 символов)."
-
-#~ msgid ""
-#~ "List of R0KHs in the same Mobility Domain. <br />Format: MAC-address,NAS-"
-#~ "Identifier,128-bit key as hex string. <br />This list is used to map R0KH-"
-#~ "ID (NAS Identifier) to a destination MAC address when requesting PMK-R1 "
-#~ "key from the R0KH that the STA used during the Initial Mobility Domain "
-#~ "Association."
-#~ msgstr ""
-#~ "Список R0KHs в том же мобильном домене. <br />В формате: MAC-адрес,NAS-"
-#~ "идентификатор,128-битный ключ как hex строка. <br />этот список "
-#~ "используется для сопоставления R0KH-ID (NAS ID) с целевым MAC-адресом при "
-#~ "запросе ключа PMK-R1 из R0KH , который использовался STA во время "
-#~ "начальной ассоциации доменов Mobility."
-
-#~ msgid "Both Listen addr and Relay To must be specified."
-#~ msgstr ""
-#~ "Должны быть указаны оба параметра: адрес прослушивания и адрес передачи."
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "Listen address"
-#~ msgstr "Адрес сервера"
-
-#~ msgid "Listen and Relay To IP family must be homogeneous."
-#~ msgstr ""
-#~ "Версии IP для адреса прослушивания и адреса передачи должны совпадать."
-
-#~ msgid "Relay To address"
-#~ msgstr "Адрес передачи"
-
-#~ msgid "Modem bearer teardown in progress."
-#~ msgstr "Отключение канала модема в процессе."
-
-#~ msgid "Modem disconnection in progress. Please wait."
-#~ msgstr "Отсоединение модема в процессе. Пожалуйста, подождите."
-
-#~ msgid "Modem is disabled."
-#~ msgstr "Модем отключен."
-
-#~ msgid "IPv6 suffix (hex)"
-#~ msgstr "Суффикс IPv6 (hex)"
-
-#~ msgid "Annex A + L + M (all)"
-#~ msgstr "Annex A + L + M (все)"
-
-#~ msgid "Annex A G.992.1"
-#~ msgstr "Annex A G.992.1"
-
-#~ msgid "Annex A G.992.2"
-#~ msgstr "Annex A G.992.2"
-
-#~ msgid "Annex A G.992.3"
-#~ msgstr "Annex A G.992.3"
-
-#~ msgid "Annex A G.992.5"
-#~ msgstr "Annex A G.992.5"
-
-#~ msgid "Annex B (all)"
-#~ msgstr "Annex B (все)"
-
-#~ msgid "Annex B G.992.1"
-#~ msgstr "Annex B G.992.1"
-
-#~ msgid "Annex B G.992.3"
-#~ msgstr "Annex B G.992.3"
-
-#~ msgid "Annex B G.992.5"
-#~ msgstr "Annex B G.992.5"
-
-#~ msgid "Annex J (all)"
-#~ msgstr "Annex J (все)"
-
-#~ msgid "Annex L G.992.3 POTS 1"
-#~ msgstr "Annex L G.992.3 POTS 1"
-
-#~ msgid "Annex M (all)"
-#~ msgstr "Annex M (все)"
-
-#~ msgid "Annex M G.992.3"
-#~ msgstr "Annex M G.992.3"
-
-#~ msgid "Annex M G.992.5"
-#~ msgstr "Annex M G.992.5"
-
-#~ msgid "ATU-C System Vendor ID"
-#~ msgstr "ATU-C идентификатор производителя"
-
-#~ msgid "Aggregate Transmit Power (ACTATP)"
-#~ msgstr "Общая мощность передачи (ACTATP)"
-
-#~ msgctxt "VLAN port state"
-#~ msgid "Do not participate"
-#~ msgstr "Не участвует"
-
-#~ msgctxt "VLAN port state"
-#~ msgid "Egress tagged"
-#~ msgstr "Тегирован исходящий"
-
-#~ msgctxt "VLAN port state"
-#~ msgid "Egress untagged"
-#~ msgstr "Не тегирован исходящий"
-
-#~ msgid "Errored seconds (ES)"
-#~ msgstr "Ошибочные секунды (ES)"
-
-#~ msgid "Forward Error Correction Seconds (FECS)"
-#~ msgstr "Секунды прямой коррекции ошибок (FECS)"
-
-#~ msgid "Header Error Code Errors (HEC)"
-#~ msgstr "Ошибки контроля ошибок заголовка (HEC)"
-
-#~ msgid "Line Attenuation (LATN)"
-#~ msgstr "Затухание линии (LATN)"
-
-#~ msgid "Loss of Signal Seconds (LOSS)"
-#~ msgstr "Потеря сигнала в секундах (LOSS)"
-
-#~ msgid "Max. Attainable Data Rate (ATTNDR)"
-#~ msgstr "Макс. достижимая скорость передачи данных (ATTNDR)"
-
-#~ msgid "Noise Margin (SNR)"
-#~ msgstr "Соотношение сигнал/шум (SNR)"
-
-#~ msgid "Non Pre-emptive CRC errors (CRC_P)"
-#~ msgstr "Ошибки без предварительного CRC (CRC_P)"
-
-#~ msgid "Power Management Mode"
-#~ msgstr "Режим управления питанием"
-
-#~ msgid "Pre-emptive CRC errors (CRCP_P)"
-#~ msgstr "Предварительные ошибки CRC (CRCP_P)"
-
-#~ msgctxt "VLAN port state"
-#~ msgid "Primary VLAN ID"
-#~ msgstr "Первичный VLAN ID"
-
-#~ msgid "Severely Errored Seconds (SES)"
-#~ msgstr "Число секунд с многочисленными ошибками (SES)"
-
-#~ msgid "Signal Attenuation (SATN)"
-#~ msgstr "Затухание сигнала (SATN)"
-
-#~ msgid "Unavailable Seconds (UAS)"
-#~ msgstr "Секунды неготовности (UAS)"
-
-#~ msgid ""
-#~ "Avoid uselessly triggering dial-on-demand links (filters SRV/SOA records "
-#~ "and names with underscores)."
-#~ msgstr ""
-#~ "Избегать бесполезного включения соединений dial-on-demand (фильтрует "
-#~ "записи SRV/SOA и имена с подчеркиванием)."
-
-#~ msgid "Filter useless"
-#~ msgstr "Фильтровать бесполезные"
-
-#~ msgid "Network Utilities"
-#~ msgstr "Сетевые утилиты"
-
-#~ msgid "Back to configuration"
-#~ msgstr "Назад к настройкам"
-
-#~ msgid "Close list..."
-#~ msgstr "Закрыть список..."
-
-#~ msgid "Internal Server Error"
-#~ msgstr "Внутренняя ошибка сервера"
-
-#~ msgid "No files found"
-#~ msgstr "Файлы не найдены"
-
-#~ msgid "Sorry, the server encountered an unexpected error."
-#~ msgstr "Извините, сервер столкнулся с неожиданной ошибкой."
-
-#~ msgid "Do not forward queries that cannot be answered by public resolvers."
-#~ msgstr ""
-#~ "Не перенаправлять запросы, которые не могут быть обработаны публичными "
-#~ "DNS-серверами."
-
-#~ msgid "Import peer configuration…"
-#~ msgstr "Импорт конфигурации узла…"
-
-#~ msgid "Paste or drag WireGuard configuration file…"
-#~ msgstr "Вставьте или перетащите файл конфигурации WireGuard…"
-
-#~ msgid "PublicKey setting is missing or invalid"
-#~ msgstr "Отсутствует или неверная настройка параметра PublicKey"
-
-#~ msgid "Sytem running in recovery (initramfs) mode."
-#~ msgstr "Система работает в режиме восстановления (initramfs)."
-
-#~ msgid ""
-#~ "To import a WireGuard client configuration, e.g. provided by a commercial "
-#~ "VPN provider, drag the <em>*.conf</em> file or paste its contents into "
-#~ "the text field below. The relevant settings will be automatically "
-#~ "extracted from the configuration."
-#~ msgstr ""
-#~ "Чтобы импортировать конфигурацию клиента WireGuard, например, "
-#~ "предоставленную коммерческим поставщиком VPN, перетащите файл <em>*.conf</"
-#~ "em> или вставьте его содержимое в текстовое поле ниже. Соответствующие "
-#~ "настройки будут автоматически извлечены из конфигурации."
-
-#~ msgid ""
-#~ "A random, on the fly generated \"PrivateKey\", the key will not be saved "
-#~ "on the router"
-#~ msgstr ""
-#~ "Случайный, сгенерированный на лету ключ «PrivateKey», который не будет "
-#~ "сохранен на маршрутизаторе"
-
-#~ msgid "For QR-Code support please install the qrencode package!"
-#~ msgstr "Для поддержки QR-кодов установите пакет qrencode!"
-
-#~ msgid "Generate Key"
-#~ msgstr "Сгенерировать ключ"
-
-#~ msgid "Generate New QR-Code"
-#~ msgstr "Сгенерировать новый QR-код"
-
-#~ msgid "Generate new QR-Code"
-#~ msgstr "Сгенерировать новый QR-код"
-
-#~ msgid "Hide QR-Code"
-#~ msgstr "Скрыть QR-код"
-
-#~ msgid "If available, the client's \"PresharedKey\""
-#~ msgstr "Если доступно, «‎PresharedKey» клиента"
-
-#~ msgid ""
-#~ "If there are any unsaved changes for this client, please save the "
-#~ "configuration before generating a QR-Code"
-#~ msgstr ""
-#~ "Если для этого клиента есть несохраненные изменения, пожалуйста, "
-#~ "сохраните конфигурацию перед генерацией QR-кода"
-
-#~ msgid "Loading QR-Code..."
-#~ msgstr "Загрузка QR-кода..."
-
-#~ msgid "No peers defined yet"
-#~ msgstr "Узлы ещё не определены"
-
-#~ msgid "QR-Code"
-#~ msgstr "QR-код"
-
-#~ msgid "Required. Base64-encoded public key of peer."
-#~ msgstr "Обязательно. Публичный ключ узла в кодировке Base64."
-
-#~ msgid "The \"PublicKey\" of that wg interface"
-#~ msgstr "«‎PublicKey» этого wg-интерфейса"
-
-#~ msgid ""
-#~ "The QR-Code works per wg interface, it will be refreshed with every "
-#~ "button click and transfers the following information:"
-#~ msgstr ""
-#~ "QR-код действует для каждого wg интерфейса, он обновляется при каждом "
-#~ "нажатии кнопки и содержит следующую информацию:"
-
-#~ msgid ""
-#~ "The list of this client's \"AllowedIPs\" or \"0.0.0.0/0, ::/0\" if not "
-#~ "configured"
-#~ msgstr ""
-#~ "Список разрешенных IP-адресов (AllowedIP) этого клиента или "
-#~ "\"0.0.0.0/0, ::/0\", если не настроено"
-
-#~ msgid "The value is overridden by configuration. Original: %s"
-#~ msgstr "Значение переопределено конфигурацией. Оригинал: %s"
-
-#~ msgctxt "nft meta oif"
-#~ msgid "Engress device id"
-#~ msgstr "Идентификатор исходящего устройства"
-
-#~ msgid "Firewall (iptables)"
-#~ msgstr "Межсетевой экран (iptables)"
-
-#~ msgid "Firewall (nftables)"
-#~ msgstr "Межсетевой экран (nftables)"
-
-#~ msgid "No nftables ruleset load"
-#~ msgstr "Не загружен набор правил nftables"
-
-#~ msgid ""
-#~ "When enabled, gateway is on link even if the gateway does not match any "
-#~ "interface prefix"
-#~ msgstr ""
-#~ "Если включено, шлюз будет находиться на связи, даже если шлюз не "
-#~ "соответствует какому-либо префиксу интерфейса"
-
-#~ msgid "Default %d"
-#~ msgstr "По умолчанию %d"
-
-#~ msgid "The login request failed with error: %h"
-#~ msgstr "Запрос на вход в систему завершился с ошибкой: %h"
-
-#~ msgid "Root directory for files served via TFTP."
-#~ msgstr "Корневая директория для файлов сервера, вроде TFTP."
-
-#~ msgid "TFTP Settings"
-#~ msgstr "Настройки TFTP"
-
-#~ msgid "Auto Refresh"
-#~ msgstr "Автообновление"
-
-#~ msgid "on"
-#~ msgstr "включено"
-
-#~ msgid ""
-#~ "Required. IP addresses and prefixes that this peer is allowed to use "
-#~ "inside the tunnel. Usually the peer's tunnel IP addresses and the "
-#~ "networks the peer routes through the tunnel."
-#~ msgstr ""
-#~ "Обязательно. IP-адреса и префиксы, которые разрешено использовать этому "
-#~ "пиру внутри туннеля. Обычно IP-адреса и сети пира маршрутизируются через "
-#~ "туннель."
-
-#~ msgid "Value must not be empty"
-#~ msgstr "Значение не должно быть пустым"
-
-#~ msgid ""
-#~ "Force upgrade: Select 'Force upgrade' to flash the image even if the "
-#~ "image format check fails. Use only if you are sure that the firmware is "
-#~ "correct and meant for your device!"
-#~ msgstr ""
-#~ "Принудительное обновление: Выберите «Принудительное обновление», чтобы "
-#~ "прошить образ, даже если проверка формата образа не прошла. Используйте "
-#~ "только в том случае, если вы уверены, что прошивка правильная и "
-#~ "предназначена для вашего устройства!"
-
-#~ msgid "Grant access to the system route status"
-#~ msgstr "Предоставить доступ к состоянию системных маршрутов"
-
-#~ msgid "Host entries"
-#~ msgstr "Список хостов"
-
-#~ msgid ""
-#~ "<br/>Note: you need to manually restart the cron service if the crontab "
-#~ "file was empty before editing."
-#~ msgstr ""
-#~ "<br />Внимание: вы должны вручную перезапустить службу cron, если этот "
-#~ "файл был пустым перед внесением ваших изменений."
-
-#~ msgid ""
-#~ "Specify a TOS (Type of Service). Can be <code>inherit</code> (the outer "
-#~ "header inherits the value of the inner header), or an hexadecimal value "
-#~ "<code>00..FF</code> (optional)."
-#~ msgstr ""
-#~ "Укажите TOS (тип обслуживание). Может быть <code>inherit</code> (значение "
-#~ "внешнего заголовка наследуется из значения внутреннего заголовка) или "
-#~ "шестнадцатеричное значение <code>00...FF</code> (необязательно)."
-
-#~ msgid ""
-#~ "<ul style=\"list-style-type:none;\"> <li><strong>server mode</strong>: "
-#~ "Router advertises itself as the default IPv6 gateway via <abbr "
-#~ "title=\"Router Advertisement, ICMPv6 Type 134\">RA</abbr> messages (to "
-#~ "<code>ff02::1</code>) and provides <abbr title=\"Prefix Delegation\">PD</"
-#~ "abbr> to downstream devices.</li> <li><strong>relay mode</strong>: Router "
-#~ "relays <abbr title=\"Router Advertisement, ICMPv6 Type 134\">RA</abbr> "
-#~ "from upstream, and extends upstream (e.g. WAN) interface config and "
-#~ "prefix to downstream (e.g. LAN) interfaces.</li> <li><strong>hybrid mode</"
-#~ "strong>: Router does both server+relay; extends upstream config and "
-#~ "prefix downstream, and uses <abbr title=\"Prefix Delegation\">PD</abbr> "
-#~ "locally.</li></ul>"
-#~ msgstr ""
-#~ "<ul style=\"list-style-type:none;\"> <li><strong>режим сервера</strong>: "
-#~ "Маршрутизатор объявляет себя в качестве IPv6 шлюза по умолчанию через "
-#~ "<abbr title=\"Router Advertisement, ICMPv6 Type 134\">RA</abbr> сообщения "
-#~ "(на адрес <code>ff02::1</code>) и предоставляет <abbr title=\"Prefix "
-#~ "Delegation\">PD</abbr> нижестоящим устройствам.</li> <li><strong>режим "
-#~ "передачи</strong>: Маршрутизатор передаёт <abbr title=\"Router "
-#~ "Advertisement, ICMPv6 Type 134\">RA</abbr> с восходящего потока и "
-#~ "расширяет конфигурацию интерфейсов восходящего потока (например, WAN) и "
-#~ "префиксы для интерфейсов нисходящего потока (например, LAN).</li> "
-#~ "<li><strong>гибридный режим</strong>: Маршрутизатор выполняет обе роли; "
-#~ "расширяет конфигурацию и префиксы устройств и использует <abbr "
-#~ "title=\"Prefix Delegation\">PD</abbr> локально.</li></ul>"
-
-#~ msgid ""
-#~ "<ul style=\"list-style-type:none;\"> <li><strong>server mode</strong>: "
-#~ "Router assigns IPs and delegates prefixes (<abbr title=\"Prefix "
-#~ "Delegation\">PD</abbr>) to downstream interfaces.</li> <li><strong>relay "
-#~ "mode</strong>: Router relays WAN interface config downstream. Helps "
-#~ "support upstream links that lack <abbr title=\"Prefix Delegation\">PD</"
-#~ "abbr>.</li> <li><strong>hybrid mode</strong>: Router does combination of "
-#~ "server+relay.</li></ul>"
-#~ msgstr ""
-#~ "<ul style=\"list-style-type:none;\"> <li><strong>режим сервера</strong>: "
-#~ "Маршрутизатор назначает IP-адреса и делегирует префиксы (<abbr "
-#~ "title=\"Prefix Delegation\">PD</abbr>) интерфейсам нисходящего потока.</"
-#~ "li> <li><strong>режим передачи</strong>: Маршрутизатор передаёт "
-#~ "конфигурацию WAN интерфейса в нисходящих поток. Помогает поддерживать "
-#~ "восходящие соединения, в которых отсутствует <abbr title=\"Prefix "
-#~ "Delegation\">PD</abbr>.</li> <li><strong>гибридный режим</strong>: "
-#~ "Маршрутизатор работает в комбинации режимов сервера и передачи.</li></ul>"
-
-#~ msgid "Always, even if no public prefix is available."
-#~ msgstr "Всегда, даже если нет публичного префикса."
-
-#~ msgid "Announce as default router"
-#~ msgstr "Объявлять как маршрутизатор по умолчанию"
-
-#~ msgid "Announced DNS servers"
-#~ msgstr "Объявить DNS сервера"
-
-#~ msgid "DHCPv6-Mode"
-#~ msgstr "DHCPv6 режим"
-
-#~ msgid "Default is on."
-#~ msgstr "По умолчанию включено."
-
-#~ msgid ""
-#~ "Default is stateless + stateful<br /> <ul style=\"list-style-type:none;"
-#~ "\"> <li><strong>stateless</strong>: Router advertises prefixes, host uses "
-#~ "<abbr title=\"Stateless Address Auto Config\">SLAAC</abbr> to self assign "
-#~ "its own address. No DHCPv6.</li> <li><strong>stateless + stateful</"
-#~ "strong>: SLAAC. In addition, router assigns an IPv6 address to a host via "
-#~ "DHCPv6.</li> <li><strong>stateful-only</strong>: No SLAAC. Router assigns "
-#~ "an IPv6 address to a host via DHCPv6.</li></ul>"
-#~ msgstr ""
-#~ "Значение по умолчанию — 'без и с сохранением состояния'<br /> <ul "
-#~ "style=\"list-style-type:none;\"> <li><strong>без сохранения состояния</"
-#~ "strong>: Маршрутизатор объявляет префиксы, хост использует <abbr title=\\"
-#~ "\\\\\"Stateless Address Auto Config\\\\\\\">SLAAC</abbr> для "
-#~ "самостоятельного назначения своего адреса. DHCPv6 не используется.</li> "
-#~ "<li><strong>без и с сохранением состояния</strong>: В дополнение к SLAAC "
-#~ "маршрутизатор назначает IPv6-адрес хосту через DHCPv6.</li> "
-#~ "<li><strong>только с сохранением состояния</strong>: SLAAC не "
-#~ "используется. Маршрутизатор назначает IPv6-адрес хосту через DHCPv6.</"
-#~ "li></ul>"
-
-#~ msgid "Learn routes from NDP"
-#~ msgstr "Изучать маршруты с помощью NDP"
-
-#~ msgid ""
-#~ "Maximum time allowed between sending unsolicited <abbr title=\"Router "
-#~ "Advertisement, ICMPv6 Type 134\">RA</abbr>. Default is 600 seconds "
-#~ "(<code>600</code>)."
-#~ msgstr ""
-#~ "Максимальное разрешенное время между отправками незапрашиваемых <abbr "
-#~ "title=\"Router Advertisement, ICMPv6 Type 134\">RA</abbr> сообщений. По "
-#~ "умолчанию 600 секунд (<code>600</code>)."
-
-#~ msgid ""
-#~ "Minimum time allowed between sending unsolicited <abbr title=\"Router "
-#~ "Advertisement, ICMPv6 Type 134\">RA</abbr>. Default is 200 seconds "
-#~ "(<code>200</code>)."
-#~ msgstr ""
-#~ "Минимальное разрешенное время между отправками незапрашиваемых <abbr "
-#~ "title=\"Router Advertisement, ICMPv6 Type 134\">RA</abbr> сообщений. По "
-#~ "умолчанию 200 секунд (<code>200</code>)."
-
-#~ msgid "Override MAC address"
-#~ msgstr "Назначить MAC-адрес"
-
-#~ msgid ""
-#~ "Reverts to disabled internally if there are no interfaces with boolean "
-#~ "<code>ndproxy_slave</code> set to 1. Think of <abbr title=\"Neighbour "
-#~ "Discovery Protocol\">NDP</abbr> Proxy as Proxy ARP for IPv6: unify hosts "
-#~ "on different physical hardware segments into the same IP subnet. Consists "
-#~ "of <abbr title=\"Neighbour Solicitation, Type 135\">NS</abbr> and <abbr "
-#~ "title=\"Neighbour Advertisement, Type 136\">NA</abbr> messages. <abbr "
-#~ "title=\"Neighbour Discovery Protocol\">NDP</abbr>-Proxy listens for <abbr "
-#~ "title=\"Neighbour Solicitation, Type 135\">NS</abbr> on an interface "
-#~ "marked with boolean <code>master</code> as 1 (i.e. upstream), then "
-#~ "queries the slave/internal interfaces for that target IP before finally "
-#~ "sending an <abbr title=\"Neighbour Advertisement, Type 136\">NA</abbr> "
-#~ "message. <abbr title=\"Neighbour Discovery Protocol\">NDP</abbr> is "
-#~ "effectively ARP for IPv6. <abbr title=\"Neighbour Solicitation, Type "
-#~ "135\">NS</abbr> and <abbr title=\"Neighbour Advertisement, Type 136\">NA</"
-#~ "abbr> detect reachability and duplicate addresses on a link, themselves "
-#~ "also a prerequisite for SLAAC autoconfig.<br /> <ul style=\"list-style-"
-#~ "type:none;\"> <li><strong>disabled</strong>: No <abbr title=\"Neighbour "
-#~ "Discovery Protocol\">NDP</abbr> messages are proxied through to "
-#~ "<code>ndproxy_slave</code> true interfaces.</li> <li><strong>relay mode</"
-#~ "strong>: Proxies <abbr title=\"Neighbour Discovery Protocol\">NDP</abbr> "
-#~ "messages from <code>master</code> to <code>ndproxy_slave</code> true "
-#~ "interfaces. Helps to support provider links without <abbr title=\"Prefix "
-#~ "Delegation\">PD</abbr>, and to firewall proxied hosts.</li> "
-#~ "<li><strong>hybrid mode</strong>: Relay mode is disabled unless the "
-#~ "interface boolean <code>master</code> is 1.</li></ul>"
-#~ msgstr ""
-#~ "Возвращается к внутреннему отключению, если нет интерфейсов с логическим "
-#~ "значением <code>ndproxy_slave</code>, равным 1. Подумайте о проксе <abbr "
-#~ "title=\"Протокол обнаружения соседей\">NDP</abbr> как о прокси ARP для "
-#~ "IPv6: объедините хосты на разных сегментах физического оборудования в "
-#~ "одну IP-подсеть. Состоит из сообщений <abbr title=\"Neighbour "
-#~ "Solicitation, Type 135\">NS</abbr> и <abbr title=\"Neighbour "
-#~ "Advertisement, Type 136\">NA</abbr>. Прокси <abbr title=\"Протокол "
-#~ "обнаружения соседей\">NDP</abbr> прослушивает <abbr title=\"Neighbour "
-#~ "Solicitation, Type 135\">NS</abbr> на интерфейсе, помеченном логическим "
-#~ "<code>master</code> как 1 (т.е. upstream), затем запрашивает ведомые/"
-#~ "внутренние интерфейсы для этого целевого IP перед тем, как, наконец, "
-#~ "послать сообщение <abbr title=\"Neighbour Advertisement, Type 136\">NA</"
-#~ "abbr>. <abbr title=\"Протокол обнаружения соседей\">NDP</abbr> - это "
-#~ "фактически ARP для IPv6. <abbr title=\"Neighbour Solicitation, Type "
-#~ "135\">NS</abbr> и <abbr title=\"Neighbour Advertisement, Type 136\">NA</"
-#~ "abbr> обнаруживают достижимость и дублируют адреса на канале связи, что "
-#~ "само по себе также является необходимым условием для автоконфигурации "
-#~ "SLAAC.<br /> <ul style=\"list-style-type:none;\"> <li><strong>disabled</"
-#~ "strong>: Никакие <abbr title=\"Протокол обнаружения соседей\">NDP</abbr> "
-#~ "сообщения не проксируются через true интерфейсы <code>ndproxy_slave</"
-#~ "code>.</li> <li><strong>режим реле</strong>: Сообщения прокси <abbr "
-#~ "title=\"Протокол обнаружения соседей\">NDP</abbr> из <code>master</code> "
-#~ "через true интерфейсы <code>ndproxy_slave</code>. Helps to support "
-#~ "provider links without <abbr title=\"Prefix Delegation\">PD</abbr>, and "
-#~ "to firewall proxied hosts.</li> <li><strong>гибридный режим</strong>: "
-#~ "Режим реле отключен, если логический интерфейс <code>master</code> "
-#~ "является 1.</li></ul>"
-
-#~ msgid ""
-#~ "Router Lifetime published in <abbr title=\"Router Advertisement, ICMPv6 "
-#~ "Type 134\">RA</abbr> messages. Default is 1800 seconds (<code>1800</"
-#~ "code>). Max 9000 seconds."
-#~ msgstr ""
-#~ "Время жизни маршрутизатора, публикуемое в <abbr title=\"Router "
-#~ "Advertisement, ICMPv6 Type 134\">RA</abbr> сообщениях. По умолчанию 1800 "
-#~ "секунд (<code>1800</code>). Максимальное значение 9000 секунд."
-
-#~ msgid "Set this interface as master for the dhcpv6 relay."
-#~ msgstr "Установить этот интерфейс в качестве мастера для dhcpv6 relay."
-
-#~ msgid "Static NDP-Proxy prefixes"
-#~ msgstr "Статические префиксы NDP-Proxy"
-
-#~ msgid ""
-#~ "The <abbr title=\"Maximum Transmission Unit\">MTU</abbr> to be published "
-#~ "in <abbr title=\"Router Advertisement, ICMPv6 Type 134\">RA</abbr> "
-#~ "messages. Default is 0 (<code>0</code>). Min 1280."
-#~ msgstr ""
-#~ "Значение <abbr title=\"Maximum Transmission Unit\">MTU</abbr>, "
-#~ "публикуемое в <abbr title=\"Router Advertisement, ICMPv6 Type 134\">RA</"
-#~ "abbr> сообщениях. По умолчанию 0 (<code>0</code>). Минимальное значение "
-#~ "1280."
-
-#~ msgid ""
-#~ "The maximum hops to be published in <abbr title=\"Router "
-#~ "Advertisement\">RA</abbr> messages.<br />Default is 0 (<code>0</code>), "
-#~ "meaning unspecified. Max 255."
-#~ msgstr ""
-#~ "Максимальное число прыжков, публикуемое в <abbr title=\"Router "
-#~ "Advertisement\">RA</abbr> сообщениях.<br />По умолчанию 0 <code>0</"
-#~ "code>), то есть не определено. Максимальное значение 255."
-
-#~ msgid "stateful-only"
-#~ msgstr "только с сохранением состояния"
-
-#~ msgid "stateless"
-#~ msgstr "без сохранения состояния"
-
-#~ msgid "stateless + stateful"
-#~ msgstr "без и с сохранением состояния"
-
-#~ msgid "Bridge interfaces"
-#~ msgstr "Объединить в мост"
-
-#~ msgid "Creates a bridge over specified interface(s)"
-#~ msgstr "Создаёт мост для выбранных сетевых интерфейсов"
-
-#~ msgid ""
-#~ "Default is stateless + stateful<br /> <ul style=\"list-style-type:none;"
-#~ "\"> <li><strong>stateless</strong>: Router advertises prefixes, host uses "
-#~ "<abbr title=\"Stateless Address Auto Config\">SLAAC</abbr> to self assign "
-#~ "its own address. No DHCPv6.</li> <li><strong>stateless + stateful</"
-#~ "strong>: SLAAC. In addition, router assigns an IPv6 address to a host via "
-#~ "DHCPv6.</li> <li><strong>stateful-only</strong>: No SLAAC. Router assigns "
-#~ "an IPv6 address to a host via DHCPv6.</li><ul>"
-#~ msgstr ""
-#~ "Значение по умолчанию — 'без и с сохранением состояния'.<ul style=\"list-"
-#~ "style-type:none;\"> <li><strong>без сохранения состояния</strong>: "
-#~ "Маршрутизатор объявляет префиксы, хост использует <abbr title=\"Stateless "
-#~ "Address Auto Config\">SLAAC</abbr> для самостоятельного назначения своего "
-#~ "адреса. DHCPv6 не используется.</li> <li><strong>без и с сохранением "
-#~ "состояния</strong>: В дополнение к SLAAC маршрутизатор назначает IPv6-"
-#~ "адрес хосту через DHCPv6.</li> <li><strong>только с сохранением "
-#~ "состояния</strong>: SLAAC не используется. Маршрутизатор назначает IPv6-"
-#~ "адрес хосту через DHCPv6.</li><ul>"
-
-#~ msgid ""
-#~ "The maximum hops to be published in <abbr title=\"Router "
-#~ "Advertisement\">RA</abbr> messages.<br>Default is 0 (<code>0</code>), "
-#~ "meaning unspecified. Max 255."
-#~ msgstr ""
-#~ "Максимальное число прыжков, публикуемое в <abbr title=\"Router "
-#~ "Advertisement\">RA</abbr> сообщениях. По умолчанию 0 (<code>0</code>), то "
-#~ "есть не определено. Максимальное значение 255."
-
-#~ msgid "Always announce default router"
-#~ msgstr "Объявлять всегда, как маршрутизатор по умолчанию"
-
-#~ msgid "Announce as default router even if no public prefix is available."
-#~ msgstr ""
-#~ "Объявить маршрутизатором по умолчанию, даже если общедоступный префикс "
-#~ "недоступен."
-
-#~ msgid "Default is stateless + stateful"
-#~ msgstr "Значение по умолчанию — 'stateless + stateful'"
-
-#~ msgid "NDP-Proxy"
-#~ msgstr "NDP-прокси"
-
-#~ msgid "Router Advertisement-Service"
-#~ msgstr "Доступные режимы работы"
-
-#~ msgid "Custom delegated IPv6-prefix"
-#~ msgstr "Установленный пользователем IPv6-prefix"
-
-#~ msgid "Default Route"
-#~ msgstr "Маршрут по умолчанию"
-
-#~ msgid "Number of parallel threads used for compression"
-#~ msgstr "Количество параллельных потоков используемых для компрессии"
-
-#~ msgid "Set VPN as Default Route"
-#~ msgstr "Установить VPN в качестве маршрута по умолчанию"
-
-#~ msgid "ZRam Compression Streams"
-#~ msgstr "Потоки компрессии ZRam"
-
-#~ msgid "Profile"
-#~ msgstr "Профиль"
-
-#~ msgid ""
-#~ "Requires the 'full' version of wpad/hostapd and support from the wifi "
-#~ "driver <br />(as of Jan 2019: ath9k, ath10k, mwlwifi and mt76)"
-#~ msgstr ""
-#~ "Требуется 'полная' версия wpad/hostapd и поддержка со стороны WiFi "
-#~ "драйвера в <br />(as of Jan 2019: ath9k, ath10k, mwlwifi and mt76)"
-
-#~ msgid "Invalid value"
-#~ msgstr "Неверное значение"
-
-#~ msgid ""
-#~ "Specify a TOS (Type of Service). Can be either <code>inherit</code> (the "
-#~ "outer header inherits the value of the inner header) or an hexadecimal "
-#~ "value starting with <code>0x</code> (optional)."
-#~ msgstr ""
-#~ "Укажите TOS (Type of Service). Может быть как <code>inherit</code> "
-#~ "(внешний заголовок наследует значение внутреннего заголовка), так и "
-#~ "шестнадцатеричное значение, начинающееся с <code>0x</code> (опционально)."
-
-#~ msgid ""
-#~ "Specify a Traffic Class. Can be either <code>inherit</code> (the outer "
-#~ "header inherits the value of the inner header) or an hexadecimal value "
-#~ "starting with <code>0x</code> (optional)."
-#~ msgstr ""
-#~ "Укажите TC (Traffic Class). Может быть как <code>inherit</code> (внешний "
-#~ "заголовок наследует значение внутреннего заголовка), так и "
-#~ "шестнадцатеричное значение, начинающееся с <code>0x</code> (опционально)."
-
-#~ msgid "default-on (kernel)"
-#~ msgstr "default-on (ядро)"
-
-#~ msgid "heartbeat (kernel)"
-#~ msgstr "heartbeat (ядро)"
-
-#~ msgid "netdev (kernel)"
-#~ msgstr "netdev (ядро)"
-
-#~ msgid "none (kernel)"
-#~ msgstr "none (ядро)"
-
-#~ msgid "timer (kernel)"
-#~ msgstr "timer (ядро)"
-
-#~ msgid "Enable/Disable"
-#~ msgstr "Включить/Выключить"
-
-#~ msgid "No signal"
-#~ msgstr "Нет сигнала"
-
-#~ msgid "Free"
-#~ msgstr "Свободно"
-
-#~ msgid "Switch Port Mask"
-#~ msgstr "Изменить маску порта"
-
-#~ msgid "Switch Speed Mask"
-#~ msgstr "Изменить маску скорости"
-
-#~ msgid "USB Device"
-#~ msgstr "USB устройство"
-
-#~ msgid "USB Ports"
-#~ msgstr "USB порты"
-
-#~ msgid "Define a name for this network."
-#~ msgstr "Укажите имя этой сети."
-
-#~ msgid "Bad address specified!"
-#~ msgstr "Указан неправильный адрес!"
-
-#~ msgid "Install iputils-traceroute6 for IPv6 traceroute"
-#~ msgstr "Для поддержки IPv6, установите пакет iputils-traceroute6"
-
-#~ msgid "Loading"
-#~ msgstr "Загружаем"
-
-#~ msgid "Waiting for command to complete..."
-#~ msgstr "Ожидание завершения выполнения команды..."
-
-#~ msgid "Assign interfaces..."
-#~ msgstr "Назначить интерфейсы..."
-
-#~ msgid "MB/s"
-#~ msgstr "МБ/с"
-
-#~ msgid "Network without interfaces."
-#~ msgstr "Сеть без интерфейсов."
-
-#~ msgid ""
-#~ "Really delete this interface? The deletion cannot be undone! You might "
-#~ "lose access to this device if you are connected via this interface"
-#~ msgstr ""
-#~ "Действительно удалить этот интерфейс? Удаление не может быть отменено! Вы "
-#~ "можете потерять доступ к этому устройству, если вы подключены через "
-#~ "данный интерфейс"
-
-#~ msgid "Realtime Connections"
-#~ msgstr "Соединения в реальном времени"
-
-#~ msgid "Realtime Load"
-#~ msgstr "Загрузка в реальном времени"
-
-#~ msgid "Realtime Traffic"
-#~ msgstr "Трафик в реальном времени"
-
-#~ msgid "Realtime Wireless"
-#~ msgstr "Беспроводная сеть в реальном времени"
-
-#~ msgid "Swap"
-#~ msgstr "Раздел подкачки (swap)"
-
-#~ msgid "The firstboot command failed with code %d"
-#~ msgstr "Команда firstboot завершилась с кодом ошибки %d"
-
-#~ msgid "There are no active leases."
-#~ msgstr "Нет активных арендованных адресов."
-
-#~ msgid ""
-#~ "This page gives an overview over currently active network connections."
-#~ msgstr ""
-#~ "Страница содержит список всех активных на данный момент сетевых "
-#~ "соединений."
-
-#~ msgid "dB"
-#~ msgstr "дБ"
-
-#~ msgid "kB/s"
-#~ msgstr "кБ/с"
-
-#~ msgid "kbit/s"
-#~ msgstr "кбит/с"
-
-#~ msgid "Caution: Configuration files will be erased"
-#~ msgstr "Внимание: файлы конфигурации будут удалены"
-
-#~ msgid "Changes applied."
-#~ msgstr "Изменения приняты."
-
-#~ msgid "Configuration files will be kept"
-#~ msgstr "Конфигурационные файлы будут сохранены"
-
-#~ msgid "Delete permission denied"
-#~ msgstr "Нет разрешений на удаление"
-
-#~ msgid "Delete request failed: %d %s"
-#~ msgstr "Ошибка запроса на удаление: %d %s"
-
-#~ msgid "Device is rebooting..."
-#~ msgstr "Перезагрузка..."
-
-#~ msgid "Keep settings"
-#~ msgstr "Сохранить настройки"
-
-#~ msgid "Rebooting..."
-#~ msgstr "Перезагрузка..."
-
-#~ msgid ""
-#~ "Upload a sysupgrade-compatible image here to replace the running "
-#~ "firmware. Check \"Keep settings\" to retain the current configuration "
-#~ "(requires a compatible firmware image)."
-#~ msgstr ""
-#~ "Загрузите sysupgrade-совместимый образ, чтобы заменить текущую прошивку "
-#~ "устройства. Поставьте галочку 'Сохранить настройки', чтобы сохранить "
-#~ "текущие config файлы — ваши настройки устройства (требуется совместимый "
-#~ "образ прошивки)."
-
-#~ msgid ""
-#~ "Used for two different purposes: RADIUS NAS ID and 802.11r R0KH-ID. Not "
-#~ "needed with normal WPA(2)-PSK/WPA3-SAE."
-#~ msgstr ""
-#~ "Используется для двух различных целей: RADIUS NAS ID и 802.11r R0KH-ID. "
-#~ "Не используется с обычным WPA(2)-PSK/WPA3-SAE."
-
-#~ msgid "Waiting for changes to be applied..."
-#~ msgstr "Ожидание применения изменений..."
-
-#~ msgid "(%s available)"
-#~ msgstr "(%s доступно)"
-
-#~ msgid "-- match by device --"
-#~ msgstr "-- проверка по устройству --"
-
-#~ msgid "Caution: System upgrade will be forced"
-#~ msgstr "Внимание: выбрано принудительное обновление системы"
-
-#~ msgid "Check"
-#~ msgstr "Проверить"
-
-#~ msgid "Checksum"
-#~ msgstr "Контрольная сумма"
-
-#~ msgid "Enable this mount"
-#~ msgstr "Включить эту точку монтирования"
-
-#~ msgid "Enable this swap"
-#~ msgstr "Включить этот раздел подкачки"
-
-#~ msgid "Flash Firmware"
-#~ msgstr "Установить прошивку"
-
-#~ msgid "Flashing..."
-#~ msgstr "Прошивка..."
-
-#~ msgid "Mount Entry"
-#~ msgstr "Настройка config файла fstab (/etc/config/fstab)"
-
-#~ msgid "Proceed"
-#~ msgstr "Продолжить"
-
-#~ msgid "Really reset all changes?"
-#~ msgstr "Действительно сбросить все изменения?"
-
-#~ msgid "Root"
-#~ msgstr "Корень"
-
-#~ msgid "Swap Entry"
-#~ msgstr "Настройка config файла fstab (/etc/config/fstab)"
-
-#~ msgid "The backup archive does not appear to be a valid gzip file."
-#~ msgstr "Архив резервной копии не является правильным gzip файлом."
-
-#~ msgid ""
-#~ "The filesystem that was used to format the memory (<abbr title=\"for "
-#~ "example\">e.g.</abbr> <samp><abbr title=\"Third Extended "
-#~ "Filesystem\">ext3</abbr></samp>)"
-#~ msgstr ""
-#~ "Файловая система (<abbr title=\"например\">напр.</abbr> <samp><abbr "
-#~ "title=\"Third Extended Filesystem\">ext3</abbr></samp>)."
-
-#~ msgid ""
-#~ "The flash image was uploaded. Below is the checksum and file size listed, "
-#~ "compare them with the original file to ensure data integrity.<br /> Click "
-#~ "\"Proceed\" below to start the flash procedure."
-#~ msgstr ""
-#~ "Образ загружен. Сравните размер файла и контрольную сумму, чтобы "
-#~ "удостовериться в целостности данных.<br /> Нажмите 'Продолжить', чтобы "
-#~ "начать процедуру обновления прошивки."
-
-#~ msgid "Verify"
-#~ msgstr "Проверить"
-
-#~ msgid "overlay"
-#~ msgstr "overlay"
-
-#~ msgid "Change login password"
-#~ msgstr "Изменить пароль"
-
-#~ msgid "Changing password…"
-#~ msgstr "Изменение пароля..."
-
-#~ msgid "Disabled (default)"
-#~ msgstr "Отключено (по умолчанию)"
-
-#~ msgid "Loading SSH keys…"
-#~ msgstr "Загрузка SSH ключей..."
-
-#~ msgid "Saving keys…"
-#~ msgstr "Сохранение ключей..."
-
-#~ msgid "Specifies the listening port of this <em>Dropbear</em> instance"
-#~ msgstr "Порт данного процесса <em>Dropbear</em>"
-
-#~ msgid "Switch %q (%s)"
-#~ msgstr "Коммутатор %q (%s)"
-
-#~ msgid "VLANs on %q (%s)"
-#~ msgstr "VLANы на %q (%s)"
