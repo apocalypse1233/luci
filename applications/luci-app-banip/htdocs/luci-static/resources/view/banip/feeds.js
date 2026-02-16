@@ -119,67 +119,75 @@ function handleEdit(ev) {
 			return ui.addNotification(null, E('p', _('Invalid input values, unable to save modifications.')), 'error');
 		}
 	}
-	let sumSubElements = [], exportJson;
+	/*
+		gather all input data
+	*/
+	let sumSubElements = [];
 	const nodeKeys = document.querySelectorAll('[id^="widget.cbid.json"][id$="name"]');
-	for (let i = 0; i < nodeKeys.length; i++) {
-		let subElements = {};
-		let elements = document.querySelectorAll('[id^="widget.cbid.json.' + nodeKeys[i].id.split('.')[3] + '\."]');
-		for (const element of elements) {
-			let key = element.id.split('.')[4];
-			let value = element.value || "";
-			if (value === "") {
-				continue;
-			}
-			switch (key) {
-				case 'url_4':
-					subElements.url_4 = value;
-					break;
-				case 'rule_4':
-					subElements.rule_4 = value;
-					break;
-				case 'url_6':
-					subElements.url_6 = value;
-					break;
-				case 'rule_6':
-					subElements.rule_6 = value;
-					break;
-				case 'descr':
-					subElements.descr = value;
-					break;
-				case 'flag':
-					subElements.flag = value;
-					break;
+	for (const keyNode of nodeKeys) {
+		const keyValue = keyNode.value?.trim();
+		if (!keyValue) continue;
+		const idParts = keyNode.id.split(".");
+		const ruleId = idParts[3];
+		if (!ruleId) continue;
+		const selector =
+			`[id^="widget.cbid.json.${ruleId}."], ` +
+			`[id^="cbid.json.${ruleId}.rule"]`;
+		const elements = document.querySelectorAll(selector);
+		const sub = {};
+		for (const el of elements) {
+			const parts = el.id.split(".");
+			const key = parts[parts.length - 1];
+			const value = el.value?.trim();
+			if (!value) continue;
+			if (["url_4", "url_6", "rule", "chain", "descr", "flag"].includes(key)) {
+				sub[key] = value;
 			}
 		}
-		if (nodeKeys[i].value !== "" && subElements.descr !== "") {
-			sumSubElements.push(nodeKeys[i].value, subElements);
+		if (sub.descr) {
+			sumSubElements.push(keyValue, sub);
 		}
 	}
-	if (sumSubElements.length > 0) {
-		exportJson = JSON.stringify(sumSubElements).replace(/^\[/, '{\n').replace(/\}]$/, '\n\t}\n}\n').replace(/,{"/g, ':{\n\t"').replace(/"},"/g, '"\n\t},\n"').replace(/","/g, '",\n\t"');
+	/*
+		construct json object
+	*/
+	let exportObj = {};
+	for (let i = 0; i < sumSubElements.length; i += 2) {
+		const key = sumSubElements[i];
+		const value = sumSubElements[i + 1];
+		exportObj[key] = value;
 	}
-	return fs.write('/etc/banip/banip.custom.feeds', exportJson).then(function () {
-		location.reload();
-	});
+	const exportJson = JSON.stringify(exportObj, null, 4);
+	/*
+		save to file and reload
+	*/
+	return fs.write('/etc/banip/banip.custom.feeds', exportJson)
+		.then(() => location.reload());
 }
 
 return view.extend({
 	load: function () {
-		return L.resolveDefault(fs.read_direct('/etc/banip/banip.custom.feeds', 'json'), "");
+		return L.resolveDefault(fs.stat('/etc/banip/banip.custom.feeds'), "")
+			.then(function (stat) {
+				if (!stat) {
+					return fs.write('/etc/banip/banip.custom.feeds', "");
+				}
+				return L.resolveDefault(fs.read_direct('/etc/banip/banip.custom.feeds', 'json'), "");
+			})
 	},
 
 	render: function (data) {
-		let m, s, o, feed, url_4, url_6, rule_4, rule_6, descr, flag;
+		let m, s, o, feed, url_4, url_6, rule, chain, descr, flag;
 
-		m = new form.JSONMap(data, _('Custom Feed Editor'), _('With this editor you can upload your local custom feed file or fill up an initial one (a 1:1 copy of the version shipped with the package). \
+		m = new form.JSONMap(data, null, _('With this editor you can upload your local custom feed file or fill up an initial one (a 1:1 copy of the version shipped with the package). \
 			The file is located at \'/etc/banip/banip.custom.feeds\'. \
 			Then you can edit this file, delete entries, add new ones or make a local backup. To go back to the maintainers version just clear the custom feed file.'));
 		for (let i = 0; i < Object.keys(m.data.data).length; i++) {
 			feed = Object.keys(m.data.data)[i];
 			url_4 = m.data.data[feed].url_4;
-			rule_4 = m.data.data[feed].rule_4;
 			url_6 = m.data.data[feed].url_6;
-			rule_6 = m.data.data[feed].rule_6;
+			rule = m.data.data[feed].rule;
+			chain = m.data.data[feed].chain;
 			descr = m.data.data[feed].descr;
 			flag = m.data.data[feed].flag;
 
@@ -211,8 +219,6 @@ return view.extend({
 				return true;
 			}
 
-			o = s.option(form.Value, 'rule_4', _('Rulev4'));
-
 			o = s.option(form.Value, 'url_6', _('URLv6'));
 			o.validate = function (section_id, value) {
 				if (!value) {
@@ -224,10 +230,22 @@ return view.extend({
 				return true;
 			}
 
-			o = s.option(form.Value, 'rule_6', _('Rulev6'));
+			o = s.option(form.Value, 'rule', _('Rule'));
+			o.value('feed 1', _('<IP-Address>'));
+			o.value('feed 1 ,', _('<IP-Address><CSV-Seperator>'));
+			o.value('feed 13', _('<IP-Address> <Netmask>'));
+			o.value('suricata 1', _('<Suricata Syntax>'));
+			o.optional = true;
+			o.rmempty = true;
+
+			o = s.option(form.ListValue, 'chain', _('Chain'));
+			o.value('in', _('Inbound'));
+			o.value('out', _('Outbound'));
+			o.value('inout', _('Inbound & Outbound'));
+			o.default = 'in';
 
 			o = s.option(form.Value, 'descr', _('Description'));
-			o.datatype = 'and(minlength(3),maxlength(30))';
+			o.datatype = 'and(minlength(5),maxlength(30))';
 			o.validate = function (section_id, value) {
 				if (!value) {
 					return _('Empty field not allowed');
@@ -249,52 +267,52 @@ return view.extend({
 
 		s = m.section(form.NamedSection, 'global');
 		s.render = L.bind(function () {
-			return E('div', { class: 'right' }, [
+			return E('div', { 'class': 'cbi-page-actions' }, [
 				E('button', {
-					'class': 'btn cbi-button cbi-button-action',
+					'class': 'btn cbi-button cbi-button-action important',
+					'style': 'float:none;margin-right:.4em;',
 					'id': 'btnDownload',
 					'disabled': 'disabled',
 					'click': ui.createHandlerFn(this, function () {
 						return handleEdit('download');
 					})
-				}, [_('Download Custom Feeds')]),
-				'\xa0',
+				}, [_('Download')]),
 				E('button', {
-					'class': 'btn cbi-button cbi-button-action',
+					'class': 'btn cbi-button cbi-button-action important',
+					'style': 'float:none;margin-right:.4em;',
 					'id': 'btnUpload',
 					'disabled': 'disabled',
 					'click': ui.createHandlerFn(this, function () {
 						return handleEdit('upload');
 					})
-				}, [_('Upload Custom Feeds')]),
-				'\xa0',
+				}, [_('Upload')]),
 				E('button', {
 					'class': 'btn cbi-button cbi-button-action important',
+					'style': 'float:none;margin-right:.4em;',
 					'id': 'btnCreate',
 					'disabled': 'disabled',
 					'click': ui.createHandlerFn(this, function () {
 						return handleEdit('create');
 					})
-				}, [_('Fill Custom Feeds')]),
-				'\xa0',
+				}, [_('Fill')]),
 				E('button', {
 					'class': 'btn cbi-button cbi-button-negative important',
+					'style': 'float:none;margin-right:.4em;',
 					'id': 'btnClear',
 					'disabled': 'disabled',
 					'click': ui.createHandlerFn(this, function () {
 						return handleEdit('clear');
 					})
-				}, [_('Clear Custom Feeds')]),
-				'\xa0',
+				}, [_('Clear')]),
 				E('button', {
 					'class': 'btn cbi-button cbi-button-positive important',
+					'style': 'float:none',
 					'id': 'btnSave',
 					'disabled': 'disabled',
 					'click': ui.createHandlerFn(this, function () {
 						return handleEdit('save');
 					})
-				}, [_('Save Custom Feeds')]),
-				'\xa0'
+				}, [_('Save')]),
 			])
 		});
 		return m.render();

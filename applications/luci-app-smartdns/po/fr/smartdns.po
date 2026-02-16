@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-02-01 22:49+0000\n"
-"Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2025-12-12 15:40+0000\n"
+"Last-Translator: liolio6 <fliolio@free.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationssmartdns/fr/>\n"
 "Language: fr\n"
@@ -10,28 +10,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:792
 msgid "Additional Args for upstream dns servers"
-msgstr ""
+msgstr "Args (arguments) complémentaires pour serveurs dns amont."
 
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:886
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:1090
 msgid ""
 "Additional Flags for rules, read help on domain-rule for more information."
 msgstr ""
+"Paramètres additionnels pour les règles, lire l'aide domain-rule pour plus "
+"d'informations."
 
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:885
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:1089
 msgid "Additional Rule Flag"
-msgstr ""
+msgstr "Marqueur de règle supplémentaire"
 
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:346
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:479
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:791
 msgid "Additional Server Args"
-msgstr ""
+msgstr "Arguments additionnels du Serveur"
 
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:347
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:480
@@ -45,10 +47,13 @@ msgid "Advanced Settings"
 msgstr "Paramètres avancés"
 
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:253
+#, fuzzy
 msgid ""
 "Attempts to serve old responses from cache with a TTL of 0 in the response "
 "without waiting for the actual resolution to finish."
 msgstr ""
+"Tentater de diffuser d'anciennes réponses depuis le cache avec un TTL de 0 "
+"dans la réponse sans attendre la fin de la résolution réelle."
 
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:161
 msgid "Automatically Set Dnsmasq"
@@ -84,7 +89,7 @@ msgstr ""
 
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:121
 msgid "Collecting data ..."
-msgstr ""
+msgstr "Récolte de données..."
 
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:1100
 msgid ""
@@ -533,7 +538,7 @@ msgstr ""
 
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:64
 msgid "RUNNING"
-msgstr ""
+msgstr "EXÉCUTION"
 
 #: applications/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js:341
 msgid "Reply Domain TTL Max"

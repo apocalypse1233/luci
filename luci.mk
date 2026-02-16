@@ -28,8 +28,11 @@ LUCI_LANG.da=Dansk (Danish)
 LUCI_LANG.de=Deutsch (German)
 LUCI_LANG.el=Ελληνικά (Greek)
 LUCI_LANG.es=Español (Spanish)
+LUCI_LANG.fa=Farsi (Persian)
 LUCI_LANG.fi=Suomi (Finnish)
+LUCI_LANG.fil=Filipino (Philippinic)
 LUCI_LANG.fr=Français (French)
+LUCI_LANG.ga=Gaeilge (Irish)
 LUCI_LANG.he=עִבְרִית (Hebrew)
 LUCI_LANG.hi=हिंदी (Hindi)
 LUCI_LANG.hu=Magyar (Hungarian)
@@ -48,11 +51,13 @@ LUCI_LANG.ro=Română (Romanian)
 LUCI_LANG.ru=Русский (Russian)
 LUCI_LANG.sk=Slovenčina (Slovak)
 LUCI_LANG.sv=Svenska (Swedish)
+LUCI_LANG.ta=Tamil (Tamil)
 LUCI_LANG.tr=Türkçe (Turkish)
 LUCI_LANG.uk=Українська (Ukrainian)
 LUCI_LANG.vi=Tiếng Việt (Vietnamese)
-LUCI_LANG.zh_Hans=简体中文 (Chinese Simplified)
-LUCI_LANG.zh_Hant=繁體中文 (Chinese Traditional)
+LUCI_LANG.yua=Yucateco (Yucatec Maya)
+LUCI_LANG.zh_Hans=简体中文 (Simplified Chinese)
+LUCI_LANG.zh_Hant=正體中文 (Traditional Chinese)
 #LUCI_LANG_END
 
 # Submenu titles
@@ -153,10 +158,11 @@ ifneq ($(LUCI_SUBMENU),none)
 endif
   TITLE:=$(if $(LUCI_TITLE),$(LUCI_TITLE),LuCI $(LUCI_NAME) $(LUCI_TYPE))
   DEPENDS:=$(LUCI_DEPENDS)
-  VERSION:=$(if $(PKG_VERSION),$(if $(PKG_RELEASE),$(PKG_VERSION)-$(PKG_RELEASE),$(PKG_VERSION)),$(PKG_SRC_VERSION))
+  VERSION:=$(if $(PKG_VERSION),$(if $(PKG_RELEASE),$(PKG_VERSION)-r$(PKG_RELEASE),$(PKG_VERSION)),$(PKG_SRC_VERSION))
   $(if $(LUCI_EXTRA_DEPENDS),EXTRA_DEPENDS:=$(LUCI_EXTRA_DEPENDS))
   $(if $(LUCI_PKGARCH),PKGARCH:=$(LUCI_PKGARCH))
   $(if $(PKG_PROVIDES),PROVIDES:=$(PKG_PROVIDES))
+  $(if $(LUCI_DEFAULT),DEFAULT:=$(LUCI_DEFAULT))
   URL:=$(LUCI_URL)
   MAINTAINER:=$(LUCI_MAINTAINER)
 endef
@@ -174,6 +180,7 @@ define Build/Prepare
 		$(CP) ./$$$$d/* $(PKG_BUILD_DIR)/$$$$d/; \
 	  fi; \
 	done
+	$(call Build/Prepare/$(LUCI_NAME))
 	$(call Build/Prepare/Default)
 endef
 
@@ -227,7 +234,7 @@ define Package/$(PKG_NAME)/postinst
 [ -n "$${IPKG_INSTROOT}" ] || { \
 	rm -f /tmp/luci-indexcache.*
 	rm -rf /tmp/luci-modulecache/
-	killall -HUP rpcd 2>/dev/null
+	/etc/init.d/rpcd reload 2>/dev/null
 	exit 0
 }
 endef

@@ -1,8 +1,14 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-05-31 20:15+0000\n"
+"Last-Translator: hmzs <hmzs@1szer1.hu>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/openwrt/"
+"luciapplicationsemail/hu/>\n"
 "Language: hu\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:248
 msgid ""
@@ -40,7 +46,7 @@ msgstr ""
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:25
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Haladó beállítások"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:50
 msgid "Allow connections from the public internet."
@@ -81,7 +87,7 @@ msgstr ""
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:67
 msgid "Domain"
-msgstr ""
+msgstr "Tartomány"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:11
 msgid "E-MailRelay Server Configuration."
@@ -119,7 +125,7 @@ msgstr ""
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:27
 msgid "Enabled"
-msgstr ""
+msgstr "Engedélyezve"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:281
 msgid "Extra command line options"
@@ -189,7 +195,7 @@ msgstr ""
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:24
 msgid "POP3"
-msgstr ""
+msgstr "POP3"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:114
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:192
@@ -223,7 +229,7 @@ msgstr ""
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:23
 msgid "SMTP Client"
-msgstr ""
+msgstr "SMTP ügyfél"
 
 #: applications/luci-app-email/htdocs/luci-static/resources/view/email/emailrelay.js:40
 msgid "SMTP Port"

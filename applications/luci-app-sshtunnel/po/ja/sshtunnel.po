@@ -1,8 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-03-28 23:40+0000\n"
-"Last-Translator: Ioroi Kouhei <kouhei@ioroi.org>\n"
+"PO-Revision-Date: 2025-12-07 21:54+0000\n"
+"Last-Translator: Monarch <monarch.scrap-0p@users.noreply.hosted.weblate.org>"
+"\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationssshtunnel/ja/>\n"
 "Language: ja\n"
@@ -10,14 +11,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:37
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:75
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:113
 msgid "<code>*</code> means to listen all interfaces <b>including public</b>."
-msgstr "<code>*</code> は "
-"<b>パブリックを含む</b>全てのインターフェースをリッスンすることを意味します。"
+msgstr ""
+"<code>*</code> は <b>パブリックを含む</b>全てのインターフェースをリッスンする"
+"ことを意味します。"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_keys.js:138
 msgid "A key with that name already exists."
@@ -74,7 +76,7 @@ msgstr ""
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:106
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:132
 msgid "Enabled"
-msgstr ""
+msgstr "有効"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:52
 msgid "For Dropbear %s"
@@ -115,7 +117,7 @@ msgstr ""
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_hosts.js:39
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:37
 msgid "Hostname"
-msgstr ""
+msgstr "ホスト名"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:49
 msgid "Identity Key"
@@ -169,13 +171,13 @@ msgstr ""
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_keys.js:88
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_keys.js:101
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:80
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:116
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:126
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:19
 msgid "No SSH keys found, <a %s>generate a new one</a>"
@@ -248,7 +250,7 @@ msgstr ""
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:157
 msgid "Server"
-msgstr ""
+msgstr "サーバー"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:93
 msgid "Server keep alive attempts"
@@ -299,7 +301,7 @@ msgstr ""
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:46
 msgid "User"
-msgstr ""
+msgstr "ユーザー"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:125
 msgid "VPN Tunnels"
@@ -313,4 +315,4 @@ msgstr ""
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:115
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:125
 msgid "Yes"
-msgstr ""
+msgstr "はい"

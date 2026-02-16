@@ -2,27 +2,15 @@
 "require rpc";
 "require form";
 "require baseclass";
+"require adblock-fast.status as adb";
 
-var pkg = {
-	get Name() {
-		return "adblock-fast";
-	},
-	get URL() {
-		return "https://docs.openwrt.melmac.net/" + pkg.Name + "/";
-	},
-};
-
-var getInitStatus = rpc.declare({
-	object: "luci." + pkg.Name,
-	method: "getInitStatus",
-	params: ["name"],
-});
+const { pkg } = adb;
 
 return baseclass.extend({
 	title: _("AdBlock-Fast"),
 
 	load: function () {
-		return Promise.all([getInitStatus(pkg.Name)]);
+		return Promise.all([adb.getInitStatus(pkg.Name)]);
 	},
 
 	render: function (data) {
@@ -46,19 +34,6 @@ return baseclass.extend({
 				outputGzipExists: null,
 				leds: [],
 			},
-		};
-		var statusTable = {
-			statusNoInstall: _("%s is not installed or not found").format(pkg.Name),
-			statusStopped: _("Stopped"),
-			statusStarting: _("Starting"),
-			statusProcessing: _("Processing lists"),
-			statusRestarting: _("Restarting"),
-			statusForceReloading: _("Force Reloading"),
-			statusDownloading: _("Downloading lists"),
-			statusError: _("Error"),
-			statusWarning: _("Warning"),
-			statusFail: _("Fail"),
-			statusSuccess: _("Active"),
 		};
 
 		var cacheText;
@@ -92,7 +67,7 @@ return baseclass.extend({
 					E(
 						"td",
 						{ class: "td" },
-						statusTable[reply.status.status] || _("Unknown")
+						pkg.statusTable[reply.status.status] || _("Unknown")
 					),
 					E("td", { class: "td" }, reply.status.version || _("-")),
 					E("td", { class: "td" }, reply.status.dns || _("-")),

@@ -10,16 +10,64 @@ var pkg = {
 	get Name() {
 		return "pbr";
 	},
+	get LuciCompat() {
+		return 24;
+	},
+	get ReadmeCompat() {
+		return "1.2.1";
+	},
 	get URL() {
-		return "https://docs.openwrt.melmac.net/" + pkg.Name + "/";
+		return (
+			"https://docs.openwrt.melmac.ca/" +
+			pkg.Name +
+			"/" +
+			(pkg.ReadmeCompat ? pkg.ReadmeCompat + "/" : "")
+		);
+	},
+	get DonateURL() {
+		return (
+			"https://docs.openwrt.melmac.ca/" +
+			pkg.Name +
+			"/" +
+			(pkg.ReadmeCompat ? pkg.ReadmeCompat + "/" : "") +
+			"#donate"
+		);
+	},
+	isVersionMismatch: function (luci, pkg, rpcd) {
+		return luci !== pkg || pkg !== rpcd || luci !== rpcd;
+	},
+	formatMessage: function (info, template) {
+		if (!template) return _("Unknown message") + "<br />";
+		return (
+			(Array.isArray(info)
+				? template.format(...info)
+				: template.format(info || " ")) + "<br />"
+		);
+	},
+	buildGatewayText: function (gw) {
+		const gateways = Array.isArray(gw) ? gw : Object.values(gw);
+		const lines = gateways.map((g) => {
+			const iface = g.name;
+			if (!iface) return "";
+			const dev_ipv4 = g.device_ipv4;
+			const gw_ipv4 = g.gateway_ipv4;
+			const dev_ipv6 = g.device_ipv6;
+			const gw_ipv6 = g.gateway_ipv6;
+			const default_gw = g.default;
+			const parts = [iface];
+			if (dev_ipv4 && dev_ipv4 !== iface) parts.push(dev_ipv4);
+			if (gw_ipv4) parts.push(gw_ipv4);
+			if (gw_ipv6) {
+				if (dev_ipv6 && dev_ipv6 !== iface) parts.push(dev_ipv6);
+				parts.push(gw_ipv6);
+			}
+			let line = parts.join("/");
+			if (default_gw) line += " ✓";
+			return line;
+		});
+		return lines.join("<br />");
 	},
 };
-
-var getGateways = rpc.declare({
-	object: "luci." + pkg.Name,
-	method: "getGateways",
-	params: ["name"],
-});
 
 var getInitList = rpc.declare({
 	object: "luci." + pkg.Name,
@@ -43,6 +91,12 @@ var getPlatformSupport = rpc.declare({
 	object: "luci." + pkg.Name,
 	method: "getPlatformSupport",
 	params: ["name"],
+});
+
+var getServiceInfo = rpc.declare({
+	object: "service",
+	method: "list",
+	params: ["name", "verbose"],
 });
 
 var _setInitAction = rpc.declare({
@@ -70,98 +124,124 @@ var RPC = {
 			}
 		});
 	},
-	getInitList: function (name) {
-		getInitList(name).then(
-			function (result) {
-				this.emit("getInitList", result);
-			}.bind(this)
-		);
-	},
-	getInitStatus: function (name) {
-		getInitStatus(name).then(
-			function (result) {
-				this.emit("getInitStatus", result);
-			}.bind(this)
-		);
-	},
-	getGateways: function (name) {
-		getGateways(name).then(
-			function (result) {
-				this.emit("getGateways", result);
-			}.bind(this)
-		);
-	},
-	getPlatformSupport: function (name) {
-		getPlatformSupport(name).then(
-			function (result) {
-				this.emit("getPlatformSupport", result);
-			}.bind(this)
-		);
-	},
-	getInterfaces: function (name) {
-		getInterfaces(name).then(
-			function (result) {
-				this.emit("getInterfaces", result);
-			}.bind(this)
-		);
-	},
 	setInitAction: function (name, action) {
 		_setInitAction(name, action).then(
 			function (result) {
 				this.emit("setInitAction", result);
-			}.bind(this)
+			}.bind(this),
 		);
 	},
+};
+
+// Poll service status until completion (for long-running operations like download)
+var pollServiceStatus = function (callback) {
+	var maxAttempts = 300; // Max 5 minutes of polling
+	var attempt = 0;
+
+	var checkStatus = function () {
+		attempt++;
+
+		// Use the RPC function directly from the module scope
+		L.resolveDefault(getInitStatus(pkg.Name), {})
+			.then(function (statusData) {
+				var currentStatus =
+					statusData && statusData[pkg.Name] && statusData[pkg.Name].running;
+
+				// Check if completed or failed
+				if (currentStatus === true) {
+					callback(true, currentStatus);
+				}
+				// Check if timed out
+				else if (attempt >= maxAttempts) {
+					callback(false, "timeout");
+				}
+				// Continue polling
+				else {
+					setTimeout(checkStatus, 1000); // Check again in 1 second
+				}
+			})
+			.catch(function (err) {
+				// Retry on error unless timed out
+				if (attempt < maxAttempts) {
+					setTimeout(checkStatus, 1000);
+				} else {
+					callback(false, "error");
+				}
+			});
+	};
+
+	// Start polling after 2 seconds delay (give backend time to start the task)
+	setTimeout(checkStatus, 3000);
 };
 
 var status = baseclass.extend({
 	render: function () {
 		return Promise.all([
 			L.resolveDefault(getInitStatus(pkg.Name), {}),
-			//			L.resolveDefault(getGateways(pkg.Name), {}),
-		]).then(function (data) {
-			//			var replyStatus = data[0];
-			//			var replyGateways = data[1];
-			var reply;
-			var text;
-
-			if (data[0] && data[0][pkg.Name]) {
-				reply = data[0][pkg.Name];
-			} else {
-				reply = {
+			L.resolveDefault(getServiceInfo(pkg.Name, true), {}),
+		]).then(function ([initStatus, ubusInfo]) {
+			var reply = {
+				status: initStatus?.[pkg.Name] || {
 					enabled: null,
 					running: null,
 					running_iptables: null,
 					running_nft: null,
 					running_nft_file: null,
 					version: null,
-					gateways: null,
+					packageCompat: 0,
+					rpcdCompat: 0,
+				},
+				ubus: ubusInfo?.[pkg.Name]?.instances?.main?.data || {
+					packageCompat: 0,
+					gateways: [],
 					errors: [],
 					warnings: [],
-				};
+				},
+			};
+
+			if (
+				pkg.isVersionMismatch(
+					pkg.LuciCompat,
+					reply.status.packageCompat,
+					reply.status.rpcdCompat,
+				)
+			) {
+				reply.ubus.warnings.push({
+					code: "warningInternalVersionMismatch",
+					info: [
+						reply.ubus.packageCompat,
+						pkg.LuciCompat,
+						reply.status.rpcdCompat,
+						'<a href="' +
+							pkg.URL +
+							'#Warning:InternalVersionMismatch" target="_blank">',
+						"</a>",
+					],
+				});
 			}
 
+			var text;
 			var header = E("h2", {}, _("Policy Based Routing - Status"));
 			var statusTitle = E(
 				"label",
 				{ class: "cbi-value-title" },
-				_("Service Status")
+				_("Service Status"),
 			);
-			if (reply.version) {
-				text = _("Version %s").format(reply.version) + " - ";
-				if (reply.running) {
+			if (reply.status.version) {
+				text = _("Version %s").format(reply.status.version) + " - ";
+				if (reply.status.running) {
 					text += _("Running");
-					if (reply.running_iptables) {
+					if (reply.status.running_iptables) {
 						text += " (" + _("iptables mode") + ").";
-					} else if (reply.running_nft_file) {
+					} else if (reply.status.running_nft_file) {
 						text += " (" + _("fw4 nft file mode") + ").";
-					} else if (reply.running_nft) {
+					} else if (reply.status.running_nft) {
 						text += " (" + _("nft mode") + ").";
 					} else {
 						text += ".";
 					}
 				} else {
-					if (reply.enabled) {
+					if (reply.status.enabled) {
 						text += _("Stopped.");
 					} else {
 						text += _("Stopped (Disabled).");
@@ -178,21 +258,35 @@ var status = baseclass.extend({
 			]);
 
 			var gatewaysDiv = [];
-			if (reply.gateways) {
+			if (reply.ubus.gateways) {
 				var gatewaysTitle = E(
 					"label",
 					{ class: "cbi-value-title" },
-					_("Service Gateways")
+					_("Service Gateways"),
 				);
-				text = _(
-					"The %s indicates default gateway. See the %sREADME%s for details."
-				).format(
-					"<strong>✓</strong>",
-					'<a href="' + pkg.URL + '#AWordAboutDefaultRouting" target="_blank">',
-					"</a>"
+				var description =
+					_(
+						"The %s indicates default gateway. See the %sREADME%s for details.",
+					).format(
+						"<strong>✓</strong>",
+						'<a href="' +
+							pkg.URL +
+							'#AWordAboutDefaultRouting" target="_blank">',
+						"</a>",
+					) +
+					"<br />" +
+					"<br />" +
+					_("Please %sdonate%s to support development of this project.").format(
+						"<a href='" + pkg.DonateURL + "' target='_blank'>",
+						"</a>",
+					);
+				var gatewaysDescr = E(
+					"div",
+					{ class: "cbi-value-description" },
+					description,
 				);
-				var gatewaysDescr = E("div", { class: "cbi-value-description" }, text);
-				var gatewaysText = E("div", {}, reply.gateways);
+				text = pkg.buildGatewayText(reply.ubus.gateways);
+				var gatewaysText = E("div", {}, text);
 				var gatewaysField = E("div", { class: "cbi-value-field" }, [
 					gatewaysText,
 					gatewaysDescr,
@@ -204,63 +298,89 @@ var status = baseclass.extend({
 			}
 
 			var warningsDiv = [];
-			if (reply.warnings && reply.warnings.length) {
-				var textLabelsTable = {
+			if (reply.ubus.warnings && reply.ubus.warnings.length) {
+				var warningTable = {
+					warningInternalVersionMismatch: _(
+						"Internal version mismatch (package: %s, luci app: %s, luci rpcd: %s), you may need to update packages or reboot the device, please check the %sREADME%s.",
+					),
 					warningResolverNotSupported: _(
-						"Resolver set (%s) is not supported on this system."
+						"Resolver set (%s) is not supported on this system.",
 					).format(L.uci.get(pkg.Name, "config", "resolver_set")),
 					warningAGHVersionTooLow: _(
-						"Installed AdGuardHome (%s) doesn't support 'ipset_file' option."
+						"Installed AdGuardHome (%s) doesn't support 'ipset_file' option.",
 					),
 					warningPolicyProcessCMD: _("%s"),
 					warningTorUnsetParams: _(
-						"Please unset 'src_addr', 'src_port' and 'dest_port' for policy '%s'"
+						"Please unset 'src_addr', 'src_port' and 'dest_port' for policy '%s'",
 					),
 					warningTorUnsetProto: _(
-						"Please unset 'proto' or set 'proto' to 'all' for policy '%s'"
+						"Please unset 'proto' or set 'proto' to 'all' for policy '%s'",
 					),
 					warningTorUnsetChainIpt: _(
-						"Please unset 'chain' or set 'chain' to 'PREROUTING' for policy '%s'"
+						"Please unset 'chain' or set 'chain' to 'PREROUTING' for policy '%s'",
 					),
 					warningTorUnsetChainNft: _(
-						"Please unset 'chain' or set 'chain' to 'prerouting' for policy '%s'"
+						"Please unset 'chain' or set 'chain' to 'prerouting' for policy '%s'",
 					),
 					warningInvalidOVPNConfig: _(
-						"Invalid OpenVPN config for %s interface"
+						"Invalid OpenVPN config for %s interface",
 					),
-					warningOutdatedWebUIApp: _(
-						"The WebUI application is outdated (version %s), please update it"
+					warningOutdatedLuciPackage: _(
+						"The WebUI application (luci-app-pbr) is outdated, please update it",
+					),
+					warningOutdatedPrincipalPackage: _(
+						"The principal package (pbr) is outdated, please update it",
 					),
 					warningBadNftCallsInUserFile: _(
-						"Incompatible nft calls detected in user include file, disabling fw4 nft file support."
+						"Incompatible nft calls detected in user include file, disabling fw4 nft file support",
 					),
 					warningDnsmasqInstanceNoConfdir: _(
-						"Dnsmasq instance (%s) targeted in settings, but it doesn't have its own confdir."
+						"Dnsmasq instance (%s) targeted in settings, but it doesn't have its own confdir",
+					),
+					warningDhcpLanForce: _(
+						_(
+							"Please set 'dhcp.%%s.force=1' to speed up service start-up %s(more info)%s",
+						).format(
+							"<a href='" +
+								pkg.URL +
+								"#Warning:Pleasesetdhcp.lan.force1" +
+								"' target='_blank'>",
+							"</a>",
+						),
+					),
+					warningSummary: _("Warnings encountered, please check %s"),
+					warningIncompatibleDHCPOption6: _(
+						"Incompatible DHCP Option 6 for interface %s",
+					),
+					warningNetifdMissingInterfaceLocal: _(
+						"Netifd setup: option netifd_interface_local is missing, assuming '%s'",
+					),
+					warningUplinkDown: _(
+						"Uplink/WAN interface is still down, going back to boot mode",
 					),
 				};
 				var warningsTitle = E(
 					"label",
 					{ class: "cbi-value-title" },
-					_("Service Warnings")
+					_("Service Warnings"),
 				);
 				var text = "";
-				reply.warnings.forEach((element) => {
-					if (element.id && textLabelsTable[element.id]) {
-						if (element.id !== "warningPolicyProcessCMD") {
-							text +=
-								(textLabelsTable[element.id] + ".").format(
-									element.extra || " "
-								) + "<br />";
-						}
+				reply.ubus.warnings.forEach((element) => {
+					if (element.code && warningTable[element.code]) {
+						text += pkg.formatMessage(element.info, warningTable[element.code]);
 					} else {
 						text += _("Unknown warning") + "<br />";
 					}
 				});
-				var warningsText = E("div", {}, text);
+				text += _("Warnings encountered, please check the %sREADME%s").format(
+					'<a href="' + pkg.URL + '#WarningMessagesDetails" target="_blank">',
+					"</a>!<br />",
+				);
+				var warningsText = E("div", { class: "cbi-value-description" }, text);
 				var warningsField = E(
 					"div",
 					{ class: "cbi-value-field" },
-					warningsText
+					warningsText,
 				);
 				warningsDiv = E("div", { class: "cbi-value" }, [
 					warningsTitle,
@@ -269,49 +389,55 @@ var status = baseclass.extend({
 			}
 
 			var errorsDiv = [];
-			if (reply.errors && reply.errors.length) {
-				var textLabelsTable = {
+			if (reply.ubus.errors && reply.ubus.errors.length) {
+				var errorTable = {
 					errorConfigValidation: _("Config (%s) validation failure").format(
-						"/etc/config/" + pkg.Name
+						"/etc/config/" + pkg.Name,
 					),
-					errorNoIpFull: _("%s binary cannot be found").format("ip-full"),
 					errorNoIptables: _("%s binary cannot be found").format("iptables"),
 					errorNoIpset: _(
-						"Resolver set support (%s) requires ipset, but ipset binary cannot be found"
+						"Resolver set support (%s) requires ipset, but ipset binary cannot be found",
 					).format(L.uci.get(pkg.Name, "config", "resolver_set")),
 					errorNoNft: _(
-						"Resolver set support (%s) requires nftables, but nft binary cannot be found"
+						"Resolver set support (%s) requires nftables, but nft binary cannot be found",
 					).format(L.uci.get(pkg.Name, "config", "resolver_set")),
 					errorResolverNotSupported: _(
-						"Resolver set (%s) is not supported on this system"
+						"Resolver set (%s) is not supported on this system",
 					).format(L.uci.get(pkg.Name, "config", "resolver_set")),
 					errorServiceDisabled: _(
-						"The %s service is currently disabled"
+						"The %s service is currently disabled",
 					).format(pkg.Name),
-					errorNoWanGateway: _(
-						"The %s service failed to discover WAN gateway"
+					errorNoUplinkGateway: _(
+						"The %s service failed to discover uplink gateway",
 					).format(pkg.Name),
-					errorNoWanInterface: _(
-						"The %s inteface not found, you need to set the 'pbr.config.procd_wan_interface' option"
+					errorNoUplinkInterface: _(
+						"The %s interface not found, you need to set the 'pbr.config.uplink_interface' option",
 					),
-					errorNoWanInterfaceHint: _(
-						"Refer to https://docs.openwrt.melmac.net/pbr/#procd_wan_interface"
+					errorNoUplinkInterfaceHint: _(
+						"Refer to %sREADME%s for details",
+					).format(
+						'<a href="' + pkg.URL + '#uplink_interface" target="_blank">',
+						"</a>!<br />",
 					),
 					errorIpsetNameTooLong: _(
-						"The ipset name '%s' is longer than allowed 31 characters"
+						"The ipset name '%s' is longer than allowed 31 characters",
 					),
 					errorNftsetNameTooLong: _(
-						"The nft set name '%s' is longer than allowed 255 characters"
+						"The nft set name '%s' is longer than allowed 255 characters",
 					),
 					errorUnexpectedExit: _(
-						"Unexpected exit or service termination: '%s'"
+						"Unexpected exit or service termination: '%s'",
 					),
 					errorPolicyNoSrcDest: _(
-						"Policy '%s' has no source/destination parameters"
+						"Policy '%s' has no source/destination parameters",
 					),
 					errorPolicyNoInterface: _("Policy '%s' has no assigned interface"),
+					errorPolicyNoDns: _("Policy '%s' has no assigned DNS"),
+					errorPolicyProcessNoInterfaceDns: _(
+						"Interface '%s' has no assigned DNS",
+					),
 					errorPolicyUnknownInterface: _(
-						"Policy '%s' has an unknown interface"
+						"Policy '%s' has an unknown interface",
 					),
 					errorPolicyProcessCMD: _("%s"),
 					errorFailedSetup: _("Failed to set up '%s'"),
@@ -320,71 +446,114 @@ var status = baseclass.extend({
 					errorUserFileSyntax: _("Syntax error in custom user file '%s'"),
 					errorUserFileRunning: _("Error running custom user file '%s'"),
 					errorUserFileNoCurl: _(
-						"Use of 'curl' is detected in custom user file '%s', but 'curl' isn't installed"
+						"Use of 'curl' is detected in custom user file '%s', but 'curl' isn't installed",
 					),
 					errorNoGateways: _("Failed to set up any gateway"),
 					errorResolver: _("Resolver '%s'"),
 					errorPolicyProcessNoIpv6: _(
-						"Skipping IPv6 policy '%s' as IPv6 support is disabled"
+						"Skipping IPv6 policy '%s' as IPv6 support is disabled",
 					),
 					errorPolicyProcessUnknownFwmark: _(
-						"Unknown packet mark for interface '%s'"
+						"Unknown packet mark for interface '%s'",
 					),
 					errorPolicyProcessMismatchFamily: _(
-						"Mismatched IP family between in policy '%s'"
+						"Mismatched IP family between in policy '%s'",
 					),
 					errorPolicyProcessUnknownProtocol: _(
-						"Unknown protocol in policy '%s'"
+						"Unknown protocol in policy '%s'",
 					),
 					errorPolicyProcessInsertionFailed: _(
-						"Insertion failed for both IPv4 and IPv6 for policy '%s'"
+						"Insertion failed for both IPv4 and IPv6 for policy '%s'",
 					),
 					errorPolicyProcessInsertionFailedIpv4: _(
-						"Insertion failed for IPv4 for policy '%s'"
+						"Insertion failed for IPv4 for policy '%s'",
 					),
+					errorPolicyProcessUnknownEntry: _("Unknown entry in policy '%s'"),
 					errorInterfaceRoutingEmptyValues: _(
-						"Received empty tid/mark or interface name when setting up routing"
+						"Received empty tid/mark or interface name when setting up routing",
+					),
+					errorInterfaceMarkOverflow: _(
+						"Interface mark for '%s' exceeds the fwmask value",
 					),
 					errorFailedToResolve: _("Failed to resolve '%s'"),
 					errorInvalidOVPNConfig: _(
-						"Invalid OpenVPN config for '%s' interface"
+						"Invalid OpenVPN config for '%s' interface",
 					),
-					errorNftFileInstall: _("Failed to install fw4 nft file '%s'"),
+					errorNftMainFileInstall: _("Failed to install fw4 nft file '%s'"),
 					errorNoDownloadWithSecureReload: _(
-						"Policy '%s' refers to URL which can't be downloaded in 'secure_reload' mode!"
+						"Policy '%s' refers to URL which can't be downloaded in 'secure_reload' mode",
 					),
 					errorDownloadUrlNoHttps: _(
-						"Failed to download '%s', HTTPS is not supported!"
+						"Failed to download '%s', HTTPS is not supported",
 					),
-					errorDownloadUrl: _("Failed to download '%s'!"),
+					errorDownloadUrl: _("Failed to download '%s'"),
 					errorFileSchemaRequiresCurl: _(
-						"The file:// schema requires curl, but it's not detected on this system!"
+						"The '%s' schema requires curl, but it's not detected on this system",
+					).format("file://"),
+					errorTryFailed: _("Command failed: '%s'"),
+					errorIncompatibleUserFile: _(
+						"Incompatible custom user file detected '%s'",
 					),
-					errorTryFailed: _("Command failed: %s"),
+					errorDefaultFw4TableMissing: _("Default fw4 table '%s' is missing"),
+					errorDefaultFw4ChainMissing: _("Default fw4 chain '%s' is missing"),
+					errorRequiredBinaryMissing: _("Required binary '%s' is missing"),
+					errorInterfaceRoutingUnknownDevType: _(
+						"Unknown IPv6 Link type for device '%s'",
+					),
+					errorMktempFileCreate: _(
+						"Failed to create temporary file with mktemp mask: '%s'",
+					),
+					errorSummary: _("Errors encountered, please check %s"),
+					errorNftNetifdFileInstall: _(
+						"Netifd setup: failed to install fw4 netifd nft file '%s'",
+					),
+					errorNftNetifdFileDelete: _(
+						"Netifd setup: failed to delete fw4 netifd nft file '%s'",
+					),
+					errorNetifdMissingOption: _(
+						"Netifd setup: required option '%s' is missing",
+					),
+					errorNetifdInvalidGateway4: _(
+						"Netifd setup: invalid value of netifd_interface_default option '%s'",
+					),
+					errorNetifdInvalidGateway6: _(
+						"Netifd setup: invalid value of netifd_interface_default6 option '%s'",
+					),
+					errorUplinkDown: _(
+						"Uplink/WAN interface is still down, increase value of 'procd_boot_trigger_delay' option",
+					),
+					errorUnexpectedExit: _(
+						"Unexpected exit or service termination: '%s'",
+					),
+					errorNoDownloadWithSecureReload: _(
+						"Policy '%s' refers to URL which can't be downloaded in 'secure_reload' mode",
+					),
+					errorIncompatibleUserFile: _(
+						"Incompatible custom user file detected '%s'",
+					),
+					errorTryFailed: _("Command failed: '%s'"),
+					errorMktempFileCreate: _(
+						"Failed to create temporary file with mktemp mask: '%s'",
+					),
 				};
 				var errorsTitle = E(
 					"label",
 					{ class: "cbi-value-title" },
-					_("Service Errors")
+					_("Service Errors"),
 				);
 				var text = "";
-				reply.errors.forEach((element) => {
-					if (element.id && textLabelsTable[element.id]) {
-						if (element.id !== "errorPolicyProcessCMD") {
-							text +=
-								(textLabelsTable[element.id] + "!").format(
-									element.extra || " "
-								) + "<br />";
-						}
+				reply.ubus.errors.forEach((element) => {
+					if (element.code && errorTable[element.code]) {
+						text += pkg.formatMessage(element.info, errorTable[element.code]);
 					} else {
-						text += _("Unknown error!") + "<br />";
+						text += _("Unknown error") + "<br />";
 					}
 				});
-				text += _("Errors encountered, please check the %sREADME%s!").format(
-					'<a href="' + pkg.URL + '" target="_blank">',
-					"</a><br />"
+				text += _("Errors encountered, please check the %sREADME%s").format(
+					'<a href="' + pkg.URL + '#ErrorMessagesDetails" target="_blank">',
+					"</a>!<br />",
 				);
-				var errorsText = E("div", {}, text);
+				var errorsText = E("div", { class: "cbi-value-description" }, text);
 				var errorsField = E("div", { class: "cbi-value-field" }, errorsText);
 				errorsDiv = E("div", { class: "cbi-value" }, [
 					errorsTitle,
@@ -396,7 +565,7 @@ var status = baseclass.extend({
 			var btn_gap_long = E(
 				"span",
 				{},
-				"&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"
+				"&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;",
 			);
 
 			var btn_start = E(
@@ -409,13 +578,13 @@ var status = baseclass.extend({
 							E(
 								"p",
 								{ class: "spinning" },
-								_("Starting %s service").format(pkg.Name)
+								_("Starting %s service").format(pkg.Name),
 							),
 						]);
 						return RPC.setInitAction(pkg.Name, "start");
 					},
 				},
-				_("Start")
+				_("Start"),
 			);
 
 			var btn_action = E(
@@ -428,13 +597,13 @@ var status = baseclass.extend({
 							E(
 								"p",
 								{ class: "spinning" },
-								_("Restarting %s service").format(pkg.Name)
+								_("Restarting %s service").format(pkg.Name),
 							),
 						]);
 						return RPC.setInitAction(pkg.Name, "restart");
 					},
 				},
-				_("Restart")
+				_("Restart"),
 			);
 
 			var btn_stop = E(
@@ -447,13 +616,13 @@ var status = baseclass.extend({
 							E(
 								"p",
 								{ class: "spinning" },
-								_("Stopping %s service").format(pkg.Name)
+								_("Stopping %s service").format(pkg.Name),
 							),
 						]);
 						return RPC.setInitAction(pkg.Name, "stop");
 					},
 				},
-				_("Stop")
+				_("Stop"),
 			);
 
 			var btn_enable = E(
@@ -466,13 +635,13 @@ var status = baseclass.extend({
 							E(
 								"p",
 								{ class: "spinning" },
-								_("Enabling %s service").format(pkg.Name)
+								_("Enabling %s service").format(pkg.Name),
 							),
 						]);
 						return RPC.setInitAction(pkg.Name, "enable");
 					},
 				},
-				_("Enable")
+				_("Enable"),
 			);
 
 			var btn_disable = E(
@@ -485,19 +654,19 @@ var status = baseclass.extend({
 							E(
 								"p",
 								{ class: "spinning" },
-								_("Disabling %s service").format(pkg.Name)
+								_("Disabling %s service").format(pkg.Name),
 							),
 						]);
 						return RPC.setInitAction(pkg.Name, "disable");
 					},
 				},
-				_("Disable")
+				_("Disable"),
 			);
 
-			if (reply.enabled) {
+			if (reply.status.enabled) {
 				btn_enable.disabled = true;
 				btn_disable.disabled = false;
-				if (reply.running) {
+				if (reply.status.running) {
 					btn_start.disabled = true;
 					btn_action.disabled = false;
 					btn_stop.disabled = false;
@@ -517,7 +686,7 @@ var status = baseclass.extend({
 			var buttonsTitle = E(
 				"label",
 				{ class: "cbi-value-title" },
-				_("Service Control")
+				_("Service Control"),
 			);
 			var buttonsText = E("div", {}, [
 				btn_start,
@@ -531,9 +700,32 @@ var status = baseclass.extend({
 				btn_disable,
 			]);
 			var buttonsField = E("div", { class: "cbi-value-field" }, buttonsText);
-			var buttonsDiv = reply.version
+			var buttonsDiv = reply.status.version
 				? E("div", { class: "cbi-value" }, [buttonsTitle, buttonsField])
 				: "";
+
+			var donateTitle = E(
+				"label",
+				{ class: "cbi-value-title" },
+				_("Donate to the Project"),
+			);
+			var donateText = E(
+				"div",
+				{ class: "cbi-value-field" },
+				E(
+					"div",
+					{ class: "cbi-value-description" },
+					_("Please %sdonate%s to support development of this project.").format(
+						"<a href='" + pkg.DonateURL + "' target='_blank'>",
+						"</a>",
+					),
+				),
+			);
+
+			var donateDiv = reply.status.version
+				? E("div", { class: "cbi-value" }, [donateTitle, donateText])
+				: "";
+
 			return E("div", {}, [
 				header,
 				statusDiv,
@@ -541,18 +733,25 @@ var status = baseclass.extend({
 				warningsDiv,
 				errorsDiv,
 				buttonsDiv,
+				//			donateDiv,
 			]);
 		});
 	},
 });
 
 RPC.on("setInitAction", function (reply) {
-	ui.hideModal();
-	location.reload();
+	// Don't immediately hide modal and reload
+	// Instead, poll status until the operation actually completes
+	pollServiceStatus(function () {
+		ui.hideModal();
+		location.reload();
+	});
 });
 
 return L.Class.extend({
 	status: status,
+	pkg: pkg,
+	getInitStatus: getInitStatus,
 	getInterfaces: getInterfaces,
 	getPlatformSupport: getPlatformSupport,
 });

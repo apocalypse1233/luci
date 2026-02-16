@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2023-10-06 08:29+0000\n"
-"Last-Translator: Norbert Szentner <upd6la1j@duck.com>\n"
+"PO-Revision-Date: 2025-05-08 13:01+0000\n"
+"Last-Translator: hmzs <hmzs@1szer1.hu>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsolsr/hu/>\n"
 "Language: hu\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/mid.js:152
 msgid "Active MID announcements"
@@ -24,25 +24,24 @@ msgstr "Aktív OLSR csomópontok"
 msgid "Active host net announcements"
 msgstr "Aktív gép hálózati közleményei"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:128
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:126
-#, fuzzy
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:126
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:124
 msgid "Advanced Settings"
-msgstr "Haladó Beállítások"
+msgstr "Haladó beállítások"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:69
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:69
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:67
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:67
 msgid "Allow gateways with NAT"
 msgstr "Engedélyezett átjárók NAT-tal"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:69
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:69
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:67
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:67
 msgid "Allow the selection of an outgoing IPv4 gateway with NAT"
 msgstr ""
 "Egy NAT-tal rendelkező kimenő IPv4-átjáró kiválasztásának lehetővé tétele"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:81
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:81
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:79
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:79
 msgid "Announce uplink"
 msgstr "Kifelé menő kapcsolat bejelentése"
 
@@ -94,35 +93,35 @@ msgstr "ETX"
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/routes.js:292
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/topology.js:180
 msgid "ETX:"
-msgstr ""
+msgstr "ETX:"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:60
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:513
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:60
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:489
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:41
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:41
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:58
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:511
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:58
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:487
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:39
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:39
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins.js:50
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins6.js:48
 msgid "Enable"
 msgstr "Engedélyezés"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:60
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:60
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:58
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:58
 msgid ""
 "Enable SmartGateway. If it is disabled, then all other SmartGateway "
 "parameters are ignored. Default is \"no\"."
 msgstr ""
-"SmartGateway engedélyezése. Ha ez le van tiltva, akkor az összes egyéb "
+"SmartGateway engedélyezése. Ha ez letiltott, akkor az összes egyéb "
 "SmartGateway paraméter figyelmen kívül lesz hagyva. Alapértelmezetten „no”."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:41
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:41
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:39
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:39
 msgid "Enable this interface."
 msgstr "A csatoló engedélyezése."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins.js:278
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins6.js:276
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins.js:279
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins6.js:277
 msgid "Enabled"
 msgstr "Engedélyezve"
 
@@ -132,13 +131,13 @@ msgstr "Engedélyezve"
 msgid "Expected retransmission count"
 msgstr "Elvárt újraküldési darabszám"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:153
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:147
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:151
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:145
 msgid "FIB metric"
 msgstr "FIB mérőszám"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:155
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:149
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:153
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:147
 msgid ""
 "FIBMetric controls the metric value of the host-routes OLSRd sets. \"flat\" "
 "means that the metric value is always 2. This is the preferred value because "
@@ -155,8 +154,8 @@ msgstr ""
 "mérőszámértékként, de csak akkor frissíti az ugrásszámot, ha a következő "
 "ugrás is megváltozik. Alapértelmezetten „flat”."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:209
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:203
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:207
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:201
 msgid "Fisheye mechanism for TCs (checked means on). Default is \"on\""
 msgstr ""
 "Halszem mechanizmus a TC-khez (a bejelölt azt jeleni, hogy be). "
@@ -166,17 +165,17 @@ msgstr ""
 msgid "Gateway"
 msgstr "Átjáró"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:48
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:284
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:48
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:278
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:37
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:37
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:46
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:282
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:46
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:276
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:35
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:35
 msgid "General Settings"
-msgstr "Általános Beállítások"
+msgstr "Általános beállítások"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:45
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:45
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:43
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:43
 msgid "General settings"
 msgstr "Általános beállítások"
 
@@ -194,11 +193,11 @@ msgstr "Jó (30 > SNR > 20)"
 
 #: applications/luci-app-olsr/root/usr/share/rpcd/acl.d/luci-app-olsr.json:3
 msgid "Grant UCI access for luci-app-olsr"
-msgstr ""
+msgstr "UCI hozzáférés engedélyezése a <em>luci-app-olsr</em> alkalmazásnak"
 
 #: applications/luci-app-olsr/root/usr/share/rpcd/acl.d/luci-app-olsr-unauthenticated.json:3
 msgid "Grant read access"
-msgstr ""
+msgstr "Olvasási hozzáférés engedélyezése"
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/neighbors.js:541
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/neighbors.js:550
@@ -209,8 +208,8 @@ msgstr ""
 msgid "Green"
 msgstr "Zöld"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:550
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:526
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:548
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:524
 #: applications/luci-app-olsr/root/usr/share/luci/menu.d/luci-app-olsr-frontend.json:34
 msgid "HNA"
 msgstr "HNA"
@@ -220,36 +219,36 @@ msgstr "HNA"
 msgid "HNA Announcements"
 msgstr "HNA közlemények"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:449
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:428
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:215
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:199
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:447
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:426
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:213
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:197
 msgid "HNA interval"
 msgstr "HNA időköz"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:460
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:439
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:226
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:210
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:458
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:437
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:224
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:208
 msgid "HNA validity time"
 msgstr "HNA érvényességi idő"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:529
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:505
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:527
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:503
 msgid "Hello"
 msgstr "Helló"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:383
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:362
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:149
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:133
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:381
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:360
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:147
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:131
 msgid "Hello interval"
-msgstr "Helló időköze"
+msgstr "HELLO időköz"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:394
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:373
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:160
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:144
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:392
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:371
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:158
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:142
 msgid "Hello validity time"
 msgstr "Helló érvényességi idő"
 
@@ -286,8 +285,8 @@ msgstr ""
 "Egy OLSR által forgalomirányított hálózatban lévő gépek bejelenthetik a "
 "külső hálózatokkal való kapcsolataikat HNA6 üzenetek használatával."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:218
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:212
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:216
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:210
 msgid ""
 "Hysteresis for link sensing (only for hopcount metric). Hysteresis adds more "
 "robustness to the link sensing but delays neighbor registration. Defaults is "
@@ -297,14 +296,14 @@ msgstr ""
 "hiszterézis nagyobb robusztusságot ad a kapcsolat érzékeléséhez, de "
 "késlelteti a szomszéd regisztrálását. Alapértelmezetten „yes”"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:285
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:279
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:38
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:38
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:283
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:277
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:36
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:36
 msgid "IP Addresses"
 msgstr "IP-címek"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:130
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:128
 msgid ""
 "IP-version to use. If 6and4 is selected then one olsrd instance is started "
 "for each protocol."
@@ -316,13 +315,13 @@ msgstr ""
 msgid "IPv4"
 msgstr "IPv4"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:355
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:121
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:353
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:119
 msgid "IPv4 broadcast"
 msgstr "IPv4 üzenetszórás"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:356
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:122
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:354
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:120
 msgid ""
 "IPv4 broadcast address for outgoing OLSR packets. One useful example would "
 "be 255.255.255.255. Default is \"0.0.0.0\", which triggers the usage of the "
@@ -332,13 +331,13 @@ msgstr ""
 "255.255.255.255. Alapértelmezetten „0.0.0.0”, amely a csatoló üzenetszórási "
 "IP-jének használatát aktiválja."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:367
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:133
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:365
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:131
 msgid "IPv4 source"
 msgstr "IPv4 forrás"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:367
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:133
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:365
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:131
 msgid ""
 "IPv4 src address for outgoing OLSR packages. Default is \"0.0.0.0\", which "
 "triggers usage of the interface IP."
@@ -350,17 +349,17 @@ msgstr ""
 msgid "IPv6"
 msgstr "IPv6"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:362
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:346
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:128
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:117
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:360
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:344
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:126
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:115
 msgid "IPv6 multicast"
 msgstr "IPv6 csoportcímzés"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:362
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:346
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:128
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:117
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:360
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:344
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:126
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:115
 msgid ""
 "IPv6 multicast address. Default is \"FF02::6D\", the manet-router linklocal "
 "multicast."
@@ -376,17 +375,17 @@ msgstr ""
 "Az IPv6 hálózatot teljes jelölésben kell megadni, az előtagnak CIDR "
 "jelölésben kell lennie."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:376
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:355
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:142
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:126
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:374
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:353
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:140
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:124
 msgid "IPv6 source"
 msgstr "IPv6 forrás"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:377
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:356
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:143
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:127
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:375
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:354
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:141
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:125
 msgid ""
 "IPv6 src prefix. OLSRd will choose one of the interface IPs which matches "
 "the prefix of this parameter. Default is \"0::/0\", which triggers the usage "
@@ -397,13 +396,13 @@ msgstr ""
 "„0::/0”, amely egy nem kapcsolatszintű csatoló IP-jének használatát "
 "aktiválja."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:113
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:113
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:111
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:111
 msgid "IPv6-Prefix of the uplink"
 msgstr "A kifelé menő kapcsolat IPv6-előtagja"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:257
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:251
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:255
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:249
 msgid ""
 "If the route to the current gateway is to be changed, the ETX value of this "
 "gateway is multiplied with this value before it is compared to the new one. "
@@ -418,16 +417,16 @@ msgstr ""
 "><b>FIGYELMEZTETÉS:</b> ezt a paramétert nem szabad együtt használni az "
 "etx_ffeth mérőszámmal!<br />Alapértelmezetten „1.0”."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:93
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:93
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:91
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:91
 msgid ""
 "If this Node uses NAT for connections to the internet. Default is \"yes\"."
 msgstr ""
 "Ha ez a csomópont NAT-ot használ az internethez történő kapcsolatokhoz. "
 "Alapértelmezetten „yes”."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:33
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:33
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:31
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:31
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/interfaces.js:135
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/neighbors.js:272
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/routes.js:181
@@ -435,10 +434,10 @@ msgstr ""
 msgid "Interface"
 msgstr "Csatoló"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:288
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:282
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:53
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:53
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:286
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:280
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:51
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:51
 msgid ""
 "Interface mode is used to prevent unnecessary packet forwarding on switched "
 "ethernet interfaces. Valid modes are \"mesh\" and \"ether\". Default is "
@@ -448,29 +447,38 @@ msgstr ""
 "csomagtovábbítást a kapcsolt Ethernet csatolókon. Az érvényes módok: „mesh” "
 "és „ether”. Alapértelmezetten „mesh”."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:471
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:450
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:469
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:448
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/interfaces.js:167
 msgid "Interfaces"
 msgstr "Csatolók"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:280
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:274
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:278
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:272
 msgid "Interfaces Defaults"
 msgstr "Csatolók alapértelmezettjei"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:130
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:128
 msgid "Internet protocol"
 msgstr "Internetprotokoll"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:139
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:133
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:137
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:131
 msgid ""
 "Interval to poll network interfaces for configuration changes (in seconds). "
 "Default is \"2.5\"."
 msgstr ""
 "Időköz a hálózati csatolók lekérdezéséhez a beállítások változtatásaiért "
 "(másodpercben). Alapértelmezetten „2.5”."
+
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:38
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:38
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:19
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:19
+msgid ""
+"It runs on any wifi card that supports ad-hoc mode and of course on any "
+"ethernet device. Visit %s for help and documentation."
+msgstr ""
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/routes.js:285
 msgid "Known OLSR routes"
@@ -480,23 +488,23 @@ msgstr "Ismert OLSR útvonalak"
 msgid "LQ"
 msgstr "LQ"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:181
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:175
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:179
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:173
 msgid "LQ aging"
 msgstr "LQ öregedés"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:191
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:185
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:189
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:183
 msgid "LQ algorithm"
 msgstr "LQ algoritmus"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:209
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:203
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:207
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:201
 msgid "LQ fisheye"
 msgstr "LQ halszem"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:171
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:165
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:169
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:163
 msgid "LQ level"
 msgstr "LQ szint"
 
@@ -504,7 +512,7 @@ msgstr "LQ szint"
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/routes.js:290
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/topology.js:178
 msgid "LQ:"
-msgstr ""
+msgstr "LQ:"
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/topology.js:140
 msgid "Last hop"
@@ -517,19 +525,19 @@ msgid "Legend"
 msgstr "Jelmagyarázat"
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins.js:58
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins.js:287
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins.js:288
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins6.js:56
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins6.js:285
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins6.js:286
 msgid "Library"
 msgstr "Programkönyvtár"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:49
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:49
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:47
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:47
 msgid "Link Quality Settings"
 msgstr "Kapcsolat minőségének beállításai"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:182
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:176
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:180
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:174
 msgid ""
 "Link quality aging factor (only for lq level 2). Tuning parameter for "
 "etx_float and etx_fpm, smaller values mean slower changes of ETX value. "
@@ -540,8 +548,8 @@ msgstr ""
 "értékek az ETX érték lassabb változtatásait jelentik (az engedélyezett "
 "értékek 0.01 és 1.0 között vannak)"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:193
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:187
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:191
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:185
 msgid ""
 "Link quality algorithm (only for lq level 2).<br /><b>etx_float</b>: "
 "floating point ETX with exponential aging<br /><b>etx_fpm</b> : same as "
@@ -558,8 +566,8 @@ msgstr ""
 "kompatibilis változata, amely megengedi az ETX 0.1 értékkel rendelkező "
 "Ethernet kapcsolatokat.<br />Alapértelmezetten „etx_ff”"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:172
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:166
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:170
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:164
 msgid ""
 "Link quality level switch between hopcount and cost-based (mostly ETX) "
 "routing.<br /><b>0</b> = do not use link quality<br /><b>2</b> = use link "
@@ -570,10 +578,10 @@ msgstr ""
 "kapcsolatminőséget<br /><b>2</b> = kapcsolatminőség használata az MPR "
 "kiválasztáshoz és az útválasztáshoz<br />Alapértelmezetten „2”"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:315
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:309
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:80
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:80
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:313
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:307
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:78
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:78
 msgid "LinkQuality Multiplicator"
 msgstr "Kapcsolatminőség szorzója"
 
@@ -581,23 +589,23 @@ msgstr "Kapcsolatminőség szorzója"
 msgid "Local interface IP"
 msgstr "Helyi csatoló IP"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:543
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:519
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:541
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:517
 #: applications/luci-app-olsr/root/usr/share/luci/menu.d/luci-app-olsr-frontend.json:42
 msgid "MID"
 msgstr "MID"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:427
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:406
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:193
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:177
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:425
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:404
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:191
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:175
 msgid "MID interval"
 msgstr "MID időköz"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:438
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:417
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:204
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:188
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:436
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:415
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:202
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:186
 msgid "MID validity time"
 msgstr "MID érvényességi idő"
 
@@ -605,8 +613,8 @@ msgstr "MID érvényességi idő"
 msgid "MTU"
 msgstr "MTU"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:236
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:230
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:234
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:228
 msgid "Main IP"
 msgstr "Fő IP"
 
@@ -615,22 +623,25 @@ msgid ""
 "Make sure that OLSRd is running, the \"jsoninfo\" plugin is loaded, "
 "configured on port 9090, and accepts connections from \"127.0.0.1\"."
 msgstr ""
+"Győződjön meg arról, hogy az OLSRd fut, a \"jsoninfo\" bővítmény be van "
+"töltve, a 9090-es porton van konfigurálva, és fogadja a kapcsolatokat a "
+"\"127.0.0.1\" címről."
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/routes.js:182
 msgid "Metric"
 msgstr "Mérőszám"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:288
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:524
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:282
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:500
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:53
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:53
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:286
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:522
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:280
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:498
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:51
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:51
 msgid "Mode"
 msgstr "Mód"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:317
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:82
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:315
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:80
 msgid ""
 "Multiply routes with the factor given here. Allowed values are between 0.01 "
 "and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
@@ -643,8 +654,8 @@ msgstr ""
 "0.5<br />az LQ csökkentése az összes csomópontra ezen a csatolón 20%-kal: "
 "default 0.8"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:311
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:82
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:309
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:80
 msgid ""
 "Multiply routes with the factor given here. Allowed values are between 0.01 "
 "and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
@@ -657,8 +668,8 @@ msgstr ""
 "fd91:662e:3c58::1 0.5<br />az LQ csökkentése az összes csomópontra ezen a "
 "csatolón 20%-kal: default 0.8"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:255
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:249
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:253
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:247
 msgid "NAT threshold"
 msgstr "NAT küszöbszintje"
 
@@ -670,7 +681,7 @@ msgstr "NLQ"
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/routes.js:291
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/topology.js:179
 msgid "NLQ:"
-msgstr ""
+msgstr "NLQ:"
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/neighbors.js:270
 msgid "Neighbour IP"
@@ -685,10 +696,10 @@ msgstr "Szomszédok"
 msgid "Netmask"
 msgstr "Hálózati maszk"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:521
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:497
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:50
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:50
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:519
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:495
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:48
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:48
 msgid "Network"
 msgstr "Hálózat"
 
@@ -696,10 +707,12 @@ msgstr "Hálózat"
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdhna.js:38
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdhna6.js:19
 msgid "Network address"
-msgstr "Hálózati cím"
+msgstr ""
+"Hálózati cím IP-cím/maszk (<abbr title=\"Osztály nélküli tartományok közötti "
+"útválasztás (Classless Inter-Domain Routing)\">CIDR</abbr>) formátumban."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:139
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:133
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:137
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:131
 msgid "Nic changes poll interval"
 msgstr "Nic változtatások lekérdezési időköze"
 
@@ -720,9 +733,9 @@ msgid "OLSR - HNA6-Announcements"
 msgstr "OLSR – HNA6-közlemények"
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins.js:46
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins.js:261
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins.js:262
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins6.js:44
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins6.js:259
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins6.js:260
 msgid "OLSR - Plugins"
 msgstr "OLSR – bővítmények"
 
@@ -739,11 +752,11 @@ msgstr "OLSR démon – csatoló"
 
 #: applications/luci-app-olsr/root/usr/share/luci/menu.d/luci-app-olsr-backend.json:3
 msgid "OLSR IPv4"
-msgstr ""
+msgstr "OLSR IPv4"
 
 #: applications/luci-app-olsr/root/usr/share/luci/menu.d/luci-app-olsr-backend.json:45
 msgid "OLSR IPv6"
-msgstr ""
+msgstr "OLSR IPv6"
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/neighbors.js:531
 msgid "OLSR connections"
@@ -801,26 +814,26 @@ msgstr "Ebben a hálózatban lévő okos átjárók áttekintője"
 msgid "Plugin configuration"
 msgstr "Bővítmény beállítása"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins.js:263
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins6.js:261
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins.js:264
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdplugins6.js:262
 #: applications/luci-app-olsr/root/usr/share/luci/menu.d/luci-app-olsr-backend.json:37
 #: applications/luci-app-olsr/root/usr/share/luci/menu.d/luci-app-olsr-backend.json:79
 msgid "Plugins"
 msgstr "Bővítmények"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:134
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:128
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:132
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:126
 msgid "Polling rate for OLSR sockets in seconds. Default is 0.05."
 msgstr ""
 "Az OLSR foglalatok lekérdezési aránya másodpercben. Alapértelmezetten „0.05”."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:134
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:128
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:132
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:126
 msgid "Pollrate"
 msgstr "Lekérdezési arány"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:227
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:221
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:225
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:219
 msgid "Port"
 msgstr "Port"
 
@@ -862,7 +875,7 @@ msgstr "Útvonalak"
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/routes.js:301
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/topology.js:189
 msgid "SNR:"
-msgstr ""
+msgstr "Jel-zaj arány (SNR):"
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/mid.js:122
 msgid "Secondary OLSR interfaces"
@@ -872,7 +885,7 @@ msgstr "Másodlagos OLSR csatolók"
 msgid "Selected"
 msgstr "Kiválasztva"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:237
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:235
 msgid ""
 "Sets the main IP (originator ip) of the router. This IP will NEVER change "
 "during the uptime of olsrd. Default is 0.0.0.0, which triggers usage of the "
@@ -882,7 +895,7 @@ msgstr ""
 "megváltoztatva az olsrd működési ideje alatt. Alapértelmezetten 0.0.0.0, "
 "amely az első csatoló IP-jének használatát aktiválja."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:231
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:229
 msgid ""
 "Sets the main IP (originator ip) of the router. This IP will NEVER change "
 "during the uptime of olsrd. Default is ::, which triggers usage of the IP of "
@@ -896,10 +909,10 @@ msgstr ""
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/routes.js:301
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/topology.js:189
 msgid "Signal Noise Ratio in dB"
-msgstr "Jel zajaránya dB-ben"
+msgstr "Jel-zaj arány dB-ben"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:59
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:59
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:57
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:57
 #: applications/luci-app-olsr/root/usr/share/luci/menu.d/luci-app-olsr-frontend.json:58
 msgid "SmartGW"
 msgstr "SmartGW"
@@ -910,14 +923,14 @@ msgstr "SmartGW közlemények"
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/smartgw.js:273
 msgid "SmartGateway is not configured on this system"
-msgstr ""
+msgstr "SmartGateway nincs beállítva ezen a rendszeren"
 
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/status-olsr/interfaces.js:140
 msgid "Source address"
 msgstr "Forráscím"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:102
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:102
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:100
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:100
 msgid ""
 "Specifies the speed of the uplink in kilobits/s. First parameter is "
 "upstream, second parameter is downstream. Default is \"128 1024\"."
@@ -926,8 +939,8 @@ msgstr ""
 "paraméter a feltöltés, a második paraméter a letöltés. Alapértelmezetten "
 "„128 1024”."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:102
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:102
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:100
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:100
 msgid "Speed of the uplink"
 msgstr "A kifelé menő kapcsolat sebessége"
 
@@ -959,58 +972,41 @@ msgstr "A szomszédtól fogadott csomagok sikerességi aránya"
 msgid "Success rate of packages sent to the neighbour"
 msgstr "A szomszédnak küldött csomagok sikerességi aránya"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:536
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:512
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:534
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:510
 msgid "TC"
 msgstr "TC"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:405
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:384
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:171
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:155
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:403
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:382
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:169
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:153
 msgid "TC interval"
 msgstr "TC időköz"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:416
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:395
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:182
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:166
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:414
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:393
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:180
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:164
 msgid "TC validity time"
 msgstr "TC érvényességi idő"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:144
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:138
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:142
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:136
 msgid "TOS value"
 msgstr "TOS érték"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:37
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:37
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:36
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:36
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:17
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:17
 msgid ""
 "The OLSR daemon is an implementation of the Optimized Link State Routing "
-"protocol. As such it allows mesh routing for any network equipment. It runs "
-"on any wifi card that supports ad-hoc mode and of course on any ethernet "
-"device. Visit <a href=\"http://www.olsr.org\">olsrd.org</a> for help and "
-"documentation."
+"protocol. As such it allows mesh routing for any network equipment."
 msgstr ""
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:18
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:18
-msgid ""
-"The OLSR daemon is an implementation of the Optimized Link State Routing "
-"protocol. As such it allows mesh routing for any network equipment. It runs "
-"on any wifi card that supports ad-hoc mode and of course on any ethernet "
-"device. Visit <a href='http://www.olsr.org'>olsrd.org</a> for help and "
-"documentation."
-msgstr ""
-"Az OLSR démon az optimalizált kapcsolatállapot alapú forgalomirányítás "
-"(Optimized Link State Routing) protokoll megvalósítása. Mint olyan, lehetővé "
-"teszi a háló útválasztást bármely hálózati berendezésnél. Bármilyen Wi-Fi "
-"kártyán elfut, amely támogatja az eseti módot, és természetesen bármely "
-"Ethernet eszközön. A súgóért és a dokumentációért látogassa meg az <a "
-"href='http://www.olsr.org'>olsrd.org</a> oldalt."
-
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:244
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:238
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:242
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:236
 msgid ""
 "The fixed willingness to use. If not set willingness will be calculated "
 "dynamically based on battery/power status. Default is \"3\"."
@@ -1019,13 +1015,13 @@ msgstr ""
 "dinamikusan lesz kiszámítva az akkumulátor vagy energia állapota alapján. "
 "Alapértelmezetten „3”."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:50
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:50
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:48
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:48
 msgid "The interface OLSRd should serve."
 msgstr "A csatoló, amelyet az OLSRd-nek ki kell szolgálnia."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:227
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:221
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:225
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:219
 msgid ""
 "The port OLSR uses. This should usually stay at the IANA assigned port 698. "
 "It can have a value between 1 and 65535."
@@ -1033,8 +1029,8 @@ msgstr ""
 "Az a port, amelyet az OLSR használ. Ezt általában az IANA-hoz rendelt 698-as "
 "porton kellene tartani. 1 és 65535 között lehet az értéke."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:115
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:115
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:113
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:113
 msgid ""
 "This can be used to signal the external IPv6 prefix of the uplink to the "
 "clients. This might allow a client to change it's local IPv6 address to use "
@@ -1047,10 +1043,10 @@ msgstr ""
 "használja. A legnagyobb előtaghossz 64 bit. Alapértelmezetten „::/0” (nincs "
 "előtag)."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:286
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:280
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:39
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:39
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:284
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:278
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:37
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:37
 msgid "Timing and Validity"
 msgstr "Időzítés és érvényesség"
 
@@ -1058,8 +1054,8 @@ msgstr "Időzítés és érvényesség"
 msgid "Topology"
 msgstr "Topológia"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:144
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:138
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:142
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:136
 msgid ""
 "Type of service value for the IP header of control traffic. Default is "
 "\"16\"."
@@ -1075,13 +1071,13 @@ msgstr "Nem lehet kapcsolódni az OLSR démonhoz!"
 msgid "Uplink"
 msgstr "Kifelé menő kapcsolat"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:93
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:93
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:91
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:91
 msgid "Uplink uses NAT"
 msgstr "A kifelé menő kapcsolat NAT-ot használ"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:217
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:211
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:215
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:209
 msgid "Use hysteresis"
 msgstr "Hiszterézis használata"
 
@@ -1105,8 +1101,8 @@ msgstr "Nagyon jó (SNR > 30)"
 msgid "WLAN"
 msgstr "WLAN"
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:59
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:59
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:57
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:57
 msgid ""
 "Warning: kmod-ipip is not installed. Without kmod-ipip SmartGateway will not "
 "work, please install it."
@@ -1114,17 +1110,17 @@ msgstr ""
 "Figyelmeztetés: a kmod-ipip nincs telepítve. A kmod-ipip nélkül a "
 "SmartGateway nem fog működni, ezért telepítse azt."
 
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:296
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:290
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:61
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:61
+msgid "Weight"
+msgstr "Súlyozás"
+
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:298
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:292
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:63
 #: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:63
-msgid "Weight"
-msgstr "Súly"
-
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:300
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:294
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface.js:65
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrdiface6.js:65
 msgid ""
 "When multiple links exist between hosts the weight of interface is used to "
 "determine the link to use. Normally the weight is automatically calculated "
@@ -1143,7 +1139,7 @@ msgstr ""
 "állítva. A LinkQualityLevel bármely egyéb értékénél a csatoló ETX értéke "
 "lesz használva helyette."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:82
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:80
 msgid ""
 "Which kind of uplink is exported to the other mesh nodes. An uplink is "
 "detected by looking for a local HNA of 0.0.0.0/0, ::ffff:0:0/96 or 2000::/3. "
@@ -1154,7 +1150,7 @@ msgstr ""
 "vagy 2000::/3 helyi HNA-jára történő keresés alapján van felismerve. Az "
 "alapértelmezett érték „both”."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:82
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:80
 msgid ""
 "Which kind of uplink is exported to the other mesh nodes. An uplink is "
 "detected by looking for a local HNA6 ::ffff:0:0/96 or 2000::/3. Default "
@@ -1165,8 +1161,8 @@ msgstr ""
 "helyi HNA6-jára történő keresés alapján van felismerve. Az alapértelmezett "
 "érték „both”."
 
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:244
-#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:238
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd.js:242
+#: applications/luci-app-olsr/htdocs/luci-static/resources/view/olsr/frontend/olsrd6.js:236
 msgid "Willingness"
 msgstr "Hajlandóság"
 
@@ -1195,87 +1191,31 @@ msgstr "fel"
 msgid "yes"
 msgstr "igen"
 
-#~ msgid "Can only be a valid IPv4 or IPv6 address or 'default'"
-#~ msgstr "Csak egy érvényes IPv4-cím, IPv6-cím vagy „default” lehet"
-
-#~ msgid "Can only be a valid IPv6 address or 'default'"
-#~ msgstr "Csak egy érvényes IPv6-cím vagy „default” lehet"
-
-#~ msgid "Configuration"
-#~ msgstr "Beállítás"
+#~ msgid ""
+#~ "The OLSR daemon is an implementation of the Optimized Link State Routing "
+#~ "protocol. As such it allows mesh routing for any network equipment. It "
+#~ "runs on any wifi card that supports ad-hoc mode and of course on any "
+#~ "ethernet device. Visit <a href=\"http://www.olsr.org\">olsrd.org</a> for "
+#~ "help and documentation."
+#~ msgstr ""
+#~ "Az <abbr title=\"Optimalizált kapcsolatállapot alapú útirányítás "
+#~ "(Optimized Link State Routing)\">OLSR</abbr> démon az OLSR protokoll egy "
+#~ "megvalósítása. Lehetővé teszi az útválasztást a hálóban bármilyen "
+#~ "hálózati eszköz számára. Minden wifi kártyával működik, amelyik támogatja "
+#~ "az ad-hoc módot, és természetesen bármilyen ethernet eszközzel. "
+#~ "Látogasson el az <a href=\"http://www.olsr.org\">olsrd.org</a> oldalra "
+#~ "segítségért és dokumentációért."
 
 #~ msgid ""
-#~ "Could not get any data. Make sure the jsoninfo plugin is installed and "
-#~ "allows connections from localhost."
+#~ "The OLSR daemon is an implementation of the Optimized Link State Routing "
+#~ "protocol. As such it allows mesh routing for any network equipment. It "
+#~ "runs on any wifi card that supports ad-hoc mode and of course on any "
+#~ "ethernet device. Visit <a href='http://www.olsr.org'>olsrd.org</a> for "
+#~ "help and documentation."
 #~ msgstr ""
-#~ "Nem sikerült lekérni semmilyen adatot. Győződjön meg arról, hogy a "
-#~ "jsoninfo bővítmény telepítve van-e, valamint elfogad-e kapcsolatokat a "
-#~ "helyi gépről."
-
-#~ msgid "Download Config"
-#~ msgstr "Beállítás letöltése"
-
-#~ msgid "HNA6 Announcements"
-#~ msgstr "HNA6 közlemények"
-
-#~ msgid "Hide IPv4"
-#~ msgstr "IPv4 elrejtése"
-
-#~ msgid "Hide IPv6"
-#~ msgstr "IPv6 elrejtése"
-
-#~ msgid "Invalid Value for LQMult-Value. Must be between 0.01 and 1.0."
-#~ msgstr ""
-#~ "Érvénytelen érték az LQMult értéknél. 0.01 és 1.0 között kell lennie."
-
-#~ msgid ""
-#~ "Invalid Value for LQMult-Value. You must use a decimal number between "
-#~ "0.01 and 1.0 here."
-#~ msgstr ""
-#~ "Érvénytelen érték az LQMult értéknél. Itt decimális számot kell "
-#~ "használnia 0.01 és 1.0 között."
-
-#~ msgid ""
-#~ "LQMult requires two values (IP address or 'default' and multiplicator) "
-#~ "separated by space."
-#~ msgstr ""
-#~ "Az LQMult két értéket igényel (IP-cím vagy „default” és szorzó), "
-#~ "szóközzel elválasztva."
-
-#~ msgid "Links per node (average)"
-#~ msgstr "Csomópontonkénti kapcsolatok (átlag)"
-
-#~ msgid "Links total"
-#~ msgstr "Kapcsolatok összesen"
-
-#~ msgid ""
-#~ "Make sure that OLSRd is running, the \"jsoninfo\" plugin is loaded, "
-#~ "configured on port 9090 and accepts connections from \"127.0.0.1\"."
-#~ msgstr ""
-#~ "Győződjön meg arról, hogy az OLSRd fut-e, a „jsoninfo” bővítmény be van-e "
-#~ "töltve, be van-e állítva a 9090-es porton, valamint elfogad-e "
-#~ "kapcsolatokat a „127.0.0.1” címről."
-
-#~ msgid "Neighbors"
-#~ msgstr "Szomszédok"
-
-#~ msgid "Nodes"
-#~ msgstr "Csomópontok"
-
-#~ msgid "Overview"
-#~ msgstr "Áttekintés"
-
-#~ msgid "Show IPv4"
-#~ msgstr "IPv4 megjelenítése"
-
-#~ msgid "Show IPv6"
-#~ msgstr "IPv6 megjelenítése"
-
-#~ msgid "SmartGateway is not configured on this system."
-#~ msgstr "A SmartGateway nincs beállítva ezen a rendszeren."
-
-#~ msgid "Version"
-#~ msgstr "Verzió"
-
-#~ msgid "infinite"
-#~ msgstr "végtelen"
+#~ "Az OLSR démon az optimalizált kapcsolatállapot alapú forgalomirányítás "
+#~ "(Optimized Link State Routing) protokoll megvalósítása. Mint olyan, "
+#~ "lehetővé teszi a háló útválasztást bármely hálózati berendezésnél. "
+#~ "Bármilyen Wi-Fi kártyán elfut, amely támogatja az eseti módot, és "
+#~ "természetesen bármely Ethernet eszközön. A súgóért és a dokumentációért "
+#~ "látogassa meg az <a href='http://www.olsr.org'>olsrd.org</a> oldalt."

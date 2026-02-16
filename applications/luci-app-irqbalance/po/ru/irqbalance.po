@@ -1,8 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-03-21 13:58+0000\n"
-"Last-Translator: st7105 <st7105@gmail.com>\n"
+"PO-Revision-Date: 2026-02-15 08:21+0000\n"
+"Last-Translator: SnIPeRSnIPeR <snipersniper@users.noreply.hosted.weblate.org>"
+"\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsirqbalance/ru/>\n"
 "Language: ru\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:82
 msgid "Cache level at which irqbalance partitions cache domains."
@@ -19,7 +20,7 @@ msgstr "Уровень кэша, на котором irqbalance разделяе
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:82
 msgid "Deepest cache"
-msgstr "Самое глубокое кэширование"
+msgstr "Кэширование глубокого уровня"
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:78
 msgid "Enable"
@@ -27,15 +28,15 @@ msgstr "Включить"
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:92
 msgid "Exclude CPUs"
-msgstr "Исключите процессоры"
+msgstr "Исключить процессоры"
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:104
 msgid "Exclude IRQs"
-msgstr "Исключите IRQ"
+msgstr "Исключить IRQ"
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:75
 msgid "General settings"
-msgstr "Общие настройки"
+msgstr "Основные настройки"
 
 #: applications/luci-app-irqbalance/root/usr/share/rpcd/acl.d/luci-app-irqbalance.json:3
 msgid "Grant UCI access for luci-app-irqbalance"
@@ -43,7 +44,7 @@ msgstr "Предоставьте доступ к UCI для luci-app-irqbalance"
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:87
 msgid "Interval"
-msgstr "Интервал"
+msgstr "Частота сообщений"
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:98
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:110
@@ -55,7 +56,7 @@ msgid ""
 "List of CPUs to ignore, can be an integer or integers separated by commas."
 msgstr ""
 "Список игнорируемых процессоров, может быть целым числом или целыми числами, "
-"разделенными запятыми."
+"разделёнными запятыми."
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:104
 msgid "List of IRQs to ignore."
@@ -64,11 +65,11 @@ msgstr "Список игнорируемых IRQ."
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:56
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:68
 msgid "Loading..."
-msgstr "Загружается…"
+msgstr "Загружается..."
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:30
 msgid "NOT RUNNING"
-msgstr "НЕ ЗАПУЩЕН"
+msgstr "НЕ ЗАПУЩЕНО"
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:29
 msgid "RUNNING"
@@ -80,7 +81,7 @@ msgstr "Показать вывод отладки"
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:114
 msgid "Show debug output in system log."
-msgstr "Показать отладочный вывод в системном журнале."
+msgstr "Показывать отладку в системном журнале."
 
 #: applications/luci-app-irqbalance/htdocs/luci-static/resources/view/irqbalance.js:60
 msgid "Snapshot of current IRQs"

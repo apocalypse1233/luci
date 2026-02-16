@@ -7,15 +7,7 @@
 "require view";
 "require pbr.status as pbr";
 
-var pkg = {
-	get Name() {
-		return "pbr";
-	},
-
-	get URL() {
-		return "https://docs.openwrt.melmac.net/" + pkg.Name + "/";
-	},
-};
+var pkg = pbr.pkg;
 
 return view.extend({
 	load: function () {
@@ -95,26 +87,6 @@ return view.extend({
 		o.default = "1";
 
 		var text = "";
-		if (reply.platform.adguardhome_ipset_support === null) {
-			text +=
-				_("The %s support is unknown.").format("<i>adguardhome.ipset</i>") +
-				"<br />";
-		} else if (!reply.platform.adguardhome_ipset_support) {
-			text +=
-				_("The %s is not supported on this system.").format(
-					"<i>adguardhome.ipset</i>"
-				) + "<br />";
-		}
-		if (reply.platform.dnsmasq_ipset_support === null) {
-			text +=
-				_("The %s support is unknown.").format("<i>dnsmasq.ipset</i>") +
-				"<br />";
-		} else if (!reply.platform.dnsmasq_ipset_support) {
-			text +=
-				_("The %s is not supported on this system.").format(
-					"<i>dnsmasq.ipset</i>"
-				) + "<br />";
-		}
 		if (reply.platform.dnsmasq_nftset_support === null) {
 			text +=
 				_("The %s support is unknown.").format("<i>dnsmasq.nftset</i>") +
@@ -169,7 +141,11 @@ return view.extend({
 			_("Supported Interfaces"),
 			_(
 				"Allows to specify the list of interface names (in lower case) to be explicitly supported by the service. " +
-					"Can be useful if your OpenVPN tunnels have dev option other than tun* or tap*."
+					"Can be useful if your OpenVPN tunnels have dev option other than tun* or tap* or specific use cases " +
+					"of WireGuard servers. See the %sREADME%s for details."
+			).format(
+				'<a href="' + pkg.URL + '#WireGuardServerUseCases" target="_blank">',
+				"</a>"
 			)
 		);
 		o.optional = false;
@@ -180,8 +156,13 @@ return view.extend({
 			"ignored_interface",
 			_("Ignored Interfaces"),
 			_(
-				"Allows to specify the list of interface names (in lower case) to be ignored by the service. " +
-					"Can be useful if running both VPN server and VPN client on the router."
+				"Allows to specify the list of interface names (lower case) to be ignored by the service. " +
+					"Can be useful for an OpenVPN server running on OpenWrt device. WireGuard servers, which " +
+					"have a listen_port defined, are handled automatically, do not add those here." +
+					"See the %sREADME%s for details."
+			).format(
+				'<a href="' + pkg.URL + '#WireGuardServerUseCases" target="_blank">',
+				"</a>"
 			)
 		);
 		o.optional = false;
@@ -215,10 +196,10 @@ return view.extend({
 		o = s.taboption(
 			"tab_advanced",
 			form.Value,
-			"wan_mark",
-			_("WAN Table FW Mark"),
+			"uplink_mark",
+			_("Uplink Interface Table FW Mark"),
 			_(
-				"Starting (WAN) FW Mark for marks used by the service. High starting mark is " +
+				"Starting (Uplink Interface) FW Mark for marks used by the service. High starting mark is " +
 					"used to avoid conflict with SQM/QoS. Change with caution together with"
 			) +
 				" " +
@@ -245,6 +226,21 @@ return view.extend({
 		o.rmempty = true;
 		o.placeholder = "ff0000";
 		o.datatype = "hexstring";
+
+		o = s.taboption(
+			"tab_advanced",
+			form.Value,
+			"uplink_ip_rules_priority",
+			_("Uplink IP Rules Priority"),
+			_(
+				"Starting (Uplink/WAN) ip rules priority used by the pbr service. High starting priority is " +
+					"used to avoid conflict with other services, this can be changed by user."
+			)
+		);
+		o.rmempty = true;
+		o.placeholder = "30000";
+		o.datatype = "uinteger";
+		o.default = "30000";
 
 		o = s.taboption(
 			"tab_webui",
@@ -279,7 +275,10 @@ return view.extend({
 			_(
 				"Name, interface and at least one other field are required. Multiple local and remote " +
 					"addresses/devices/domains and ports can be space separated. Placeholders below represent just " +
-					"the format/syntax and will not be used if fields are left blank."
+					"the format/syntax and will not be used if fields are left blank. For more information on options, check the %sREADME%s."
+			).format(
+				'<a href="' + pkg.URL + '#PolicyOptions" target="_blank">',
+				"</a>"
 			)
 		);
 		s.rowcolors = true;
@@ -337,9 +336,7 @@ return view.extend({
 		o = s.option(form.ListValue, "chain", _("Chain"));
 		o.value("", "prerouting");
 		o.value("forward", "forward");
-		o.value("input", "input");
 		o.value("output", "output");
-		o.value("postrouting", "postrouting");
 		o.default = "";
 		o.rmempty = true;
 
@@ -349,6 +346,51 @@ return view.extend({
 		});
 		o.datatype = "network";
 		o.rmempty = false;
+
+		s = m.section(
+			form.GridSection,
+			"dns_policy",
+			_("DNS Policies"),
+			_(
+				"Name, local address and remote DNS fields are required. Multiple local " +
+					"addresses/devices can be space separated. For more information on options, check the %sREADME%s."
+			).format(
+				'<a href="' + pkg.URL + '#DNSPolicyOptions" target="_blank">',
+				"</a>"
+			)
+		);
+		s.rowcolors = true;
+		s.sortable = true;
+		s.anonymous = true;
+		s.addremove = true;
+
+		o = s.option(form.Flag, "enabled", _("Enabled"));
+		o.default = "1";
+		o.editable = true;
+
+		o = s.option(form.Value, "name", _("Name"));
+		o.optional = false;
+
+		o = s.option(form.Value, "src_addr", _("Local addresses / devices"));
+		o.optional = false;
+		o.datatype =
+			"list(neg(or(cidr,host,ipmask,ipaddr,macaddr,network,string)))";
+		o.rmempty = true;
+		o.default = "";
+
+		o = s.option(form.Value, "dest_dns", _("Remote DNS"));
+		o.optional = false;
+		o.rmempty = false;
+		o.datatype = "list(or(cidr,host,network,ipaddr))";
+		reply.interfaces.forEach((element) => {
+			element === "ignore" || o.value(element);
+		});
+
+		o = s.option(form.Value, "dest_dns_port", _("Remote DNS Port"));
+		o.optional = true;
+		o.rmempty = true;
+		o.datatype = "port";
+		o.default = "53";
 
 		s = m.section(
 			form.NamedSection,

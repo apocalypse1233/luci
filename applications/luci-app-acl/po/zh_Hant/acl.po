@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-28 10:32+0000\n"
-"Last-Translator: akibou <jinwenxin1997@icloud.com>\n"
-"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
-"openwrt/luciapplicationsacl/zh_Hant/>\n"
+"PO-Revision-Date: 2026-02-08 18:10+0000\n"
+"Last-Translator: EESF-2 <eesf-2@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/openwrt/luciapplicationsacl/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #: applications/luci-app-acl/root/usr/share/luci/menu.d/luci-app-acl.json:3
 msgid "ACL Settings"
@@ -25,7 +25,7 @@ msgstr "存取級別"
 
 #: applications/luci-app-acl/htdocs/luci-static/resources/view/system/acl.js:266
 msgid "Cannot encrypt plaintext password since uhttpd is not installed."
-msgstr "由於未安裝 uHTTPd，因此無法加密明文密碼。"
+msgstr "由於未安裝 uhttpd，因此無法加密明文密碼。"
 
 #: applications/luci-app-acl/htdocs/luci-static/resources/view/system/acl.js:79
 msgid "Description"
@@ -33,7 +33,7 @@ msgstr "描述"
 
 #: applications/luci-app-acl/root/usr/share/rpcd/acl.d/luci-app-acl.json:3
 msgid "Grant access to ACL configuration"
-msgstr "授予 ACL 組態擁有存取的權限"
+msgstr "授予存取 ACL 組態的權限"
 
 #: applications/luci-app-acl/htdocs/luci-static/resources/view/system/acl.js:215
 msgid "Login name"
@@ -62,18 +62,18 @@ msgstr "讀取權限"
 
 #: applications/luci-app-acl/htdocs/luci-static/resources/view/system/acl.js:288
 msgid "Session timeout"
-msgstr "工作階段逾時值"
+msgstr "工作階段逾時"
 
 #: applications/luci-app-acl/htdocs/luci-static/resources/view/system/acl.js:86
 msgctxt "Set all permissions in the table below to one of the given values"
 msgid "Set all:"
-msgstr "設定全部："
+msgstr "設定全部:"
 
 #: applications/luci-app-acl/htdocs/luci-static/resources/view/system/acl.js:178
 msgid ""
 "The LuCI ACL management is in an experimental stage! It does not yet work "
 "reliably with all applications"
-msgstr "LuCI ACL 管理處於實驗階段！它尚無法確保在所有應用程式中工作之可靠性"
+msgstr "LuCI ACL 管理處於實驗階段！它還無法在所有應用程式中可靠運作"
 
 #: applications/luci-app-acl/htdocs/luci-static/resources/view/system/acl.js:258
 msgid "The password may not start with \"$p$\"."
@@ -89,7 +89,7 @@ msgstr "UNIX 帳號"
 
 #: applications/luci-app-acl/htdocs/luci-static/resources/view/system/acl.js:281
 msgid "Unable to encrypt plaintext password: %s"
-msgstr "無法加密明文密碼（訊息：%s）"
+msgstr "無法加密明文密碼: %s"
 
 #: applications/luci-app-acl/htdocs/luci-static/resources/view/system/acl.js:220
 msgid "Use UNIX password in /etc/shadow"
@@ -138,6 +138,3 @@ msgstr "部分 (%d/%d)"
 msgctxt "Only read permissions granted"
 msgid "readonly"
 msgstr "唯讀"
-
-#~ msgid "Use plain password"
-#~ msgstr "使用明文密碼"

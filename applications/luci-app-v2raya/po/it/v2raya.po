@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: luci-app-v 2raya\n"
-"PO-Revision-Date: 2024-06-30 21:05+0000\n"
-"Last-Translator: moreno matassini <morenomatassini95@gmail.com>\n"
+"PO-Revision-Date: 2025-11-28 22:04+0000\n"
+"Last-Translator: niky1987 <niky1987@libero.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsv2raya/it/>\n"
 "Language: it\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #: applications/luci-app-v2raya/htdocs/luci-static/resources/view/v2raya/config.js:79
 #: applications/luci-app-v2raya/htdocs/luci-static/resources/view/v2raya/config.js:86
@@ -32,11 +32,11 @@ msgstr "Debug"
 
 #: applications/luci-app-v2raya/htdocs/luci-static/resources/view/v2raya/config.js:104
 msgid "Disable log color output"
-msgstr ""
+msgstr "Disabilita l'output del colore del registro"
 
 #: applications/luci-app-v2raya/htdocs/luci-static/resources/view/v2raya/config.js:106
 msgid "Disable log timestamp"
-msgstr ""
+msgstr "Disabilita i log del registro temporale"
 
 #: applications/luci-app-v2raya/htdocs/luci-static/resources/view/v2raya/config.js:70
 msgid "Enable"
@@ -102,11 +102,11 @@ msgstr ""
 #: applications/luci-app-v2raya/htdocs/luci-static/resources/view/v2raya/config.js:80
 #: applications/luci-app-v2raya/htdocs/luci-static/resources/view/v2raya/config.js:87
 msgid "On"
-msgstr ""
+msgstr "On"
 
 #: applications/luci-app-v2raya/htdocs/luci-static/resources/view/v2raya/config.js:30
 msgid "Open Web Interface"
-msgstr "Apri l'interfaccia web"
+msgstr "Apri interfaccia web"
 
 #: applications/luci-app-v2raya/htdocs/luci-static/resources/view/v2raya/config.js:31
 msgid "RUNNING"
@@ -145,7 +145,7 @@ msgstr "Avvisa"
 #: applications/luci-app-v2raya/htdocs/luci-static/resources/view/v2raya/config.js:50
 #: applications/luci-app-v2raya/root/usr/share/luci/menu.d/luci-app-v2raya.json:3
 msgid "v2rayA"
-msgstr ""
+msgstr "v2rayA"
 
 #: applications/luci-app-v2raya/htdocs/luci-static/resources/view/v2raya/config.js:51
 msgid ""

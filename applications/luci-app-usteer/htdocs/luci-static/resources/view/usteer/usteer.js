@@ -170,7 +170,7 @@ function collectWlanAPInfos(compactconnectioninfo_table_entries, wlanAPInfos) {
 	}
 };
 
-var callNetworkRrdnsLookup = rpc.declare({
+const callNetworkRrdnsLookup = rpc.declare({
 	object: 'network.rrdns',
 	method: 'lookup',
 	params: [ 'addrs', 'timeout', 'limit' ],
@@ -192,13 +192,14 @@ function collectRemoteHosts (remotehosttableentries,Remotehosts) {
 						dns_cache[address] = replies[address];
 						continue;
 					} else {
-						dns_cache[address]=Hosts[
-							Object.keys(Hosts).find(mac =>   
-								((typeof Hosts[mac]['name'] !== 'undefined') && 
-									((Object.keys(Hosts[mac]['ip6addrs']).find(IPaddr2 => (address === Hosts[mac]['ip6addrs'][IPaddr2]))) ||
-									(Object.keys(Hosts[mac]['ipaddrs']).find(IPaddr2 => (address === Hosts[mac]['ipaddrs'][IPaddr2])))))
-									)
-							]['name'];
+						if (Hosts.length >0)
+							dns_cache[address]=Hosts[
+								Object.keys(Hosts).find(mac =>   
+									((typeof Hosts[mac]['name'] !== 'undefined') && 
+										((Object.keys(Hosts[mac]['ip6addrs']).find(IPaddr2 => (address === Hosts[mac]['ip6addrs'][IPaddr2]))) ||
+										(Object.keys(Hosts[mac]['ipaddrs']).find(IPaddr2 => (address === Hosts[mac]['ipaddrs'][IPaddr2])))))
+										)
+								]['name'];
 					}
 				}
 	});
@@ -328,7 +329,7 @@ return view.extend({
 			this.callGetRemoteinfo().catch (function (){return null;}),
 			this.callGetLocalinfo().catch (function (){return null;}),
 			this.callGetClients().catch (function (){return null;}),
-			network.getWifiNetworks()
+			network.getWifiNetworks().catch (function (){return null;})
 		]);
 	},
 
@@ -364,7 +365,7 @@ return view.extend({
 	},
 
 	render: function (data) {
-		var m, s, o;
+		let m, s, o;
 
 		if (!('usteer' in data[0])) {
 			m = new form.Map('usteer', _('Usteer'),
@@ -425,7 +426,7 @@ return view.extend({
 		o.rmempty = false;
 		o.editable = true;
 
-		o = s.taboption('settings', form.Value, 'max_neighbour_reports', _('Max neighbour reports'), _('Maximum number of neighbor reports set for a node'));
+		o = s.taboption('settings', form.Value, 'max_neighbor_reports', _('Max neighbor reports'), _('Maximum number of neighbor reports set for a node'));
 		o.optional = true;
 		o.placeholder = 8;
 		o.datatype = 'uinteger';
@@ -624,10 +625,11 @@ return view.extend({
 
 		o = s.taboption('settings', form.DynamicList, 'ssid_list', _('SSID list'), _('List of SSIDs to enable steering on')+' ('+_('empty means all')+')');
 		WifiNetworks.forEach(function (wifiNetwork) {
-			if (wifiNetwork.getSSID() && (!o.keylist || o.keylist.indexOf(wifiNetwork.getSSID()) === -1)) {
-				o.value(wifiNetwork.getSSID())
-			}
-		});
+			if (wifiNetwork && typeof wifiNetwork === 'object') 
+				if (wifiNetwork.getSSID() && (!o.keylist || o.keylist.indexOf(wifiNetwork.getSSID()) === -1)) {
+					o.value(wifiNetwork.getSSID())
+				}
+		});	
 		o.optional = true;
 		o.datatype = 'list(string)';
 

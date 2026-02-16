@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-23 10:05+0000\n"
-"Last-Translator: st7105 <st7105@gmail.com>\n"
+"PO-Revision-Date: 2026-01-09 19:56+0000\n"
+"Last-Translator: vanapro1 <law820314@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationslxc/ru/>\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: applications/luci-app-lxc/luasrc/model/cbi/lxc.lua:18
 msgid ""
@@ -46,7 +46,7 @@ msgstr "Создать"
 msgid "Create New Container"
 msgstr "Создать новый контейнер"
 
-#: applications/luci-app-lxc/luasrc/view/lxc.htm:133
+#: applications/luci-app-lxc/luasrc/view/lxc.htm:132
 msgid "Delete"
 msgstr "Удалить"
 
@@ -71,7 +71,7 @@ msgstr "Предоставить UCI доступ к luci-app-lxc"
 msgid "LXC Containers"
 msgstr "LXC-контейнеры"
 
-#: applications/luci-app-lxc/luasrc/view/lxc.htm:73
+#: applications/luci-app-lxc/luasrc/view/lxc.htm:72
 msgid "Loading"
 msgstr "Загрузка"
 
@@ -79,24 +79,24 @@ msgstr "Загрузка"
 msgid "Minimum required free space for LXC Container creation in KB"
 msgstr ""
 "Минимальное свободное пространство, необходимое для создания LXC-контейнера "
-"в КБ"
+"в Кб"
 
 #: applications/luci-app-lxc/luasrc/model/cbi/lxc.lua:38
 msgid "Minimum required free temp space for LXC Container creation in KB"
 msgstr ""
 "Минимальное временное свободное пространство, необходимое для создания LXC-"
-"контейнера в КБ"
+"контейнера в Кб"
 
 #: applications/luci-app-lxc/luasrc/view/lxc.htm:27
 #: applications/luci-app-lxc/luasrc/view/lxc.htm:45
 msgid "Name"
-msgstr "Название"
+msgstr "Имя"
 
 #: applications/luci-app-lxc/luasrc/model/cbi/lxc.lua:22
 msgid "Options"
 msgstr "Настройки"
 
-#: applications/luci-app-lxc/luasrc/view/lxc.htm:131
+#: applications/luci-app-lxc/luasrc/view/lxc.htm:130
 msgid "Start"
 msgstr "Запустить"
 
@@ -104,21 +104,10 @@ msgstr "Запустить"
 msgid "Status"
 msgstr "Статус"
 
-#: applications/luci-app-lxc/luasrc/view/lxc.htm:132
+#: applications/luci-app-lxc/luasrc/view/lxc.htm:131
 msgid "Stop"
-msgstr "Остановить"
+msgstr "Стоп"
 
 #: applications/luci-app-lxc/luasrc/view/lxc.htm:46
 msgid "Template"
 msgstr "Шаблон"
-
-#~ msgid "Enable SSL"
-#~ msgstr "Включить SSL"
-
-#~ msgid ""
-#~ "Enable optional SSL encryption support. This requires additional packages "
-#~ "like 'wget', 'ca-certificates', 'gnupg' and 'gnupg-utils'."
-#~ msgstr ""
-#~ "Включить необязательную поддержку шифрования SSL. Это требуется некоторым "
-#~ "дополнительным пакетам, например: 'wget', 'ca-certificates', 'gnupg' и "
-#~ "'gnupg-utils'."

@@ -1,14 +1,15 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-06 01:48+0000\n"
-"Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
+"PO-Revision-Date: 2025-07-15 10:11+0000\n"
+"Last-Translator: Stefan Bjornelund the Gnome "
+"<stefan.bjornelund.gnome@gmail.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationslxc/sv/>\n"
 "Language: sv\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: applications/luci-app-lxc/luasrc/model/cbi/lxc.lua:18
 msgid ""
@@ -37,13 +38,13 @@ msgstr ""
 
 #: applications/luci-app-lxc/luasrc/view/lxc.htm:53
 msgid "Create"
-msgstr ""
+msgstr "Skapa"
 
 #: applications/luci-app-lxc/luasrc/view/lxc.htm:41
 msgid "Create New Container"
 msgstr ""
 
-#: applications/luci-app-lxc/luasrc/view/lxc.htm:133
+#: applications/luci-app-lxc/luasrc/view/lxc.htm:132
 msgid "Delete"
 msgstr "Ta bort"
 
@@ -68,7 +69,7 @@ msgstr ""
 msgid "LXC Containers"
 msgstr ""
 
-#: applications/luci-app-lxc/luasrc/view/lxc.htm:73
+#: applications/luci-app-lxc/luasrc/view/lxc.htm:72
 msgid "Loading"
 msgstr "Laddar"
 
@@ -89,7 +90,7 @@ msgstr "Namn"
 msgid "Options"
 msgstr "Alternativ"
 
-#: applications/luci-app-lxc/luasrc/view/lxc.htm:131
+#: applications/luci-app-lxc/luasrc/view/lxc.htm:130
 msgid "Start"
 msgstr "Starta"
 
@@ -97,7 +98,7 @@ msgstr "Starta"
 msgid "Status"
 msgstr "Status"
 
-#: applications/luci-app-lxc/luasrc/view/lxc.htm:132
+#: applications/luci-app-lxc/luasrc/view/lxc.htm:131
 msgid "Stop"
 msgstr "Stopp"
 
