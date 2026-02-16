@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-05-13 22:00+0000\n"
-"Last-Translator: try496 <pinghejk@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"openwrt/luciapplicationsocserv/zh_Hans/>\n"
+"PO-Revision-Date: 2026-02-05 16:09+0000\n"
+"Last-Translator: EESF-2 <eesf-2@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/openwrt/luciapplicationsocserv/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/main.lua:124
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/user-config.lua:80
@@ -16,7 +16,7 @@ msgid ""
 "<abbr title=\"Classless Inter-Domain Routing\">CIDR</abbr>-Notation: address/"
 "prefix"
 msgstr ""
-"<abbr title=\"Classless Inter-Domain Routing\">CIDR</abbr>–表示：地址/前缀"
+"<abbr title=\"Classless Inter-Domain Routing\">CIDR</abbr>–表示: 地址/前缀"
 
 #: applications/luci-app-ocserv/luasrc/view/ocserv_status.htm:48
 msgid "Active OpenConnect Users"
@@ -250,7 +250,7 @@ msgid ""
 "(e.g., LDAP, Radius)."
 msgstr ""
 "用户的身份验证方法。最简单的是单个用户名-密码对。使用 PAM 模块使用其他服务器"
-"（例如：LDAP、Radius）进行身份验证。"
+"（例如: LDAP、Radius）进行身份验证。"
 
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/user-config.lua:45
 msgid "The firewall zone that the VPN clients will be set to"
@@ -335,6 +335,6 @@ msgstr "VPN IP 地址"
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/main.lua:95
 #: applications/luci-app-ocserv/luasrc/model/cbi/ocserv/user-config.lua:100
 msgid ""
-"View the CA certificate used by this server. You will need to save it as 'ca."
-"pem' and import it into the clients."
+"View the CA certificate used by this server. You will need to save it as "
+"'ca.pem' and import it into the clients."
 msgstr "查看该服务器使用的 CA 证书。您需要将其另存为“ca.pem”并导入客户端。"

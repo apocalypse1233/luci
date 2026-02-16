@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2024-07-20 20:10+0000\n"
-"Last-Translator: ssantos <ssantos@web.de>\n"
+"PO-Revision-Date: 2025-11-26 16:13+0000\n"
+"Last-Translator: Luiz Carlos de Souza Santos <lcdessantos@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationssshtunnel/pt/>\n"
 "Language: pt\n"
@@ -10,25 +10,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:37
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:75
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:113
 msgid "<code>*</code> means to listen all interfaces <b>including public</b>."
 msgstr ""
+"<code>*</code> significa escutar em todas as interfaces <b>incluindo as "
+"públicas</b>."
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_keys.js:138
 msgid "A key with that name already exists."
-msgstr ""
+msgstr "Já existe uma chave com esse nome."
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:124
 msgid "Accept new and check if not changed"
-msgstr ""
+msgstr "Aceite o novo e verifique se não foi alterado"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_keys.js:123
 msgid "Add the pub key to %s or %s."
-msgstr ""
+msgstr "Adicione a chave pública a %s ou %s."
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:35
 msgid "Advanced Settings"
@@ -43,14 +45,16 @@ msgid ""
 "Bind IP address e.g. <code>192.168.1.1</code> or hostname e.g. "
 "<code>localhost</code>."
 msgstr ""
+"Vincula um endereço IP (ex.: <code>192.168.1.1</code>) ou nome de host (ex.: "
+"<code>localhost</code>)."
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:110
 msgid "Check host IP"
-msgstr ""
+msgstr "Verificar IP do host"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:111
 msgid "Check the host IP address in the %s file."
-msgstr ""
+msgstr "Verifique o endereço IP do host no ficheiro %s."
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:76
 msgid "Compression may be useful on slow connections."
@@ -73,7 +77,7 @@ msgstr ""
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:106
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:132
 msgid "Enabled"
-msgstr ""
+msgstr "Ativado"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:52
 msgid "For Dropbear %s"
@@ -163,12 +167,12 @@ msgstr ""
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:63
 msgid "Log level"
-msgstr ""
+msgstr "Nível do registo"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_keys.js:88
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_keys.js:101
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:80
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:116
@@ -182,7 +186,7 @@ msgstr ""
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:42
 msgid "Port"
-msgstr ""
+msgstr "Porta"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:50
 msgid "Private key file with authentication identity."
@@ -247,7 +251,7 @@ msgstr ""
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:157
 msgid "Server"
-msgstr ""
+msgstr "Servidor"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:93
 msgid "Server keep alive attempts"
@@ -298,7 +302,7 @@ msgstr ""
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_servers.js:46
 msgid "User"
-msgstr ""
+msgstr "Utilizador"
 
 #: applications/luci-app-sshtunnel/htdocs/luci-static/resources/view/sshtunnel/ssh_tunnels.js:125
 msgid "VPN Tunnels"

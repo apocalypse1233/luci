@@ -545,6 +545,7 @@ select {
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 18px;
+	align-items: baseline;
 }
 
 .cbi-value-field {
@@ -1156,8 +1157,7 @@ a.menu:after {
 	top: 40px;
 	left: -9999px;
 	z-index: 900;
-	min-width: 160px;
-	max-width: 220px;
+	min-width: max-content;
 	margin-left: 0;
 	margin-right: 0;
 	padding: 6px 0;
@@ -1604,6 +1604,12 @@ body.modal-overlay-active #modal_overlay {
 	border: 1px solid var(--border-color-high);
 	border-radius: 3px;
 	color: var(--text-color-high);
+}
+
+.cbi-dropdown img {
+	/* the following are necessary to constrain (vector) images of any size */
+	max-height: 1.6em;  /* Adjusts image height to fit slightly larger than text line height */
+	width: auto;  /* Preserves aspect ratio */
 }
 
 .cbi-dropdown > ul {
@@ -2206,8 +2212,8 @@ th[data-sort-direction="desc"]::after { content: "\a0\25bc"; }
 }
 
 .ifacebadge img {
-	width: 16px;
-	height: 16px;
+	width: 32px;
+	height: 32px;
 	vertical-align: middle;
 }
 

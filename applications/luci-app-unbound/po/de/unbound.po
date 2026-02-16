@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-04-26 06:49+0000\n"
-"Last-Translator: FKdeveloper <felix.koeppel.ch@gmail.com>\n"
+"PO-Revision-Date: 2026-01-18 06:31+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsunbound/de/>\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.1\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:161
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/zone-details.lua:53
@@ -41,7 +41,7 @@ msgstr "Die Adblock-Domain-Liste ist zu groß, um in LuCI angezeigt zu werden."
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:47
 msgid "Advanced"
-msgstr "Fortgeschritten"
+msgstr "Erweitert"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:263
 msgid "Aggressive"
@@ -121,7 +121,7 @@ msgstr "DNSSEC NTP Korrektur"
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:251
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:261
 msgid "Default"
-msgstr "Standard"
+msgstr "Voreinstellung"
 
 #: applications/luci-app-unbound/luasrc/model/cbi/unbound/configure.lua:182
 msgid "Denied (nxdomain)"

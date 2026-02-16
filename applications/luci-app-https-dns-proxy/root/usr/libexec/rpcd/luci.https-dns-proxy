@@ -9,19 +9,18 @@
 # ubus -S call luci.https-dns-proxy getInitStatus '{"name": "https-dns-proxy" }'
 # ubus -S call luci.https-dns-proxy getPlatformSupport '{"name": "https-dns-proxy" }'
 # ubus -S call luci.https-dns-proxy getProviders '{"name": "https-dns-proxy" }'
-# ubus -S call luci.https-dns-proxy getRuntime '{"name": "https-dns-proxy" }'
 
 readonly packageName="https-dns-proxy"
 readonly providersDir="/usr/share/${packageName}/providers"
 
-. /lib/functions.sh
-. /usr/share/libubox/jshn.sh
+. "${IPKG_INSTROOT}/lib/functions.sh"
+. "${IPKG_INSTROOT}/usr/share/libubox/jshn.sh"
 
 is_enabled() { "/etc/init.d/${1}" enabled; }
 is_running() { [ "$(ubus call service list "{ 'name': '$1' }" | jsonfilter -q -e "@['$1'].instances[*].running" | uniq)" = 'true' ]; }
-get_version() { /usr/sbin/https-dns-proxy -V; }
-check_http2() { curl --version | grep -q 'nghttp2'; }
-check_http3() { curl --version | grep -q 'nghttp3'; }
+get_version() { /usr/sbin/https-dns-proxy -V | head -1; }
+check_http2() { /usr/sbin/https-dns-proxy -V | grep -q 'nghttp2'; }
+check_http3() { /usr/sbin/https-dns-proxy -V | grep -q 'nghttp3'; }
 ubus_get_ports() { ubus call service list "{ 'name': '$packageName' }" | jsonfilter -e "@['${packageName}'].instances[*].data.firewall.*.dest_port"; }
 logger() { /usr/bin/logger -t "$packageName" "$@"; }
 print_json_bool() { json_init; json_add_boolean "$1" "$2"; json_dump; json_cleanup; }
@@ -112,19 +111,18 @@ get_providers() {
 	echo ']}'
 }
 
-get_runtime() { ubus call service list "{ 'verbose': true, 'name': '$1' }"; }
-
 set_init_action() {
-	local name="$1" action="$2" cmd
-	case $action in
+	local action="$2" cmd
+	[ "$(basename "$1")" = "$packageName" ] || { print_json_bool 'result' '0'; return 1; }
+		case $action in
 		enable|disable|start|stop|restart)
-			cmd="/etc/init.d/${name} ${action}"
+			cmd="/etc/init.d/${packageName} ${action}"
 		;;
 	esac
 	if [ -n "$cmd" ] && eval "$cmd" >/dev/null 2>&1; then
-		print_json_bool "result" '1'
+		print_json_bool 'result' '1'
 	else
-		print_json_bool "result" '0'
+		print_json_bool 'result' '0'
 	fi
 }
 
@@ -141,9 +139,6 @@ case "$1" in
 			json_add_string 'name' 'name'
 		json_close_object
 		json_add_object "getProviders"
-			json_add_string 'name' "name"
-		json_close_object
-		json_add_object "getRuntime"
 			json_add_string 'name' "name"
 		json_close_object
 		json_add_object "setInitAction"
@@ -182,13 +177,6 @@ case "$1" in
 				json_get_var name "name"
 				json_cleanup
 				get_providers "$name"
-				;;
-			getRuntime)
-				read -r input
-				json_load "$input"
-				json_get_var name "name"
-				json_cleanup
-				get_runtime "$name"
 				;;
 			setInitAction)
 				read -r input

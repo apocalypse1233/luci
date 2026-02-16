@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-10 03:40+0200\n"
-"PO-Revision-Date: 2025-03-28 20:32+0000\n"
-"Last-Translator: 翻譯得真好下次別翻了 <x86_64-pc-linux-gnu@proton.me>\n"
+"PO-Revision-Date: 2026-02-07 16:10+0000\n"
+"Last-Translator: EESF-2 <eesf-2@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/openwrt/luciapplicationsstatistics/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/mqtt.js:47
 msgid "0 - At most once"
@@ -36,7 +36,7 @@ msgstr "APC UPS"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/apcups.js:6
 msgid "APCUPS Plugin Configuration"
-msgstr "APC UPS 外掛程式設定"
+msgstr "APCUPS外掛程式設定"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/memory.js:19
 msgid "Absolute values"
@@ -68,11 +68,11 @@ msgstr "已連線使用者總數"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/graphs.js:237
 msgid "Apply interval »"
-msgstr "應用間隔 »"
+msgstr "套用間隔 »"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/email.js:47
 msgid "Awaiting email input at %s"
-msgstr "等待電子郵件輸入：%s"
+msgstr "等待電子郵件輸入: %s"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:19
 msgid "Backup RRD statistics"
@@ -157,15 +157,15 @@ msgstr "將插座檔的所有權變更為指定的群組。"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/chrony.js:8
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/chrony.json:2
 msgid "Chrony"
-msgstr "Chrony系統校時"
+msgstr "Chrony"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/chrony.js:6
 msgid "Chrony Plugin Configuration"
-msgstr "Chrony 外掛程式設定"
+msgstr "Chrony外掛程式設定"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/chrony.js:32
 msgid "Chrony monitoring enabled"
-msgstr "Chrony 監視已啟用"
+msgstr "Chrony監視已啟用"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/mqtt.js:72
 msgid "CleanSession"
@@ -186,7 +186,7 @@ msgstr "收集拓撲"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/collectd.js:46
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/collectd.js:49
 msgid "Collectd Settings"
-msgstr "Collectd 設定"
+msgstr "Collectd設定"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/exec.js:57
 msgid "Command monitoring enabled"
@@ -236,7 +236,7 @@ msgstr "DF外掛程式配置"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dhcpleases.js:7
 msgid "DHCP Leases"
-msgstr "DHCP租約"
+msgstr "DHCP 租約"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/dhcpleases.js:6
 msgid "DHCP Leases Plugin Configuration"
@@ -244,7 +244,7 @@ msgstr "DHCP租約外掛程式設定"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/dhcpleases.js:14
 msgid "DHCP leases file"
-msgstr "DHCP 租約檔"
+msgstr "DHCP租約檔"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/dns.js:10
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/dns.json:2
@@ -784,7 +784,7 @@ msgstr "DHCP 租約監視已啟用"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/dns.js:32
 msgid "Monitoring DNS queries on all interfaces"
-msgstr "監視所有界面上的DNS查詢"
+msgstr "監視所有介面上的DNS查詢"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/dns.js:34
 msgid "Monitoring DNS queries on one interface"
@@ -914,7 +914,7 @@ msgstr "有關頻率使用和過渡的更多詳細資訊"
 
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/mqtt.json:2
 msgid "Mqtt"
-msgstr ""
+msgstr "MQTT"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/mqtt.js:6
 msgid "Mqtt Plugin Configuration"
@@ -971,7 +971,7 @@ msgid ""
 "Note: as pages are rendered by user 'nobody', the *.rrd files, the storage "
 "directory and all its parent directories need to be world readable."
 msgstr ""
-"注意：由於頁面是以 'nobody' 身份生成的，因此 *.rrd 檔案以及包含此檔案的所有父"
+"注意: 由於頁面是以 'nobody' 身份生成的，因此 *.rrd 檔案以及包含此檔案的所有父"
 "目錄必須全域性可讀。"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/syslog.js:23
@@ -985,7 +985,7 @@ msgstr "收集程式使用執行緒數"
 #: applications/luci-app-statistics/htdocs/luci-static/resources/statistics/rrdtool/definitions/olsrd.js:10
 #: applications/luci-app-statistics/root/usr/share/luci/statistics/plugins/olsrd.json:2
 msgid "OLSRd"
-msgstr "最佳化鏈路狀態路由協定常駐程序(OLSRd)"
+msgstr "OLSRd"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/olsrd.js:6
 msgid "OLSRd Plugin Configuration"
@@ -1074,7 +1074,7 @@ msgstr "處理器"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/mqtt.js:21
 msgid "Publish"
-msgstr ""
+msgstr "發表"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/netlink.js:26
 msgid "Qdisc monitoring"
@@ -1082,7 +1082,7 @@ msgstr "Qdisc 監測"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/mqtt.js:46
 msgid "QoS"
-msgstr ""
+msgstr "QoS"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:62
 msgid "RRD XFiles Factor"
@@ -1122,7 +1122,7 @@ msgstr "使用百分比"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/mqtt.js:58
 msgid "Retain"
-msgstr ""
+msgstr "保留"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/rrdtool.js:57
 msgid "Rows per RRA"
@@ -1206,7 +1206,7 @@ msgstr "伺服器介面"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/network.js:62
 msgid "Server port"
-msgstr "伺服器埠號"
+msgstr "伺服器連接埠"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/network.js:20
 msgid "Set the maximum size for datagrams sent over the network"
@@ -1386,7 +1386,7 @@ msgstr "NUT外掛程式讀取UPS資訊。"
 msgid ""
 "The OLSRd plugin reads information about meshed networks from the txtinfo "
 "plugin of OLSRd."
-msgstr "OLSRd外掛程式通過txtinfo獲取meshed網路資訊。"
+msgstr "OLSRd 外掛程式通過 txtinfo 獲取 meshed 網路資訊。"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/openvpn.js:8
 msgid ""
@@ -1551,8 +1551,8 @@ msgid ""
 "values will result in a very high memory consumption in the temporary "
 "directory. This can render the device unusable!</strong>"
 msgstr ""
-"rrdtool外掛程式將收集資料以圖表的形式儲存在 RRD 資料庫檔案中。<br /><br /"
-"><strong>警告：錯誤的引數設定，將導致非常高的臨時記憶體消耗。這可能會使裝置無"
+"rrdtool 外掛程式將收集資料以圖表的形式儲存在 rrd 資料庫檔案中。<br /><br /"
+"><strong>警告: 錯誤的引數設定，將導致非常高的臨時記憶體消耗。這可能會使裝置無"
 "法使用！</strong>"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/sensors.js:18
@@ -1584,7 +1584,7 @@ msgid ""
 "read, e.g. thermal_zone1 )"
 msgstr ""
 "溫感外掛程式將會監測系統溫度。資料主要取自 /sys/class/thermal/*/temp ('*' 表"
-"示溫感裝置的名字，例如：thermal_zone1)"
+"示溫感裝置的名字，例如: thermal_zone1)"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/unixsock.js:8
 msgid ""
@@ -1677,7 +1677,7 @@ msgstr "UPS外掛程式配置"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/nut.js:14
 msgid "UPS name in NUT ups@host format"
-msgstr "UPS 名使用 NUT（Network UPS Tools）格式：ups@host"
+msgstr "UPS 名使用 NUT (Network UPS Tools) 格式: ups@host"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/curl.js:27
 msgid "URL"
@@ -1757,7 +1757,7 @@ msgstr "未選取時將監測所有介面。"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/cpu.js:21
 msgid "When set to true, reports per-state metric (system, user, idle)"
-msgstr "設定為true時，報告每個狀態指標（系統、用戶、空閒）"
+msgstr "設定為true時，報告每個狀態指標 (系統、用戶、空閒)"
 
 #: applications/luci-app-statistics/htdocs/luci-static/resources/view/statistics/plugins/memory.js:19
 msgid "When set to true, we request absolute values"
