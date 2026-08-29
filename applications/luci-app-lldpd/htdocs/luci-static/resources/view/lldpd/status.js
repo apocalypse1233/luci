@@ -156,10 +156,9 @@ return L.view.extend({
 
 	/** @private */
 	renderNumber(v) {
-		if (parseInt(v))
-			return v;
-
-		return '&#8211;';
+		if (v === undefined || v === null)
+			return '&#8211;';
+		return parseInt(v);
 	},
 
 	/** @private */
@@ -341,13 +340,14 @@ return L.view.extend({
 		//   ...
 		// row[N] - contents for N-th cell in row
 		//
+		let dImg;
 		if (row.length < 2)
 			return row;
 
 		for (let i = 1; i < row.length; i++) {
 			if (i == 1) {
 				// Fold/unfold image appears only in first column
-				const dImg = E('div', { 'style': 'padding: 0 8px 0 0;' }, [
+				dImg = E('div', { 'style': 'padding: 0 8px 0 0;' }, [
 					E('img', { 'width': '16px', 'src': this.getFoldingImage(unfolded) }),
 				]);
 			}

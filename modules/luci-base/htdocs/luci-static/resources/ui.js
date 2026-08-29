@@ -1265,24 +1265,18 @@ const UIDropdown = UIElement.extend(/** @lends LuCI.ui.Dropdown.prototype */ {
 	 * @returns {document}
 	 */
 	getScrollParent(element) {
-		let parent = element;
-		let style = getComputedStyle(element);
-		const excludeStaticParent = (style.position === 'absolute');
+		let parent = element.parentElement;
 
-		if (style.position === 'fixed')
-			return document.body;
-
-		while ((parent = parent.parentElement) != null) {
-			style = getComputedStyle(parent);
-
-			if (excludeStaticParent && style.position === 'static')
-				continue;
+		while (parent) {
+			const style = getComputedStyle(parent);
 
 			if (/(auto|scroll)/.test(style.overflow + style.overflowY + style.overflowX))
 				return parent;
+
+			parent = parent.parentElement;
 		}
 
-		return document.body;
+		return document.scrollingElement || document.documentElement;
 	},
 
 
@@ -1349,13 +1343,11 @@ const UIDropdown = UIElement.extend(/** @lends LuCI.ui.Dropdown.prototype */ {
 
 			window.requestAnimationFrame(() => {
 				const containerRect = scrollParent.getBoundingClientRect();
-				const itemHeight = li[Math.max(0, li.length - 2)].getBoundingClientRect().height;
-				let fullHeight = 0;
+				const itemHeight = li.length ? li[Math.max(0, li.length - 2)].getBoundingClientRect().height : 0;
+				const visibleItems = (items == -1 ? li.length : items);
+				const fullHeight = itemHeight * visibleItems;
 				const spaceAbove = rect.top - containerRect.top;
 				const spaceBelow = containerRect.bottom - rect.bottom;
-
-				for (let i = 0; i < (items == -1 ? li.length : items); i++)
-					fullHeight += li[i].getBoundingClientRect().height;
 
 				if (fullHeight <= spaceBelow) {
 					ul.style.top = `${rect.height}px`;
@@ -1597,7 +1589,7 @@ const UIDropdown = UIElement.extend(/** @lends LuCI.ui.Dropdown.prototype */ {
 	/**
 	 * @private
 	 * @param {Node} sb
-	 * @param {string[]} values
+	 * @param {Object<string, boolean>} values
 	 */
 	setValues(sb, values) {
 		const ul = sb.querySelector('ul');
@@ -1927,7 +1919,7 @@ const UIDropdown = UIElement.extend(/** @lends LuCI.ui.Dropdown.prototype */ {
 					const li = active.nextElementSibling;
 					this.setFocus(sb, li);
 					if (this.options.create && li == li.parentNode.lastElementChild) {
-						const input = li.querySelector('input:not([type="hidden"]):not([type="checkbox"]');
+						const input = li.querySelector('input:not([type="hidden"]):not([type="checkbox"])');
 						if (input) input.focus();
 					}
 					ev.preventDefault();
@@ -3461,8 +3453,7 @@ const UIFileUpload = UIElement.extend(/** @lends LuCI.ui.FileUpload.prototype */
 		const rows = E('ul');
 
 		list.sort((a, b) => {
-			return L.naturalCompare(a.type == 'directory', b.type == 'directory') ||
-				   L.naturalCompare(a.name, b.name);
+			return (b.type == 'directory') - (a.type == 'directory') || L.naturalCompare(a.name, b.name);
 		});
 
 		for (let i = 0; i < list.length; i++) {
@@ -3901,8 +3892,10 @@ const UITable = baseclass.extend(/** @lends LuCI.ui.table.prototype */ {
 		this.data = data;
 		this.placeholder = placeholder;
 
+		const tbodyEl = (this.node.tBodies && this.node.tBodies[0]) ? this.node.tBodies[0] : this.node;
+
 		let n = 0;
-		const rows = this.node.querySelectorAll('tr, .tr');
+		const rows = tbodyEl.querySelectorAll('tr, .tr');
 		const trows = [];
 		const captionClasses = this.options.captionClasses;
 		const trTag = (rows[0] && rows[0].nodeName == 'DIV') ? 'div' : 'tr';
@@ -3933,16 +3926,16 @@ const UITable = baseclass.extend(/** @lends LuCI.ui.table.prototype */ {
 
 		for (let i = 0; i < n; i++) {
 			if (rows[i+1])
-				this.node.replaceChild(trows[i], rows[i+1]);
+				tbodyEl.replaceChild(trows[i], rows[i+1]);
 			else
-				this.node.appendChild(trows[i]);
+				tbodyEl.appendChild(trows[i]);
 		}
 
 		while (rows[++n])
-			this.node.removeChild(rows[n]);
+			tbodyEl.removeChild(rows[n]);
 
-		if (placeholder && this.node.firstElementChild === this.node.lastElementChild) {
-			const trow = this.node.appendChild(E(trTag, { 'class': 'tr placeholder' }));
+		if (placeholder && tbodyEl.firstElementChild === tbodyEl.lastElementChild) {
+			const trow = tbodyEl.appendChild(E(trTag, { 'class': 'tr placeholder' }));
 			const td = trow.appendChild(E(tdTag, { 'class': 'td' }, placeholder));
 
 			if (typeof(captionClasses) == 'object')
@@ -4123,10 +4116,13 @@ const UITable = baseclass.extend(/** @lends LuCI.ui.table.prototype */ {
 	 * @param {Event} ev
 	 */
 	handleSort(ev) {
-		if (!ev.target.matches('th[data-sortable-row]'))
+		let th = (ev && ev.target) ? ev.target : null;
+		if (th && typeof th.matches === 'function' && !th.matches('th[data-sortable-row]'))
+			th = (typeof th.closest === 'function') ? th.closest('th[data-sortable-row]') : null;
+
+		if (!th)
 			return;
 
-		const th = ev.target;
 		const direction = (th.getAttribute('data-sort-direction') == 'asc');
 		let index = 0;
 
@@ -4447,7 +4443,7 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 					if (element.parentNode) {
 						element.parentNode.removeChild(element);
 					}
-				});
+				}, 0);
 			}
 		}
 
@@ -4804,7 +4800,7 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 		getActiveTabId(pane) {
 			const path = this.getPathForPane(pane);
 			const p = +(this.getActiveTabState().paths[path]);
-			return p ?? 0;
+			return isNaN(p) ? 0 : p;
 		},
 
 		/**
@@ -4919,12 +4915,16 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 	 * An optional DOM text node whose content text is set to the progress
 	 * percentage value during file upload.
 	 *
+	 * @param {string} [info]
+	 * An optional string that carries additional information that should
+	 * be shown under the progressbar.
+	 *
 	 * @returns {Promise<LuCI.ui.FileUploadReply>}
 	 * Returns a promise resolving to a file upload status object on success
 	 * or rejecting with an error in case the upload failed or has been
 	 * cancelled by the user.
 	 */
-	uploadFile(path, progressStatusNode) {
+	uploadFile(path, progressStatusNode, info) {
 		return new Promise((resolveFn, rejectFn) => {
 			UI.prototype.showModal(_('Uploading file…'), [
 				E('p', _('Please select the file to upload.')),
@@ -4980,7 +4980,11 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 
 								const progress = E('div', { 'class': 'cbi-progressbar', 'title': '0%' }, E('div', { 'style': 'width:0' }));
 
-								UI.prototype.showModal(_('Uploading file…'), [ progress ]);
+								let infoNode;
+								if (info)
+									infoNode = E('p', _('%s').format(info));
+
+								UI.prototype.showModal(_('Uploading file…'), [ progress, infoNode ]);
 
 								const data = new FormData();
 
@@ -5051,11 +5055,26 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 
 		return new Promise((resolveFn, rejectFn) => {
 			const img = new Image();
+			let timer = window.setTimeout(() => {
+				timer = null;
+				rejectFn();
+			}, 1000);
 
-			img.onload = resolveFn;
-			img.onerror = rejectFn;
+			img.onload = ev => {
+				if (timer !== null)
+					window.clearTimeout(timer);
+				timer = null;
+				img.onload = img.onerror = null;
+				resolveFn(ev);
+			};
 
-			window.setTimeout(rejectFn, 1000);
+			img.onerror = ev => {
+				if (timer !== null)
+					window.clearTimeout(timer);
+				timer = null;
+				img.onload = img.onerror = null;
+				rejectFn(ev);
+			};
 
 			img.src = target;
 		});
@@ -5696,7 +5715,7 @@ const UI = baseclass.extend(/** @lends LuCI.ui.prototype */ {
 		const className = 'view.%s'.format(path.replace(/\//g, '.'));
 
 		return L.require(className).then(view => {
-			if (!(view instanceof View))
+			if (typeof view?.render !== 'function')
 				throw new TypeError('Loaded class %s is not a descendant of View'.format(className));
 
 			return view;

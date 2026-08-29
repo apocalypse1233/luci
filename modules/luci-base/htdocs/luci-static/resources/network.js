@@ -215,13 +215,13 @@ function getWifiNetidBySid(sid) {
 		if (typeof(radioname) == 'string') {
 			const sections = uci.sections('wireless', 'wifi-iface');
 			let n = 0;
-			for (let s of sections) {
-				if (s.device != s.device)
+			for (let sec of sections) {
+				if (sec.device != radioname)
 					continue;
 
 				n++;
 
-				if (s['.name'] != s['.name'])
+				if (sec['.name'] != s['.name'])
 					continue;
 
 				return [ '%s.network%d'.format(s.device, n), s.device ];
@@ -353,7 +353,9 @@ function maskToPrefix(mask, v6) {
 function initNetworkState(refresh) {
 	if (_state == null || refresh) {
 		const hasWifi = L.hasSystemFeature('wifi');
-		_init = _init || Promise.all([
+
+		if (refresh || !_init) {
+			_init = Promise.all([
 			L.resolveDefault(callNetworkInterfaceDump(), []),
 			L.resolveDefault(callLuciBoardJSON(), {}),
 			L.resolveDefault(callLuciNetworkDevices(), {}),
@@ -388,6 +390,7 @@ function initNetworkState(refresh) {
 					link:     dev.link,
 					stats:    dev.stats,
 					macaddr:  dev.mac,
+					pse:      dev?.pse,
 					type:     dev.type,
 					devtype:  dev.devtype,
 					mtu:      dev.mtu,
@@ -465,7 +468,7 @@ function initNetworkState(refresh) {
 
 								if (port.device != null) {
 									spec.device = port.device;
-									spec.tagged = spec.need_tag;
+									spec.tagged = port.need_tag;
 									netdevs[port.num] = port.device;
 								}
 
@@ -530,7 +533,12 @@ function initNetworkState(refresh) {
 				return (_state = s);
 			});
 		});
+		} // end if (refresh || !_init)
+
 	}
+
+	if (refresh)
+		return _init;
 
 	return (_state != null ? Promise.resolve(_state) : _init);
 }
@@ -2314,21 +2322,21 @@ Protocol = baseclass.extend(/** @lends LuCI.network.Protocol.prototype */ {
 	 */
 	getIP6Addrs() {
 		let addrs = this._ubus('ipv6-address');
-		const rv = [];
+		const rv = new Set();
 
 		if (Array.isArray(addrs))
 			for (let a of addrs)
 				if (L.isObject(a))
-					rv.push('%s/%d'.format(a.address, a.mask));
+					rv.add('%s/%d'.format(a.address, a.mask));
 
 		addrs = this._ubus('ipv6-prefix-assignment');
 
 		if (Array.isArray(addrs))
 			for (let a of addrs)
 				if (L.isObject(a) && L.isObject(a['local-address']))
-					rv.push('%s/%d'.format(a['local-address'].address, a['local-address'].mask));
+					rv.add('%s/%d'.format(a['local-address'].address, a['local-address'].mask));
 
-		return rv;
+		return Array.from(rv);
 	},
 
 	/**
@@ -3674,7 +3682,7 @@ WifiDevice = baseclass.extend(/** @lends LuCI.network.WifiDevice.prototype */ {
 		if (sid == null || uci.get('wireless', sid, 'device') != this.sid)
 			return Promise.resolve(false);
 
-		uci.delete('wireless', network);
+		uci.remove('wireless', sid);
 
 		return Promise.resolve(true);
 	}

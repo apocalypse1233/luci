@@ -7,7 +7,7 @@
 
 const scope = this;
 
-uci.loadPackage('luci').catch();
+uci.loadPackage('luci').catch(() => {});
 
 const callSessionAccess = rpc.declare({
 	object: 'session',
@@ -1309,6 +1309,12 @@ const CBIAbstractSection = CBIAbstractElement.extend(/** @lends LuCI.form.Abstra
 		const sids = this.cfgsections();
 
 		for (let i = 0, sid = sids[0]; (sid = sids[i]) != null; i++) {
+			/*
+			 * do not remove elements that are not rendered yet
+			 */
+			if (!this.map.findElement('data-section-id', sid))
+				continue;
+
 			for (let j = 0, o = this.children[0]; (o = this.children[j]) != null; j++) {
 				let isActive = o.isActive(sid);
 				const isSatisfied = o.checkDepends(sid);
@@ -2143,7 +2149,7 @@ const CBIAbstractValue = CBIAbstractElement.extend(/** @lends LuCI.form.Abstract
 			const cval = this.cfgvalue(section_id);
 			const fval = this.formvalue(section_id);
 
-			if (fval == null || fval == '') {
+			if (fval == null || fval == '' || (fval == this.default && (this.optional || this.rmempty))) {
 				if (this.rmempty || this.optional) {
 					return Promise.resolve(this.remove(section_id));
 				}
@@ -2761,7 +2767,7 @@ const CBITableSection = CBITypedSection.extend(/** @lends LuCI.form.TableSection
 	 * @param {string} name
 	 * @returns {null}
 	 */
-	handleClone(section_id, put_next, name) {
+	handleClone(section_id, put_next, ev, name) {
 		let config_name = this.uciconfig || this.map.config;
 
 		this.map.data.clone(config_name, this.sectiontype, section_id, put_next, name);
@@ -2948,7 +2954,7 @@ const CBITableSection = CBITypedSection.extend(/** @lends LuCI.form.TableSection
 		}
 
 		if (this.filterrow && tableFilter) {
-			const filterTr = E('tr', { 'class': `tr cbi-section-table-filter ${anon_class}` });
+			const filterTr = E('tr', { 'class': `tr cbi-section-table-filter cbi-section-table-titles ${anon_class}` });
 
 			if (!this.anonymous || this.sectiontitle) {
 				filterTr.appendChild(E('th', { 'class': 'th cbi-section-table-cell' }, [
@@ -3636,32 +3642,34 @@ const CBITableSection = CBITypedSection.extend(/** @lends LuCI.form.TableSection
 	 * @returns {null}
 	 */
 	handleSort(ev) {
-		if (!ev.target.matches('th[data-sortable-row]'))
+		const th = ev.target && ev.target.closest ? ev.target.closest('th[data-sortable-row]') : null;
+		if (!th)
 			return;
 
-		const th = ev.target;
 		const descending = (th.getAttribute('data-sort-direction') == 'desc');
 		const config_name = this.uciconfig ?? this.map.config;
 		let index = 0;
 		const list = [];
 
-		ev.currentTarget.querySelectorAll('th').forEach((other_th, i) => {
+		const headerRow = ev.currentTarget;
+		headerRow.querySelectorAll('th').forEach((other_th, i) => {
 			if (other_th !== th)
 				other_th.removeAttribute('data-sort-direction');
 			else
 				index = i;
 		});
 
-		ev.currentTarget.parentNode.querySelectorAll('tr.cbi-section-table-row').forEach(L.bind((tr) => {
+		const tableEl = headerRow.closest('table') || headerRow.parentNode;
+		tableEl.querySelectorAll('tr.cbi-section-table-row').forEach(L.bind((tr, i) => {
 			const sid = tr.getAttribute('data-sid');
 			const opt = tr.childNodes[index].getAttribute('data-name');
 			let val = this.cfgvalue(sid, opt);
 
 			tr.querySelectorAll('.flash').forEach((n) => {
-				n.classList.remove('flash')
+				n.classList.remove('flash');
 			});
 
-			val = Array.isArray(val) ? val.join(' '): val;
+			val = Array.isArray(val) ? val.join(' ') : val;
 			val = `${val}`; // coerce non-string types to string
 			list.push([
 				ui.Table.prototype.deriveSortKey((val != null && typeof val.trim === 'function') ? val.trim() : ''),
@@ -3679,9 +3687,11 @@ const CBITableSection = CBITypedSection.extend(/** @lends LuCI.form.TableSection
 			let ref_sid;
 			let cur_sid;
 
+			const tbodyEl = (tableEl.tBodies && tableEl.tBodies[0]) ? tableEl.tBodies[0] : tableEl;
+
 			for (let i = 0; i < list.length; i++) {
 				list[i][1].childNodes[index].classList.add('flash');
-				th.parentNode.parentNode.appendChild(list[i][1]);
+				tbodyEl.appendChild(list[i][1]);
 
 				cur_sid = list[i][1].getAttribute('data-sid');
 

@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-14 15:03+0000\n"
-"Last-Translator: EESF-2 <eesf-2@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2026-07-05 14:58+0000\n"
+"Last-Translator: 為什麼不加空格 <c++23@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/openwrt/luci_modules_luci-mod-dsl/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/stats.js:157
 msgid "ATM Header Error Control Errors (HEC-P)"
@@ -160,7 +160,7 @@ msgstr "數據機韌體"
 
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/stats.js:133
 msgid "Noise Margin (SNRM)"
-msgstr "雜訊容限 (信噪比)"
+msgstr ""
 
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/stats.js:122
 msgid "Noise Protection"
@@ -180,7 +180,7 @@ msgstr "PTM 搶佔式 CRC 錯誤 (CRCP-P)"
 
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/graph.js:129
 msgid "Pilot tones"
-msgstr "引導音"
+msgstr "導頻"
 
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/stats.js:96
 msgid "Power Management Mode"
@@ -222,7 +222,7 @@ msgstr "光譜"
 
 #: modules/luci-mod-dsl/root/usr/share/luci/menu.d/luci-mod-dsl.json:14
 msgid "Stats"
-msgstr "統計"
+msgstr "統計資料"
 
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/graph.js:107
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/graph.js:143
@@ -280,6 +280,10 @@ msgstr "上游 QLN"
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/graph.js:154
 msgid "Upstream SNR"
 msgstr "上游 SNR"
+
+#: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/graph.js:118
+msgid "Upstream bits allocation"
+msgstr "上游位元分配"
 
 #: modules/luci-mod-dsl/htdocs/luci-static/resources/view/status/dsl/graph.js:112
 msgid "bits"
