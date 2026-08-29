@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-07 16:09+0000\n"
+"PO-Revision-Date: 2026-08-07 23:22+0000\n"
 "Last-Translator: Hyeonjeong Lee <h9101654@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsdockerman/ko/>\n"
@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/newcontainer.lua:604
 msgid "A list of kernel capabilities to add to the container"
@@ -469,7 +469,7 @@ msgstr "정보(Info)"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/newnetwork.lua:64
 msgid "Ingress"
-msgstr ""
+msgstr "인그레스"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/newnetwork.lua:65
 msgid ""
@@ -500,7 +500,7 @@ msgstr "데몬의 저장소 미러를 새로운 저장소 미러로 교체 설�
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/container.lua:245
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/containers.lua:220
 msgid "Kill"
-msgstr "강제 종료"
+msgstr "종료"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/newnetwork.lua:60
 msgid "L2 bridge"
@@ -512,7 +512,7 @@ msgstr "L3 브리지"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/container.lua:351
 msgid "Links"
-msgstr ""
+msgstr "링크"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/newcontainer.lua:512
 msgid "Links with other containers"
@@ -614,7 +614,7 @@ msgstr "추가"
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/images.lua:39
 #: applications/luci-app-dockerman/luasrc/view/dockerman/images_import.htm:54
 msgid "New tag"
-msgstr ""
+msgstr "새 태그"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/newcontainer.lua:612
 msgid "Number of CPUs. Number is a fractional number. 0.000 means no limit"
@@ -729,7 +729,7 @@ msgstr "삭제"
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/images.lua:43
 #: applications/luci-app-dockerman/luasrc/view/dockerman/images_import.htm:82
 msgid "Remove tag"
-msgstr ""
+msgstr "태그 제거"
 
 #: applications/luci-app-dockerman/luasrc/model/cbi/dockerman/images.lua:140
 msgid "RepoTags"
